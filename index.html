@@ -1,5 +1,38 @@
-Para completar
+---
+layout: layoutIndexPage.liquid
+pageTitle: Main page
+---
 
-<a href="./Python">Cosas de Python</a>
+{% for post in collections.posts %}
+<div class="blog-card">
+    <div class="meta">
+        <div class="photo"
+            style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+        <ul class="details">
+            <li class="author"><a href="#">{{ post.data.Author }}</a></li>
+            <li class="date">{{ post.date | date: "%Y-%m-%d" }}</li>
+            <li class="tags">
+                <ul>
+                    {% for tag in post.data.visualTags %}
+                        <li><a href="#">{{tag}}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="description">
+        <h1>{{ post.data.PostTitle }}</h1>
+        <h2>{{ post.data.PostDescription }}</h2>
+        <p class="read-more">
+            <a href="{{ post.url }}">Read More</a>
+        </p>
+    </div>
+</div>
+{% endfor %}
 
 
+
+<post>
+    <h2><a href="{{ post.url }}">{{ post.data.pageTitle }}</a></h2>
+    <em>{{ post.date | date: "%Y-%m-%d" }}</em>
+</post>
