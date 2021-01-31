@@ -1,18 +1,25 @@
 <!doctype html>
 <html lang="en">
-    <head>
-            <link rel="stylesheet" href="/css/PostStyles.css">
 
-        <meta charset="utf-8">
-        <title>My Blog</title>
-    </head>
-    <body>
-        <headBand></headBand>
+<head>
+    <link rel="stylesheet" href="/css/PostStyles.css">
 
-        <img src = "{{imageUrl}}">
-        <h1>{{ PostTitle }}</h1>
-        <h2>{{ PostDescription }}</h2>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+</head>
 
-        {{ content }}
-    </body>
+<body>
+    <header>
+        <div onclick="window.location='/'">
+            dirigity.github.io/
+        </div>
+    </header>
+
+    <img src="{{imageUrl}}">
+    <h1>{{ PostTitle }}</h1>
+    <h2>{{ PostDescription }}</h2>
+
+    {{ content }}
+</body>
+
 </html>
