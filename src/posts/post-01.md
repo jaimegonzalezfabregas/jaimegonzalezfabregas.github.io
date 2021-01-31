@@ -1,6 +1,7 @@
 ---
 tags: ["web dev","11ty"]
-imageUrl: "/images/BlogScreenShot.jpg"
+ThumbNailUrl: "/images/BlogScreenShot.jpg"
+Images: ["/images/BlogScreenShot.jpg","/images/BlogScreenShot.jpg","/images/BlogScreenShot.jpg"]
 PostTitle: My post
 PostDescription : This is my first post in my blog
 Author : "Jaime González Fábregas"

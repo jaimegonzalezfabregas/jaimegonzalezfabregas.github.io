@@ -1,0 +1,74 @@
+<h1>perfundo</h1>
+<p><a href="https://travis-ci.org/maoberlehner/perfundo"><img src="https://travis-ci.org/maoberlehner/perfundo.svg?branch=master" alt="Build Status"></a>
+<a href="https://coveralls.io/github/maoberlehner/perfundo?branch=master"><img src="https://coveralls.io/repos/github/maoberlehner/perfundo/badge.svg?branch=master" alt="Coverage Status"></a>
+<a href="https://github.com/maoberlehner/perfundo"><img src="https://img.shields.io/github/stars/maoberlehner/perfundo.svg?style=social&amp;label=Star" alt="GitHub stars"></a></p>
+<p>a pure CSS lightbox (https://perfundo.oberlehner.net).</p>
+<h2>Usage</h2>
+<h3>As an npm module</h3>
+<p>To use perfundo in your Sass project, it is recommended to use the <a href="https://github.com/maoberlehner/node-sass-magic-importer/tree/master/packages/node-sass-magic-importer">node-sass-magic-importer</a> node-sass importer so it is possible to easily load perfundo directly from your <code>node_modules</code> directory.
+Make sure you checkout the <a href="https://github.com/maoberlehner/node-sass-magic-importer/tree/master/packages/node-sass-magic-importer#usage">usage section</a> on how to use the <a href="https://github.com/maoberlehner/node-sass-magic-importer/tree/master/packages/node-sass-magic-importer">node-sass-magic-importer</a>.</p>
+<p>Install perfundo:</p>
+<pre><code class="language-bash">npm install perfundo --save
+</code></pre>
+<p>Also install <a href="https://github.com/maoberlehner/node-sass-magic-importer/tree/master/packages/node-sass-magic-importer">node-sass-magic-importer</a></p>
+<pre><code class="language-bash">npm install node-sass-magic-importer --save-dev
+</code></pre>
+<p>Now you can import perfundo into your Sass file:</p>
+<pre><code class="language-scss">@import '~perfundo';
+// OR
+@import '~perfundo/with-icons';
+
+// Without node-sass-magic-importer installed
+@import 'node_modules/perfundo/scss/index.scss';
+// OR
+@import 'node_modules/perfundo/scss/with-icons.scss';
+</code></pre>
+<p>There are variables to control certain aspects of the Lightbox:</p>
+<pre><code class="language-scss">$perfundo-background-color: rgba(#000, 0.9);
+$perfundo-color: #fff;
+$perfundo-control-use-icons: false;
+$perfundo-html-padding: 2em;
+$perfundo-html-max-width: 42em;
+$perfundo-html-background-color: #fff;
+</code></pre>
+<p>If you want to use the JavaScript enhancements, load the perfundo module into your JavaScript file:</p>
+<pre><code class="language-js">// Load the module.
+const perfundo = require('perfundo');
+// Initialize a perfundo Lightbox.
+perfundo('.perfundo', {
+  // This are the default options.
+  disableHistory: false,
+  swipe: true,
+  keyboard: true,
+  classNames: {
+    link: `js-perfundo-link`,
+    overlay: `js-perfundo-overlay`,
+    close: `js-perfundo-close`,
+    prev: `js-perfundo-prev`,
+    next: `js-perfundo-next`,
+    active: `is-active`
+  }
+});
+</code></pre>
+<h3>Standalone (without npm)</h3>
+<p>Download https://github.com/maoberlehner/perfundo/archive/4.0.3.zip. Add the files to your HTML file like in the following example:</p>
+<pre><code class="language-html">&lt;!-- Put this inside the &lt;head&gt; section of your HTML. --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;perfundo.min.css&quot;&gt;
+
+&lt;!-- Put this before the closing &lt;/body&gt; tag (optionally!). --&gt;
+&lt;script src=&quot;perfundo.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  perfundo('.perfundo');
+&lt;/script&gt;
+</code></pre>
+<h2>BrowserStack</h2>
+<p>perfundo is using <a href="https://www.browserstack.com">BrowserStack</a> to automatically test it's functionality in the following Browsers: Internet Explorer 10+, Edge 14+, Firefox 54+, Chrome 59+, Opera 46+ and Safari 9+.</p>
+<p><a href="https://www.browserstack.com"><img src="https://perfundo.oberlehner.net/img/browserstack.png" alt="BrowserStack"></a></p>
+<h2>About</h2>
+<h3>Author</h3>
+<p>Markus Oberlehner<br>
+Website: https://markus.oberlehner.net<br>
+Twitter: https://twitter.com/MaOberlehner<br>
+PayPal.me: https://paypal.me/maoberlehner</p>
+<h3>License</h3>
+<p>MIT</p>

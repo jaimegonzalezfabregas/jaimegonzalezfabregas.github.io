@@ -1,0 +1,60 @@
+.header {
+  cursor: pointer;
+  padding: 10px;
+  text-align: left;
+  background: #1a8ebc;
+  color: white;
+  font-size: 20px;
+}
+
+.backArrow {
+  display: inline;
+  position: relative;
+  transition: left 0.2s;
+  left: -30px;
+  top: 0;
+}
+
+#galery{
+  border-radius: 10px;
+  padding: 10px;
+  background-color: black; 
+  overflow: auto;
+  white-space:nowrap;
+}
+
+.name {
+  display: inline;
+  position: relative;
+  transition: left 0.2s;
+  left: 0;
+  top: 0;
+}
+
+.header:hover .backArrow {
+  left: 0px;
+}
+
+.header:hover .name {
+  left: 4px;
+}
+
+img {
+  width: 50%;
+  height: auto;
+}
+
+body {
+  background: #f1f1f1;
+  margin: 0;
+  padding: 0;
+}
+
+
+.card{
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+}

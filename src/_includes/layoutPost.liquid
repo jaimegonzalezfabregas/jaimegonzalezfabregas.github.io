@@ -3,23 +3,73 @@
 
 <head>
     <link rel="stylesheet" href="/css/PostStyles.css">
-
+    <script src="https://kit.fontawesome.com/c462d93d69.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/perfundo-4.0.3/dist/perfundo.min.css">
     <meta charset="utf-8">
     <title>My Blog</title>
 </head>
 
 <body>
-    <header>
-        <div onclick="window.location='/'">
-            dirigity.github.io/
-        </div>
-    </header>
+    <div class="header" onclick="window.location='/'">
+        <span class="backArrow"> <i class="fas fa-arrow-left"></i> </span>
+        <span class="name">dirigity.github.io/</span>
+    </div>
 
-    <img src="{{imageUrl}}">
-    <h1>{{ PostTitle }}</h1>
-    <h2>{{ PostDescription }}</h2>
+    <div class="card">
+        <div id="galery" ></div>
+        <script>
+            function createGal() {
+                Images = {{ Images }}
+                for (let i = -1; i < Images.length; i++) {
+                    console.log("appending photo n " + i)
+                    let current = "";
+                    if(i!= -1)current = Images[i];
+                    else current = "{{ThumbNailUrl}}";
+                    let gal = document.getElementById("galery");
 
-    {{ content }}
+                    let controls = ``;
+
+                    if (i != Images.length - 1) controls += `<a class="perfundo__next perfundo__control js-perfundo-next" href="#perfundo-img`+ (i + 1) +`">Next</a>`;
+
+                    if (i != -1) controls += `<a class="perfundo__prev perfundo__control js-perfundo-prev" href="#perfundo-img` + (i - 1) +`">Prev</a>`;
+                    let HTMLCode = `
+                        
+                        <div style="display: inline-block; text-align: center; width:`+(200/ (Images.length+1))+`%">
+                            <a class="perfundo__link js-perfundo-link" href="#perfundo-img`+ i + `">
+                                <img src="`+ current + `" alt="` + current + `">
+                            </a>
+                            <div id="perfundo-img`+ i + `" class="perfundo__overlay fadeIn js-perfundo-overlay">
+                                <figure class="perfundo__content perfundo__figure">
+                                <img src="`+ current + `" alt="`+ current + `">
+                                <div class="perfundo__image" style="width: 800px; padding-top: 66.25%; background-image: url(`+ current + `);"></div>
+                                </figure>
+                                <a href="#perfundo-untarget" class="perfundo__close perfundo__control js-perfundo-close">Close</a>
+
+                                `+ controls + `
+
+                            </div>
+                        </div>
+                        `;
+
+                    gal.innerHTML = gal.innerHTML + HTMLCode;
+
+                }
+            }
+            createGal();
+        </script>
+
+        <h1>{{ PostTitle }}</h1>
+        <h2>{{ PostDescription }}</h2>
+        {{ content }}
+
+    </div>
+
+
+
+
+    <script src="/css/perfundo-4.0.3/dist/perfundo.min.js"></script>
+
+
 </body>
 
 </html>
