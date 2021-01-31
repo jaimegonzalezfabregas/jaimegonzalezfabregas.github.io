@@ -8,15 +8,14 @@ pageSubTitle: The main page of my blog
 {% for post in collections.all %}
 <div class="blog-card" onclick="window.location='{{ post.url }}';">
     <div class="meta">
-        <div class="photo"
-            style="background-image: url({{post.data.imageUrl}})"></div>
+        <div class="photo" style="background-image: url({{post.data.ThumbNailUrl}})"></div>
         <ul class="details">
             <li class="author"><a href="#">{{ post.data.Author }}</a></li>
             <li class="date">{{ post.date | date: "%Y-%m-%d" }}</li>
             <li class="tags">
                 <ul>
                     {% for tag in post.data.tags %}
-                        <li><a href="#">{{tag}}</a></li>
+                    <li><a href="#">{{tag}}</a></li>
                     {% endfor %}
                 </ul>
             </li>
@@ -25,13 +24,8 @@ pageSubTitle: The main page of my blog
     <div class="description">
         <h1>{{ post.data.PostTitle }}</h1>
         <h2>{{ post.data.PostDescription }}</h2>
+
+        <div class="peek" style=" height: 100px; width: 100%; overflow: hidden; float:left "> {{ post.templateContent }} </div>
     </div>
 </div>
 {% endfor %}
-
-
-
-<post>
-    <h2><a href="{{ post.url }}">{{ post.data.pageTitle }}</a></h2>
-    <em>{{ post.date | date: "%Y-%m-%d" }}</em>
-</post>

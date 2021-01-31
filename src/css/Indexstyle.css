@@ -110,6 +110,7 @@ body {
   padding: 1rem;
   background: #fff;
   position: relative;
+  width: 100%;
   z-index: 1;
 }
 .blog-card .description h1,
@@ -178,6 +179,7 @@ body {
   }
   .blog-card .description {
     flex-basis: 60%;
+    width: 0%;
   }
   .blog-card .description:before {
     transform: skewX(-3deg);

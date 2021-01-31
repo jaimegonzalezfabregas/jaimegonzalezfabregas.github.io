@@ -4,9 +4,9 @@
 <head>
     <link rel="stylesheet" href="/css/PostStyles.css">
     <script src="https://kit.fontawesome.com/c462d93d69.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/perfundo-4.0.3/dist/perfundo.min.css">
+    <link rel="stylesheet" href="/css/Galery.css">
     <meta charset="utf-8">
-    <title>My Blog</title>
+    <title>My first blog post</title>
 </head>
 
 <body>
@@ -19,31 +19,31 @@
         <div id="galery" ></div>
         <script>
             function createGal() {
-                Images = ["/images/BlogScreenShot.jpg","/images/BlogScreenShot.jpg","/images/BlogScreenShot.jpg"]
+                let Images = []
                 for (let i = -1; i < Images.length; i++) {
                     console.log("appending photo n " + i)
                     let current = "";
                     if(i!= -1)current = Images[i];
-                    else current = "/images/BlogScreenShot.jpg";
+                    else current = "/images/EleventyLogo.png";
                     let gal = document.getElementById("galery");
 
                     let controls = ``;
 
-                    if (i != Images.length - 1) controls += `<a class="perfundo__next perfundo__control js-perfundo-next" href="#perfundo-img`+ (i + 1) +`">Next</a>`;
+                    if (i != Images.length - 1) controls += `<a class="gal_next perfundo__control js-perfundo-next enlarge" href="#perfundo-img`+ (i + 1) +`"><i class="fas fa-chevron-right"></i></a>`;
 
-                    if (i != -1) controls += `<a class="perfundo__prev perfundo__control js-perfundo-prev" href="#perfundo-img` + (i - 1) +`">Prev</a>`;
+                    if (i != -1) controls += `<a class="gal_prev perfundo__control js-perfundo-prev enlarge" href="#perfundo-img` + (i - 1) +`"><i class="fas fa-chevron-left"></i></a>`;
                     let HTMLCode = `
                         
-                        <div style="display: inline-block; text-align: center; width:`+(200/ (Images.length+1))+`%">
-                            <a class="perfundo__link js-perfundo-link" href="#perfundo-img`+ i + `">
-                                <img src="`+ current + `" alt="` + current + `">
+                        <div style="display: inline-block; text-align: center; width:25%">
+                            <a class="perfundo__link js-perfundo-link" href="#perfundo-img`+ i + `"  style="display: block; margin: 10px">
+                                <img src="`+ current + `" alt="` + current + `" style="width:100%">
                             </a>
                             <div id="perfundo-img`+ i + `" class="perfundo__overlay fadeIn js-perfundo-overlay">
                                 <figure class="perfundo__content perfundo__figure">
                                 <img src="`+ current + `" alt="`+ current + `">
                                 <div class="perfundo__image" style="width: 800px; padding-top: 66.25%; background-image: url(`+ current + `);"></div>
                                 </figure>
-                                <a href="#perfundo-untarget" class="perfundo__close perfundo__control js-perfundo-close">Close</a>
+                                <a href="#perfundo-untarget" class="gal_close perfundo__control js-perfundo-close enlarge"><i class="far fa-times-circle"></i></a>
 
                                 `+ controls + `
 
@@ -58,17 +58,22 @@
             createGal();
         </script>
 
-        <h1>My post</h1>
+        <h1>My first blog post</h1>
         <h2>This is my first post in my blog</h2>
         <p>I've finaly decided to create my very own blog. I plan to post the little thinks I do from now on, but I`ll probably also update it with the thigs I've done in the past.</p>
+<p>This blog is &quot;powered&quot; by eleventh (11th), which is a template engine designed for static webpages. I've just started using it, so i'm not an expert yet. So far I've had to solve some interesting problems. I'll name them here and coment on my solution so that new people can get inspired for their own projects:</p>
+<p>The galery on your screen is kind of a big achievement. 11th comes with its own template language( wich would be lauched on build time), but i was not able to find enought documentation to get a simple for loop going. This is why I had to resort to client side javascript to dinamicaly build the galery in the browser from the data that I'm able to extract from 11th.</p>
+<p>11ty comes out of the box with a watchdog type server that will detect changes on the source files and will rebuild your files. The problem with it is that it will only update when some specific files were changed (namely .html, .md, .liquid). Specificaly .css were left out. It was a real pain to have to go to other file, save it, and then go to see how the css had changed the web page. The build times are very very fast, so changing of file was 50% of the proces. To fix this I now use some code really similar to the following:</p>
+<pre><code>find . -path ./src/node_modules -prune -o -print | entr sh 'npx eleventy';
+</code></pre>
+<p>I'm not gonna expain what it does, but it is just a line of code, I trust you can handle it.</p>
+<p>I also needed to use a server to host localy my page because i'm working inside wsl, but that is maybe to specific and will not apply to your case.</p>
+<p>As a conclusion I'd like to stress how much i do recomend eleventy. I've read about other static page generators (jekill, hugo, orgmode and such...) but as far as I know eleventy is better than all of them in build speed (maybe not better than hugo, but I haven't done any testing) , wich is an incredible adventage when messing around with css of third party code you may or may not understand.</p>
 
 
     </div>
 
-
-
-
-    <script src="/css/perfundo-4.0.3/dist/perfundo.min.js"></script>
+    <script src="/scripts/Galery.js"></script>
 
 
 </body>

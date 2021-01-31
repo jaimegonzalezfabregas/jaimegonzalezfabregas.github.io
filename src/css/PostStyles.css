@@ -15,7 +15,33 @@
   top: 0;
 }
 
+.gal_next{
+  right : 0;
+}
+.gal_prev{
+left : 0;
+}
+
+.gal_close{
+ right: 0;
+ top: 0;
+}
+
+.enlarge{
+  margin: 20px;
+  transition: color 0.3s;
+  color:rgb(141, 141, 141);
+  text-align: center;
+  font-size: 100px;
+}
+
+.enlarge:hover{
+  color:white;
+}
+
 #galery{
+  text-align: center;
+  display:block;
   border-radius: 10px;
   padding: 10px;
   background-color: black; 
