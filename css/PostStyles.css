@@ -98,3 +98,9 @@ tags {
   padding: 10px;
   border-radius: 3px;
 }
+
+marginer{
+  display: block;
+  margin-left: 10%;
+  margin-right: 10%;
+}

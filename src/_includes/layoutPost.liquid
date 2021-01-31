@@ -20,13 +20,15 @@
     </div>
 
     <div class="card">
-        <h1 style="display: inline-block;">{{ PostTitle }}</h1>
-        <tags>
-            Tags:
-            {% for tag in tags %}
-            <tag>{{tag}}</tag>
-            {% endfor %}
-        </tags>
+        <marginer>
+            <h1 style="display: inline-block;">{{ PostTitle }}</h1>
+            <tags>
+                Tags:
+                {% for tag in tags %}
+                <tag>{{tag}}</tag>
+                {% endfor %}
+            </tags>
+        </marginer>
 
         <div id="galery"></div>
         <script>
@@ -69,9 +71,11 @@
             }
             createGal();
         </script>
+        <marginer>
+            <h2>{{ PostDescription }}</h2>
+            {{ content }}
+        </marginer>
 
-        <h2>{{ PostDescription }}</h2>
-        {{ content }}
 
     </div>
 
