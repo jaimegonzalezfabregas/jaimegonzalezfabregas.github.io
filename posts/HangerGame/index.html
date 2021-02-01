@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/c462d93d69.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/Galery.css">
     <meta charset="utf-8">
-    <title>{{ PostTitle }}</title>
+    <title>Stickman hook</title>
 </head>
 
 <body>
@@ -21,24 +21,24 @@
 
     <div class="card">
         <marginer>
-            <h1 style="display: inline-block;">{{ PostTitle }}</h1>
+            <h1 style="display: inline-block;">Stickman hook</h1>
             <tags>
                 Tags:
-                {% for tag in tags %}
-                <tag>{{tag}}</tag>
-                {% endfor %}
+                
+                <tag>web dev</tag>
+                
             </tags>
         </marginer>
 
         <div id="galery"></div>
         <script>
             function createGal() {
-                let Images = {{ Images }}
+                let Images = []
             for (let i = -1; i < Images.length; i++) {
                 console.log("appending photo n " + i)
                 let current = "";
                 if (i != -1) current = Images[i];
-                else current = "{{ThumbNailUrl}}";
+                else current = "https://i.poki.com/q80,w600,h600,g29145,-7-stickman-hook.jpg";
                 let gal = document.getElementById("galery");
 
                 let controls = ``;
@@ -72,8 +72,12 @@
             createGal();
         </script>
         <marginer>
-            <h2>{{ PostDescription }}</h2>
-            {{ content }}
+            <h2>A dumb lil' game</h2>
+            <p>There was this time a few years ago when a stupid simple game became very popular, namely Stickman hook <a href="https://play.google.com/store/apps/details?id=com.mindy.grap1&amp;hl=en_US&amp;gl=US">(android)</a>  <a href="https://apps.apple.com/us/app/stickman-hook/id1435807944">(apple)</a> <a href="https://www.kizi.cm/stickman-hook/">(Play online)</a>. As there where many copies of it on the internet I decided to create my own.</p>
+<p>In my version the graphics are somewhat not as good and the rope is somewhat stiff. My game is a randomly generated inifinite level and the goal is to get as far as posible (despite there not being a proper score counter or anything). To grab onto the closest hook you have to click with your mouse or tap and hold the screen, that is it.</p>
+<p>This is just a lil project, so control your spectations 🙂</p>
+<p><a href="https://dirigity.github.io/htmlProyects/hanger%20game/">link to the project I'm talking about</a></p>
+
         </marginer>
 
 

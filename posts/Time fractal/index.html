@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/c462d93d69.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/Galery.css">
     <meta charset="utf-8">
-    <title>{{ PostTitle }}</title>
+    <title>Time Fractal</title>
 </head>
 
 <body>
@@ -21,24 +21,26 @@
 
     <div class="card">
         <marginer>
-            <h1 style="display: inline-block;">{{ PostTitle }}</h1>
+            <h1 style="display: inline-block;">Time Fractal</h1>
             <tags>
                 Tags:
-                {% for tag in tags %}
-                <tag>{{tag}}</tag>
-                {% endfor %}
+                
+                <tag>web dev</tag>
+                
+                <tag>11ty</tag>
+                
             </tags>
         </marginer>
 
         <div id="galery"></div>
         <script>
             function createGal() {
-                let Images = {{ Images }}
+                let Images = ["/images/TimeFractal1.jpg","/images/TimeFractal2.jpg","/images/TimeFractal3.jpg","/images/TimeFractal4.jpg","/images/TimeFractal6.jpg","/images/TimeFractal7.jpg"]
             for (let i = -1; i < Images.length; i++) {
                 console.log("appending photo n " + i)
                 let current = "";
                 if (i != -1) current = Images[i];
-                else current = "{{ThumbNailUrl}}";
+                else current = "/images/TimeFractal.jpg";
                 let gal = document.getElementById("galery");
 
                 let controls = ``;
@@ -72,8 +74,13 @@
             createGal();
         </script>
         <marginer>
-            <h2>{{ PostDescription }}</h2>
-            {{ content }}
+            <h2>The eye of agamotto</h2>
+            <p>This project was inspired by <a href="https://www.youtube.com/channel/UC0e3QhIYukixgh5VVpKHH9Q">code bullet</a> or <a href="https://www.youtube.com/channel/UC9z7EZAbkphEMg0SP7rw44A">carykh</a> or a similar youtuber I can't for the shake of me remeber. Any way the Idea is not mine, I just implemented it on HTML and JS.</p>
+<p>Have ever wandered how would it look if you drew an analogic clock (with 2 haddles) and on the tip of each handle drew the same clock again, and again, and again, forever. It is a pretty specific think to wonder, but it is not imposible. For the large mayority of you that have been waitng for this your hole life here you go.</p>
+<p>Now in a more serius note, this is an aparently simple concept, and in the beguinign it is king of dull, but as time passes new paters emerge. I recomend to open the tab in your browser and leave it there for a while. Each time you want to change the mind set for a second just go to the tab an look at it evolve for some seconds.</p>
+<p><a href="https://dirigity.github.io/htmlProyects/TimeFractal/">link to the project I'm talking about</a></p>
+<p>I also made a blender version of the same idea using procedural nodes and eevee, but due to the system's limitations it does not suport more than a few layers of recusion. And I may or may not have lost the file on my endless pile of unnamed .blend files. 😅</p>
+
         </marginer>
 
 

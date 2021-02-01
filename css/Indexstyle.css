@@ -200,14 +200,5 @@ body {
   .blog-card.alt .details {
     padding-left: 25px;
   }
-  .peek {
-     background: -webkit-linear-gradient(#000, #fff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 
-    height: 100px;
-    width: 100%;
-    overflow: hidden;
-    float: left;
-  }
 }

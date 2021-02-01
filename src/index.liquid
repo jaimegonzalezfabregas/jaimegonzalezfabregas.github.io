@@ -5,7 +5,7 @@ pageTitle: dirigity.github.io/
 pageSubTitle: The main page of my blog
 ---
 
-{% for post in collections.all %}
+{% for post in collections.all reversed %}
 <div class="blog-card" onclick="window.location='{{ post.url }}';">
     <div class="meta">
         <div class="photo" style="background-image: url({{post.data.ThumbNailUrl}})"></div>
@@ -25,7 +25,14 @@ pageSubTitle: The main page of my blog
         <h1>{{ post.data.PostTitle }}</h1>
         <h2>{{ post.data.PostDescription }}</h2>
 
-        <div class="peek" > {{ post.templateContent }} </div>
+        <div class="peek" style="  background: -webkit-linear-gradient(#000, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+  float: left;"> {{ post.templateContent }} </div>
     </div>
 </div>
 {% endfor %}

@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/c462d93d69.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/Galery.css">
     <meta charset="utf-8">
-    <title>{{ PostTitle }}</title>
+    <title>Planets</title>
 </head>
 
 <body>
@@ -21,24 +21,24 @@
 
     <div class="card">
         <marginer>
-            <h1 style="display: inline-block;">{{ PostTitle }}</h1>
+            <h1 style="display: inline-block;">Planets</h1>
             <tags>
                 Tags:
-                {% for tag in tags %}
-                <tag>{{tag}}</tag>
-                {% endfor %}
+                
+                <tag>web dev</tag>
+                
             </tags>
         </marginer>
 
         <div id="galery"></div>
         <script>
             function createGal() {
-                let Images = {{ Images }}
+                let Images = ["/images/GravityPlanets2.jpg"]
             for (let i = -1; i < Images.length; i++) {
                 console.log("appending photo n " + i)
                 let current = "";
                 if (i != -1) current = Images[i];
-                else current = "{{ThumbNailUrl}}";
+                else current = "/images/GravityPlanets.jpg";
                 let gal = document.getElementById("galery");
 
                 let controls = ``;
@@ -72,8 +72,18 @@
             createGal();
         </script>
         <marginer>
-            <h2>{{ PostDescription }}</h2>
-            {{ content }}
+            <h2>A newtonian phisics simulator</h2>
+            <p>Newton was a pretty mean guy, but had some good ideas, for example gravity. This program applies the simple equations that Newton came out with to a bunch of white circles in the screen, there is not much more to it actualy.</p>
+<p>Interface</p>
+<ul>
+<li>click to create new plantet</li>
+<li>click and drag to create a already moving planet</li>
+<li>click on a planet to make it fixed</li>
+<li>mouse wheel to enlarge or shirink the planets</li>
+</ul>
+<p>Actualy it is very hard to get planets to orbit themselves, they tend to crakc on eachother, wich is suboptimal to say the least.</p>
+<p><a href="https://dirigity.github.io/htmlProyects/Planetas/">link to the project I'm talking about</a></p>
+
         </marginer>
 
 

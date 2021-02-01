@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/c462d93d69.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/Galery.css">
     <meta charset="utf-8">
-    <title>{{ PostTitle }}</title>
+    <title>Sudoku</title>
 </head>
 
 <body>
@@ -21,24 +21,26 @@
 
     <div class="card">
         <marginer>
-            <h1 style="display: inline-block;">{{ PostTitle }}</h1>
+            <h1 style="display: inline-block;">Sudoku</h1>
             <tags>
                 Tags:
-                {% for tag in tags %}
-                <tag>{{tag}}</tag>
-                {% endfor %}
+                
+                <tag>web dev</tag>
+                
+                <tag>11ty</tag>
+                
             </tags>
         </marginer>
 
         <div id="galery"></div>
         <script>
             function createGal() {
-                let Images = {{ Images }}
+                let Images = []
             for (let i = -1; i < Images.length; i++) {
                 console.log("appending photo n " + i)
                 let current = "";
                 if (i != -1) current = Images[i];
-                else current = "{{ThumbNailUrl}}";
+                else current = "/images/Shudoku.jpg";
                 let gal = document.getElementById("galery");
 
                 let controls = ``;
@@ -72,8 +74,18 @@
             createGal();
         </script>
         <marginer>
-            <h2>{{ PostDescription }}</h2>
-            {{ content }}
+            <h2>Just a sudoku solver</h2>
+            <p>So I made a thing that solves sudokus, not much to coment. The AI is not more inteligent than me, it does exacli what I would do but faster, therefore there are a lot of sudoku games that it will not be able to finish</p>
+<p>The other option would have been to implement backtraking, but I've done that a million times and I wanted to take a different aproach. Also by my &quot;humanish&quot; aproach you can see how the AI fills the sudoku as a human would, wich in my opinion is pretty cute.</p>
+<p>To use it bear in mind:</p>
+<ul>
+<li>W-S or 1-9 while hovering a cell will change its value.</li>
+<li>Q will try to solve the puzzle and stop when it has no more information.</li>
+<li>if you open the dev console SPACE displays some debug info</li>
+</ul>
+<p><em>As a sudoku solver my AI is not the best one, so dont be very confident with difficult sudokus</em></p>
+<p><a href="https://dirigity.github.io/htmlProyects/Sudoku/">link to the project I'm talking about</a></p>
+
         </marginer>
 
 

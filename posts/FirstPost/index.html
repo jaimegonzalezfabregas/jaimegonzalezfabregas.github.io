@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/c462d93d69.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/Galery.css">
     <meta charset="utf-8">
-    <title>{{ PostTitle }}</title>
+    <title>My first blog post</title>
 </head>
 
 <body>
@@ -21,24 +21,26 @@
 
     <div class="card">
         <marginer>
-            <h1 style="display: inline-block;">{{ PostTitle }}</h1>
+            <h1 style="display: inline-block;">My first blog post</h1>
             <tags>
                 Tags:
-                {% for tag in tags %}
-                <tag>{{tag}}</tag>
-                {% endfor %}
+                
+                <tag>web dev</tag>
+                
+                <tag>11ty</tag>
+                
             </tags>
         </marginer>
 
         <div id="galery"></div>
         <script>
             function createGal() {
-                let Images = {{ Images }}
+                let Images = []
             for (let i = -1; i < Images.length; i++) {
                 console.log("appending photo n " + i)
                 let current = "";
                 if (i != -1) current = Images[i];
-                else current = "{{ThumbNailUrl}}";
+                else current = "/images/EleventyLogo.png";
                 let gal = document.getElementById("galery");
 
                 let controls = ``;
@@ -72,8 +74,17 @@
             createGal();
         </script>
         <marginer>
-            <h2>{{ PostDescription }}</h2>
-            {{ content }}
+            <h2>This is my first post in my blog</h2>
+            <p>I've finaly decided to create my very own blog. I plan to post the little thinks I do from now on, but I`ll probably also update it with the thigs I've done in the past.</p>
+<p>This blog is &quot;powered&quot; by eleventy (11th), which is a template engine designed for static webpages. I've just started using it, so i'm not an expert yet. So far I've had to solve some interesting problems. I'll name them here and coment on my solution so that new people can get inspired for their own projects:</p>
+<p>The photo galery on your screen is kind of a big achievement. 11th comes with its own template language (wich is lauched on build time), but i was not able to find enought documentation to get a simple for loop going. This is why I had to resort to client side javascript to dinamicaly build the galery in the browser from the data that I'm able to extract from 11th.</p>
+<p>11ty comes out of the box with a watchdog type server that will detect changes on the source files and will rebuild your files. The problem with it is that it will only update when some specific files were changed (namely .html, .md, .liquid). Specificaly .css were left out. It was a real pain to have to go to other file, save it, and then go to see how the css had changed the web page. The build times are very very fast, so changing of file was 50% of the proces. To fix this I now use some code really similar to the following:</p>
+<pre><code>find . -path ./src/node_modules -prune -o -print | entr sh 'npx eleventy';
+</code></pre>
+<p>I'm not gonna expain what it does, but it is just a line of code, I trust you can handle it. 😉</p>
+<p>I also needed to use a server to host localy my page because i'm working inside wsl, but that is maybe to specific and will not apply to your case.</p>
+<p>As a conclusion I do recomend eleventy. I've read about other static page generators (jekill, hugo, orgmode and such...) but as far as I know eleventy is better than all of them in build speed (maybe not better than hugo, but I haven't done any testing) , wich is an incredible adventage when messing around with css of third party code you may or may not understand.</p>
+
         </marginer>
 
 
