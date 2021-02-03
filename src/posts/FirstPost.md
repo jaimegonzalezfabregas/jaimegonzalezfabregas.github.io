@@ -7,9 +7,9 @@ PostDescription : This is my first post in my blog
 Author : Jaime González Fábregas
 ---
 
-I've finaly decided to create my very own blog. I plan to post the little thinks I do from now on, but I`ll probably also update it with the thigs I've done in the past. 
+I've finaly decided to create my very own blog. I plan to post the little thinks I do from now on, but I'll probably also update it with the thigs I've done in the past. 
 
-This blog is "powered" by eleventy (11th), which is a template engine designed for static webpages. I've just started using it, so i'm not an expert yet. So far I've had to solve some interesting problems. I'll name them here and coment on my solution so that new people can get inspired for their own projects:
+This blog is "powered" by [eleventy (11th)](https://www.11ty.dev/), which is a template engine designed for static webpages. I've just started using it, so i'm not an expert yet. So far I've had to solve some interesting problems. I'll name them here and coment on my solution so that new people can get inspired for their own projects:
 
 The photo galery on your screen is kind of a big achievement. 11th comes with its own template language (wich is lauched on build time), but i was not able to find enought documentation to get a simple for loop going. This is why I had to resort to client side javascript to dinamicaly build the galery in the browser from the data that I'm able to extract from 11th.
 
@@ -22,4 +22,4 @@ I'm not gonna expain what it does, but it is just a line of code, I trust you ca
 
 I also needed to use a server to host localy my page because i'm working inside wsl, but that is maybe to specific and will not apply to your case.
 
-As a conclusion I do recomend eleventy. I've read about other static page generators (jekill, hugo, orgmode and such...) but as far as I know eleventy is better than all of them in build speed (maybe not better than hugo, but I haven't done any testing) , wich is an incredible adventage when messing around with css of third party code you may or may not understand. 
+As a conclusion I do recomend eleventy. I've read about other static page generators (jekill, hugo, orgmode and such...) but as far as I know eleventy is better than all of them in build speed (maybe not better than hugo, but I haven't done any testing), wich is an incredible advantage when messing around with css of third party code you may or may not understand. 

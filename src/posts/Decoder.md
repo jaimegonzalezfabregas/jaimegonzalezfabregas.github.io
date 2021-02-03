@@ -38,11 +38,11 @@ Im sure you've hear about [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_c
 | y | b | m |
 | z | c | b |
 
-(btw, the resulting encription is very week for modern standars)
+(btw, the resulting encryption is very week for modern standars)
 
-To try to crack this types of encription it is used a fequency analisis, wich is what my algorithm does, so if you want you can go to an online encriptor, get a encripted book and put my sistem to the test. 
+To try to crack these types of encryption, it is used a fequency analysis, wich is what my algorithm does, so if you want you can go to an online encryptor, get a encrypted book and put my system to the test. 
 
 (It will probably not work without big chunks of text)
 
-[link to the project I'm talking about](https://dirigity.github.io/htmlProyects/decoder/)
+[Link to the project I'm talking about](https://dirigity.github.io/htmlProyects/decoder/)
 
