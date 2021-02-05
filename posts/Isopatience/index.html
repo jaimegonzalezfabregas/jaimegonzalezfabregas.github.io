@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/c462d93d69.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/Galery.css">
     <meta charset="utf-8">
-    <title>Stickman hook</title>
+    <title>Iso-patience</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
 
     <div class="card">
         <marginer>
-            <h1 style="display: inline-block;">Stickman hook</h1>
+            <h1 style="display: inline-block;">Iso-patience</h1>
             <tags>
                 Tags:
                 
@@ -38,7 +38,7 @@
                 console.log("appending photo n " + i)
                 let current = "";
                 if (i != -1) current = Images[i];
-                else current = "https://i.poki.com/q80,w600,h600,g29145,-7-stickman-hook.jpg";
+                else current = "/images/iso_patience.jpg";
                 let gal = document.getElementById("galery");
 
                 let controls = ``;
@@ -72,11 +72,20 @@
             createGal();
         </script>
         <marginer>
-            <h2>A dumb lil' game</h2>
-            <p>There was this time a few years ago when a stupid simple game became very popular, namely Stickman hook <a href="https://play.google.com/store/apps/details?id=com.mindy.grap1&amp;hl=en_US&amp;gl=US">(android)</a>  <a href="https://apps.apple.com/us/app/stickman-hook/id1435807944">(apple)</a> <a href="https://www.kizi.cm/stickman-hook/">(Play online)</a>. As there where many copies of it on the Internet I decided to create my own.</p>
-<p>The focus is on physics, so in my version the graphics are somewhat not as good and the rope is somewhat stiff. My game is a randomly generated inifinite level and the goal is to get as far as posible (despite there not being a proper score counter or anything). To grab onto the closest hook you have to click with your mouse or tap and hold the screen, that is it.</p>
-<p>This is just a lil project, so control your spectations.🙂</p>
-<p><a href="https://dirigity.github.io/htmlProyects/hanger%20game/">Link to the project I'm talking about</a></p>
+            <h2>Undertale's minigame recreation</h2>
+            <p>I belive to have discovered the best combination of lenguages and techniques. Right now I belive that I wont be able to find any better configuration to create apps. Let me explain myself. It recently came into my knolidege a new &quot;concept/workflow/IHonestlyHaveNoIdeaWhatToCallIt&quot; to boost web client performance, namely <strong>web assembly</strong>. This made me drop my Angular course to learn this new tecnology. It delivers what it promises. You can achieve incredible performance, close to native, just with this upgrade. But this is not all. You can combine WASM with the standar JS multithreading with web workers to get even more performance.</p>
+<p>On other post I talked about my project &quot;Ice-o-matic&quot;, where the main restriction is performance. This would completely fix that problem, allowing me to be more ambitious in the future.</p>
+<p>In fact, as a prove of concept I made the following game:</p>
+<p>The idea for the game is from <a href="https://undertale.com/">UnderTale</a>, it is explained on <a href="https://youtu.be/v7nlXgDjCY8?t=341">this</a> gameplay segment. I would say it is one of the funnyest moments on videogame history, but without the back story of Papairus(the tall skeleton) it may not be as funny. You can judge it for yourself.</p>
+<p>In my game instead of making a random board I create as many as I can and pick the best, wich makes it to resource heavy to run on JS. Also the next boards are being calculated on the background while you play by a web worker, that way you never have to wait. I also created a options screen to modify the dimensions of the board.</p>
+<p>I didn't include all the colored tiles, only the ones I think make sense on a game on its own.</p>
+<p>grey = nothing
+blue = water
+yellow = electric
+purple = slipery
+orange = orange flavour</p>
+<p>Use the arrow keys to move. The key S will show the solution and if pressed again it will transport you to the next level (the solution sometimes desyncs, so bear that in mind).</p>
+<p><a href="https://dirigity.github.io/IsoPatience/">Link to the project I'm talking about</a></p>
 
         </marginer>
 

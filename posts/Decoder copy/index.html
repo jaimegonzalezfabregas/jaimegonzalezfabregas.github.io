@@ -38,7 +38,7 @@
                 console.log("appending photo n " + i)
                 let current = "";
                 if (i != -1) current = Images[i];
-                else current = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fi2.mirror.co.uk%2Fincoming%2Farticle7377328.ece%2FALTERNATES%2Fs615b%2FEnigma-machine.jpg&f=1&nofb=1";
+                else current = "";
                 let gal = document.getElementById("galery");
 
                 let controls = ``;
@@ -73,152 +73,19 @@
         </script>
         <marginer>
             <h2>Enigma's lil brother</h2>
-            <p>Im sure you've hear about <a href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar cipher</a>, but you can go one step further. Instead of relating each letter with other one with a given offset you can scramble the abecedary to get a harder encription.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Abecesary</th>
-<th style="text-align:center">Caesar 3</th>
-<th style="text-align:center">Scrambled</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">a</td>
-<td style="text-align:center">d</td>
-<td style="text-align:center">q</td>
-</tr>
-<tr>
-<td style="text-align:center">b</td>
-<td style="text-align:center">e</td>
-<td style="text-align:center">w</td>
-</tr>
-<tr>
-<td style="text-align:center">c</td>
-<td style="text-align:center">f</td>
-<td style="text-align:center">e</td>
-</tr>
-<tr>
-<td style="text-align:center">d</td>
-<td style="text-align:center">g</td>
-<td style="text-align:center">r</td>
-</tr>
-<tr>
-<td style="text-align:center">e</td>
-<td style="text-align:center">h</td>
-<td style="text-align:center">t</td>
-</tr>
-<tr>
-<td style="text-align:center">f</td>
-<td style="text-align:center">i</td>
-<td style="text-align:center">y</td>
-</tr>
-<tr>
-<td style="text-align:center">g</td>
-<td style="text-align:center">j</td>
-<td style="text-align:center">u</td>
-</tr>
-<tr>
-<td style="text-align:center">h</td>
-<td style="text-align:center">k</td>
-<td style="text-align:center">i</td>
-</tr>
-<tr>
-<td style="text-align:center">i</td>
-<td style="text-align:center">l</td>
-<td style="text-align:center">o</td>
-</tr>
-<tr>
-<td style="text-align:center">j</td>
-<td style="text-align:center">m</td>
-<td style="text-align:center">p</td>
-</tr>
-<tr>
-<td style="text-align:center">k</td>
-<td style="text-align:center">n</td>
-<td style="text-align:center">a</td>
-</tr>
-<tr>
-<td style="text-align:center">l</td>
-<td style="text-align:center">o</td>
-<td style="text-align:center">s</td>
-</tr>
-<tr>
-<td style="text-align:center">m</td>
-<td style="text-align:center">p</td>
-<td style="text-align:center">d</td>
-</tr>
-<tr>
-<td style="text-align:center">n</td>
-<td style="text-align:center">q</td>
-<td style="text-align:center">f</td>
-</tr>
-<tr>
-<td style="text-align:center">o</td>
-<td style="text-align:center">r</td>
-<td style="text-align:center">g</td>
-</tr>
-<tr>
-<td style="text-align:center">p</td>
-<td style="text-align:center">s</td>
-<td style="text-align:center">h</td>
-</tr>
-<tr>
-<td style="text-align:center">q</td>
-<td style="text-align:center">t</td>
-<td style="text-align:center">j</td>
-</tr>
-<tr>
-<td style="text-align:center">r</td>
-<td style="text-align:center">u</td>
-<td style="text-align:center">k</td>
-</tr>
-<tr>
-<td style="text-align:center">s</td>
-<td style="text-align:center">v</td>
-<td style="text-align:center">l</td>
-</tr>
-<tr>
-<td style="text-align:center">t</td>
-<td style="text-align:center">w</td>
-<td style="text-align:center">z</td>
-</tr>
-<tr>
-<td style="text-align:center">u</td>
-<td style="text-align:center">x</td>
-<td style="text-align:center">x</td>
-</tr>
-<tr>
-<td style="text-align:center">v</td>
-<td style="text-align:center">y</td>
-<td style="text-align:center">c</td>
-</tr>
-<tr>
-<td style="text-align:center">w</td>
-<td style="text-align:center">z</td>
-<td style="text-align:center">v</td>
-</tr>
-<tr>
-<td style="text-align:center">x</td>
-<td style="text-align:center">a</td>
-<td style="text-align:center">n</td>
-</tr>
-<tr>
-<td style="text-align:center">y</td>
-<td style="text-align:center">b</td>
-<td style="text-align:center">m</td>
-</tr>
-<tr>
-<td style="text-align:center">z</td>
-<td style="text-align:center">c</td>
-<td style="text-align:center">b</td>
-</tr>
-</tbody>
-</table>
-<p>(btw, the resulting encription is very week for modern standars)</p>
-<p>To try to crack this types of encription it is used a fequency analisis, wich is what my algorithm does, so if you want you can go to an online encriptor, get a encripted book and put my sistem to the test.</p>
-<p>(It will probably not work without big chunks of text)</p>
-<p><a href="https://dirigity.github.io/htmlProyects/decoder/">link to the project I'm talking about</a></p>
+            <p>I belive to have discovered the best combination of lenguages and techniques. Right now I belive that I wont be able to find any better configuration to create apps. Let me explain myself. It recently came into my knolidege a new &quot;concept/workflow/IHonestlyHaveNoIdeaWhatToCallIt&quot; to boost web client performance, namely <strong>web assembly</strong>. This made me drop my Angular course to learn this new tecnology. It delivers what it promises. You can achieve incredible performance, close to native, just with this upgrade. But this is not all. You can combine WASM with the standar JS multithreading with web workers to get even more performance.</p>
+<p>On other post I talked about my project &quot;Ice-o-matic&quot;, where the main restriction is performance. This would completely fix that problem, allowing me to be more ambitious in the future.</p>
+<p>In fact, as a prove of concept I made the following game:</p>
+<p>The idea for the game is from <a href="https://undertale.com/">UnderTale</a>, it is explained on <a href="https://youtu.be/v7nlXgDjCY8?t=341">this</a> gameplay segment. I would say it is one of the funnyest moments on videogame history, but without the back story of Papairus(the tall skeleton) it may not be as funny. You can judge it for yourself.</p>
+<p>In my game instead of making a random board I create as many as I can and pick the best, wich makes it to resource heavy to run on JS. Also the next boards are being calculated on the background while you play by a web worker, that way you never have to wait.</p>
+<p>I didn't include all the colored tiles, only the ones I think make sense on a game on its own.</p>
+<p>grey = nothing
+blue = water
+yellow = electric
+purple = slipery
+orange = orange flavour</p>
+<p>Use the arrow keys to move.</p>
+<p><a href="https://dirigity.github.io/IsoPatience/">Link to the project I'm talking about</a></p>
 
         </marginer>
 

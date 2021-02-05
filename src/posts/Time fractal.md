@@ -17,4 +17,4 @@ Now in a more serius note, this is an aparently simple concept, and in the begin
 
 I also made a blender version of the same idea using procedural nodes and eevee, but due to the system's limitations it does not suport more than a few layers of recursion. And I may or may not have lost the file on my endless pile of unnamed .blend files. 😅
 
-
+PD: I remembered, the inspiration came from [code parade](http://codeparade.net/)
