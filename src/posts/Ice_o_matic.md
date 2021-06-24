@@ -3,7 +3,7 @@ tags: ["web dev"]
 ThumbNailUrl: "/images/Ice.jpg"
 Images: ["/images/Ice1.jpg","/images/Ice2.jpg","/images/Ice3.jpg"]
 PostTitle: Ice-O-matic
-PostDescription : Complex level randomitation
+PostDescription : Complex level randomization
 Author : Jaime González Fábregas
 ---
 

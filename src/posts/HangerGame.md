@@ -1,6 +1,6 @@
 ---
 tags: ["web dev"]
-ThumbNailUrl: "https://i.poki.com/q80,w600,h600,g29145,-7-stickman-hook.jpg"
+ThumbNailUrl: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.gamezebo.com%2Fwp-content%2Fuploads%2F2018%2F11%2FStickman-Hook.jpg&f=1&nofb=1"
 Images: []
 PostTitle: Stickman hook
 PostDescription : A dumb lil' game

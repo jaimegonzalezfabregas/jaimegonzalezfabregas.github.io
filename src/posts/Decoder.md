@@ -9,7 +9,7 @@ Author : Jaime González Fábregas
 
 Im sure you've hear about [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher), but you can go one step further. Instead of relating each letter with other one with a given offset you can scramble the abecedary to get a harder encription.
 
-| Abecesary       | Caesar 3    | Scrambled    |
+| Abecedary       | Caesar 3    | Scrambled    |
 | :------------: | :----------: | :----------: |
 | a | d | q |
 | b | e | w |
