@@ -30,7 +30,7 @@
             </tags>
         </marginer>
 
-        <div id="galery" style="height: 15cm; justify-content: center; align-items: center; display: flex; flex-wrap: wrap; flex-direction: column;"></div>
+        <div id="galery" style=" height: 15cm; justify-content: center; align-items: center; display: flex; flex-wrap: wrap; flex-direction: column;"></div>
         <script>
             function createGal() {
                 let Images = ["/images/GravityPlanets2.jpg"]
@@ -52,8 +52,9 @@
                                             <img src="`+ current + `" alt="` + current + `" style="height:10cm; width:auto">
                                         </a>
                                             <div id="perfundo-img`+ i + `" class="perfundo__overlay fadeIn js-perfundo-overlay">
+                                                <img id="ThisIsAnIdThatIsVeryUnlikelyToSeeElsewhere` + i + `" style="width: 100%; height: auto;" src="`+ current + `" alt="` + current + `">
                                                 <figure class="perfundo__content perfundo__figure">
-                                                <img style="width: auto; height: auto;" src="`+ current + `" alt="` + current + `">
+
                                                 </figure>
                                                 
 
@@ -64,6 +65,15 @@
                                     `;
 
                     gal.innerHTML = gal.innerHTML + HTMLCode;
+
+                    let img = document.getElementById("ThisIsAnIdThatIsVeryUnlikelyToSeeElsewhere" + i)
+                    if(img.height / img.width > window.height/window.width){
+                        img.style.width = "90%";
+                        img.style.height = "auto"
+                    } else {
+                        img.style.height = "90%";
+                        img.style.width = "auto";
+                    }
                                     // <div class="perfundo__image" style="width: 800px; padding-top: 66.25%; background-image: url(`+ current + `);"></div>
 
                 }
