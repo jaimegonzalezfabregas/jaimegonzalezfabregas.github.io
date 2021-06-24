@@ -32,44 +32,43 @@
             </tags>
         </marginer>
 
-        <div id="galery"></div>
+        <div id="galery" style="height: 15cm; justify-content: center; align-items: center; display: flex; flex-wrap: wrap; flex-direction: column;"></div>
         <script>
             function createGal() {
                 let Images = ["/images/TimeFractal1.jpg","/images/TimeFractal2.jpg","/images/TimeFractal3.jpg","/images/TimeFractal4.jpg","/images/TimeFractal6.jpg","/images/TimeFractal7.jpg"]
-            for (let i = -1; i < Images.length; i++) {
-                console.log("appending photo n " + i)
-                let current = "";
-                if (i != -1) current = Images[i];
-                else current = "/images/TimeFractal.jpg";
-                let gal = document.getElementById("galery");
+                for (let i = -1; i < Images.length; i++) {
+                    console.log("appending photo n " + i)
+                    let current = "";
+                    if (i != -1) current = Images[i];
+                    else current = "/images/TimeFractal.jpg";
+                    let gal = document.getElementById("galery");
 
-                let controls = ``;
+                    let controls = `<a href="#perfundo-untarget" class="gal_close perfundo__control js-perfundo-close enlarge"><i class="far fa-times-circle"></i></a>`;
+                    if (i != Images.length - 1) controls += `<a class="gal_next perfundo__control js-perfundo-next enlarge" href="#perfundo-img` + (i + 1) + `"><i class="fas fa-chevron-right"></i></a>`;
+                    if (i != -1) controls += `<a class="gal_prev perfundo__control js-perfundo-prev enlarge" href="#perfundo-img` + (i - 1) + `"><i class="fas fa-chevron-left"></i></a>`;
+                    
+                    let HTMLCode = `
+                                    
+                                    <div style="display: inline-block; text-align: center; height: 10cm">
+                                        <a class="perfundo__link js-perfundo-link" href="#perfundo-img`+ i + `"  style="margin: 10px; display: inline-block">
+                                            <img src="`+ current + `" alt="` + current + `" style="height:10cm; width:auto">
+                                        </a>
+                                            <div id="perfundo-img`+ i + `" class="perfundo__overlay fadeIn js-perfundo-overlay">
+                                                <figure class="perfundo__content perfundo__figure">
+                                                <img style="width: auto; height: auto;" src="`+ current + `" alt="` + current + `">
+                                                </figure>
+                                                
 
-                if (i != Images.length - 1) controls += `<a class="gal_next perfundo__control js-perfundo-next enlarge" href="#perfundo-img` + (i + 1) + `"><i class="fas fa-chevron-right"></i></a>`;
+                                                `+ controls + `
 
-                if (i != -1) controls += `<a class="gal_prev perfundo__control js-perfundo-prev enlarge" href="#perfundo-img` + (i - 1) + `"><i class="fas fa-chevron-left"></i></a>`;
-                let HTMLCode = `
-                                
-                                <div style="display: inline-block; text-align: center; width:25%">
-                                    <a class="perfundo__link js-perfundo-link" href="#perfundo-img`+ i + `"  style="display: block; margin: 10px">
-                                        <img src="`+ current + `" alt="` + current + `" style="width:100%">
-                                    </a>
-                                    <div id="perfundo-img`+ i + `" class="perfundo__overlay fadeIn js-perfundo-overlay">
-                                        <figure class="perfundo__content perfundo__figure">
-                                        <img src="`+ current + `" alt="` + current + `">
-                                        <div class="perfundo__image" style="width: 800px; padding-top: 66.25%; background-image: url(`+ current + `);"></div>
-                                        </figure>
-                                        <a href="#perfundo-untarget" class="gal_close perfundo__control js-perfundo-close enlarge"><i class="far fa-times-circle"></i></a>
-
-                                        `+ controls + `
-
+                                            </div> 
                                     </div>
-                                </div>
-                                `;
+                                    `;
 
-                gal.innerHTML = gal.innerHTML + HTMLCode;
+                    gal.innerHTML = gal.innerHTML + HTMLCode;
+                                    // <div class="perfundo__image" style="width: 800px; padding-top: 66.25%; background-image: url(`+ current + `);"></div>
 
-            }
+                }
             }
             createGal();
         </script>

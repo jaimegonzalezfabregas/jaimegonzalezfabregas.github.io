@@ -602,7 +602,7 @@ orange = orange flavour</p>
 <li><strong>4a</strong>: Use the arrow keys to move in</li>
 <li><strong>2a</strong>: You can turn left and right</li>
 </ul>
-<p>(SNAKE!)[https://dirigity.github.io/htmlProyects/snake/]</p>
+<p><a href="https://dirigity.github.io/htmlProyects/snake/">SNAKE!</a></p>
  </div>
     </div>
 </div>
@@ -636,7 +636,7 @@ orange = orange flavour</p>
   width: 100%;
   overflow: hidden;
   float: left;"> <p>I've finaly decided to create my very own blog. I plan to post the little thinks I do from now on, but I'll probably also update it with the thigs I've done in the past.</p>
-<p>This blog is &quot;powered&quot; by <a href="https://www.11ty.dev/">eleventy (11th)</a>, which is a template engine designed for static webpages. I've just started using it, so i'm not an expert yet. So far I've had to solve some interesting problems. I'll name them here and coment on my solution so that new people can get inspired for their own projects:</p>
+<p>This blog is &quot;powered&quot; by <a href="https://www.11ty.dev/">eleventy (11ty)</a>, which is a template engine designed for static webpages. I've just started using it, so i'm not an expert yet. So far I've had to solve some interesting problems. I'll name them here and coment on my solution so that new people can get inspired for their own projects:</p>
 <p>The photo galery on your screen is kind of a big achievement. 11th comes with its own template language (wich is lauched on build time), but i was not able to find enought documentation to get a simple for loop going. This is why I had to resort to client side javascript to dinamicaly build the galery in the browser from the data that I'm able to extract from 11th.</p>
 <p>11ty comes out of the box with a watchdog type server that will detect changes on the source files and will rebuild your files. The problem with it is that it will only update when some specific files were changed (namely .html, .md, .liquid). Specificaly .css were left out. It was a real pain to have to go to other file, save it, and then go to see how the css had changed the web page. The build times are very very fast, so changing of file was 50% of the proces. To fix this I now use some code really similar to the following:</p>
 <pre><code>find . -path ./src/node_modules -prune -o -print | entr sh 'npx eleventy';
