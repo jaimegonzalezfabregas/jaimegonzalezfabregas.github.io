@@ -5,7 +5,7 @@ Images: ["/images/Ice1.jpg","/images/Ice2.jpg","/images/Ice3.jpg"]
 PostTitle: Ice-O-matic
 PostDescription : Complex level randomization
 Author : Jaime González Fábregas
-date: 2020-07-15
+date: 0000-01-18
 ---
 
 This is one of my most proudest achievements. The idea came to me when playing [The Legend of Zelda: The Minish Cap](https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_The_Minish_Cap), which is the most underrated game in the zelda series and my top 2 game of the GBA after [Wario land 3](https://es.wikipedia.org/wiki/Wario_Land_3), but that is beyond the point. When I was about to finish my playthrough of The Minish Cap I had the idea of creating puzzles like the ones in the game proceduraly. This proved itself to be quite a difficult task, so I lowered my goals to create sliding based puzzles. 

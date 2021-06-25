@@ -5,6 +5,7 @@ Images: []
 PostTitle: Word predictor
 PostDescription : Based on some random S. Holmes book found on P.Guttemberg
 Author : Jaime González Fábregas
+date: 0000-01-19
 ---
 
 There is this thing with mobile phone's keyboards wich is preaty neat. They will try to guess what word comes next. That is not only a concerning privacy flaw, but also good inspiration for a litle program. The premise is that you write in a text input and the program tries to guess what key you will press next. 

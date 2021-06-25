@@ -5,6 +5,7 @@ Images: []
 PostTitle: Stickman hook
 PostDescription : A dumb lil' game
 Author : Jaime González Fábregas
+date: 0000-01-15
 ---
 
 There was this time a few years ago when a stupid simple game became very popular, namely Stickman hook [(android)](https://play.google.com/store/apps/details?id=com.mindy.grap1&hl=en_US&gl=US)  [(apple)](https://apps.apple.com/us/app/stickman-hook/id1435807944) [(Play online)](https://www.kizi.cm/stickman-hook/). As there where many copies of it on the Internet I decided to create my own.

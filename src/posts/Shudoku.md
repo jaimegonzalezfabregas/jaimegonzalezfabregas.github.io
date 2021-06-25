@@ -5,6 +5,7 @@ Images: []
 PostTitle: Sudoku
 PostDescription : Just a sudoku solver
 Author : Jaime González Fábregas
+date: 0000-01-16
 ---
 
 So I made a thing that solves sudokus, not much to coment. The AI is not more inteligent than me, it does exactly what I would do but faster, therefore there are a lot of sudoku games that it will not be able to finish.

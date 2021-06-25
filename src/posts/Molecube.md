@@ -5,6 +5,7 @@ Images: []
 PostTitle: Molecube
 PostDescription : My first "3d" engine
 Author : Jaime González Fábregas
+date: 0000-01-12
 ---
 
 The molecube is a puzzle that could be mistaken for a rubik cube but in fact the goal of it it completly the oposite. The goal for this fiddle is to make every color apear only once per face. At first my plan was to create a program to wich you could input your configuration and it would resolve it for you, buy that plan was too ambitious. After I was done with the interface I gave up on the logic. Any way I belive that the interface was a full project on its own. 

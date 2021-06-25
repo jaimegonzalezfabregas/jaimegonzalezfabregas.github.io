@@ -5,6 +5,7 @@ Images: ["/images/Ondas1.jpg","/images/Ondas2.jpg","/images/Ondas3.jpg"]
 PostTitle: Waves
 PostDescription : A celular automata aproach to physic simulation
 Author : Jaime González Fábregas
+date: 0000-01-17
 ---
 
 This phenomena that I have simulated is a very complex one, therefore to wrap my head arround it I started with a lilte 1D project.

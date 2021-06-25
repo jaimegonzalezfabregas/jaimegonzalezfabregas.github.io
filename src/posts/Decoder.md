@@ -5,6 +5,7 @@ Images: []
 PostTitle: Decoder
 PostDescription : Enigma's lil brother
 Author : Jaime González Fábregas
+date: 0000-01-13
 ---
 
 Im sure you've hear about [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher), but you can go one step further. Instead of relating each letter with other one with a given offset you can scramble the abecedary to get a harder encription.

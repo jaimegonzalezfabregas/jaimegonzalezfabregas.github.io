@@ -5,6 +5,7 @@ Images: ["/images/GravityPlanets2.jpg"]
 PostTitle: Planets
 PostDescription : A newtonian phisics simulator
 Author : Jaime González Fábregas
+date: 0000-01-21
 ---
 
 Newton could be a [pretty mean guy](https://www.quora.com/What-was-Isaac-Newton-like-as-a-person?share=1), but had some good ideas, for example gravity. This program applies the simple equations that Newton came out with to a bunch of white circles in the screen, there is not much more to it actualy.

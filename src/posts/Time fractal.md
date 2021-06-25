@@ -5,6 +5,7 @@ Images: ["/images/TimeFractal1.jpg","/images/TimeFractal2.jpg","/images/TimeFrac
 PostTitle: Time Fractal
 PostDescription : The eye of agamotto
 Author : Jaime González Fábregas
+date: 0000-01-14
 ---
 
 This project was inspired by [code bullet](https://www.youtube.com/channel/UC0e3QhIYukixgh5VVpKHH9Q) or [carykh](https://www.youtube.com/channel/UC9z7EZAbkphEMg0SP7rw44A) or a similar youtuber I can't for the shake of me remeber. Any way the idea is not mine, I just implemented it on HTML and JS. 
