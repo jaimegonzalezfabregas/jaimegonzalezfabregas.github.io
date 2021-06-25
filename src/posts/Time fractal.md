@@ -1,5 +1,5 @@
 ---
-tags: ["web dev","11ty"]
+tags: ["web dev"]
 ThumbNailUrl: "/images/TimeFractal.jpg"
 Images: ["/images/TimeFractal1.jpg","/images/TimeFractal2.jpg","/images/TimeFractal3.jpg","/images/TimeFractal4.jpg","/images/TimeFractal6.jpg","/images/TimeFractal7.jpg"]
 PostTitle: Time Fractal

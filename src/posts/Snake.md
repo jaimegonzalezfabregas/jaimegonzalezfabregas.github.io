@@ -1,11 +1,11 @@
 ---
-tags: ["web dev", "phisics"]
+tags: ["web dev"]
 ThumbNailUrl: "/images/SNAKE!.jpg"
 Images: []
 PostTitle: SNAKE!
 PostDescription : Oldest web project I could find😄
 Author : Jaime González Fábregas
-date: 2019-01-11
+date: 0000-01-11
 ---
 
 Oficialy my first lil HTML-JS Project:

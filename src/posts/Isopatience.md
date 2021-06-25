@@ -5,6 +5,7 @@ Images: []
 PostTitle: Iso-patience
 PostDescription : Undertale's minigame recreation
 Author : Jaime González Fábregas
+date: 2021-01-01
 ---
 
 I belive to have discovered the best combination of lenguages and techniques. Right now I belive that I wont be able to find any better configuration to create apps. Let me explain myself. It recently came into my knolidege a new "concept/workflow/IHonestlyHaveNoIdeaWhatToCallIt" to boost web client performance, namely **web assembly**. This made me drop my Angular course to learn this new tecnology. It delivers what it promises. You can achieve incredible performance, close to native, just with this upgrade. But this is not all. You can combine WASM with the standar JS multithreading with web workers to get even more performance.

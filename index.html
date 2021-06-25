@@ -17,6 +17,255 @@
     </div>
     
 
+<div class="blog-card" onclick="window.location='/posts/Predictor/';">
+    <div class="meta">
+        <div class="photo" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/cd/Sherlock_Holmes_Portrait_Paget.jpg)"></div>
+        <ul class="details">
+            <li class="author"><a href="#">Jaime González Fábregas</a></li>
+            <li class="date">2021-06-25</li>
+            <li class="tags">
+                <ul>
+                    
+                    <li><a href="#">web dev</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="description">
+        <h1>Word predictor</h1>
+        <h2>Based on some random S. Holmes book found on P.Guttemberg</h2>
+
+        <div class="peek" style="  background: -webkit-linear-gradient(#000, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+  float: left;"> <p>There is this thing with mobile phone's keyboards wich is preaty neat. They will try to guess what word comes next. That is not only a concerning privacy flaw, but also good inspiration for a litle program. The premise is that you write in a text input and the program tries to guess what key you will press next.</p>
+<p>On load my program will read and analyze the whole book and create a probability map for every leter conbination (this will lag when the page loads, you have been warned). The book used was a random Serlock Holmes book form <a href="http://www.gutenberg.org/">project guttemberg</a>(wich btw is in English).</p>
+<p>This is a web version of a c++ program I made that works with prebaked regexes that goes much faster. That other program works with full words instead of individual leters using data from multiple books. The web version uses only one book and is based on leters, this means that there are many cases it doesn't know what to say.</p>
+<p>Just an explanation on what you will see: In my program you can see bellow the input the prediction. '#' means that it has no idea what you are talking about.Anything else is a prediction. My program also only looks for the last few leters (the ones underlined), so don't even think about coherency.</p>
+<p><strong>WARNING: EXPECT GIGONOURMUS LAG SPIKE ON LOAD</strong></p>
+<p><a href="https://dirigity.github.io/htmlProyects/Predictor%20de%20latras/">Link to the project I'm talking about</a></p>
+ </div>
+    </div>
+</div>
+
+<div class="blog-card" onclick="window.location='/posts/Waves V2/';">
+    <div class="meta">
+        <div class="photo" style="background-image: url(/images/OndasV2.jpg)"></div>
+        <ul class="details">
+            <li class="author"><a href="#">Jaime González Fábregas</a></li>
+            <li class="date">2021-06-25</li>
+            <li class="tags">
+                <ul>
+                    
+                    <li><a href="#">web dev</a></li>
+                    
+                    <li><a href="#">phisics</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="description">
+        <h1>Waves V2</h1>
+        <h2>Improved gas like simulation</h2>
+
+        <div class="peek" style="  background: -webkit-linear-gradient(#000, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+  float: left;"> <p>This is the continuation to my other fluid dinamics automata simulator. The other project was based on a grid structue, what caused problems with the shape of the waves, the best I managed to do was to make them octagonal. The new fluid engine instead of using just a grid it uses particles. The particles live in a grid, that way we can aproximate calculations by considering every particle in each cell to be the same particle. You'll see what I mean just in a second:</p>
+<p>Phenomena It can simulate:</p>
+<ul>
+<li>Viscosity (internal drag): Each simulation tick I calculate the overall speed of a certain cell, then I modify the speeds of the individual particles in that cell and the cells near it to match the overall tendency. That way particles &quot;stick&quot; to each other.</li>
+<li>External drag: This is the easiest phenomena to simulate, just take every velocity and bring it down slightly per simulation tick</li>
+<li>Preasure: To simulate small scale preasure I introduce brownian movement. At a big scale I calculate the preasure per cell, if it is bigger that what it should be I apply at outwards force to all the particles of this cell and its sourroundings, if it is lower I do the oposite.</li>
+</ul>
+<p>I am aware that this way of computing is far from reality, but this technics allows me to easily run on realtime while still getting a somewhat realistic resoult</p>
+<p>I also would like to note that the grid thing creates artefacts when left untoched for a long time. This is due to a miscalculation of presure, where i spect to there be a lower amount of particles at the borders. A photo of the artefacts is up in the galery and you can see them for your self if you click the link below.</p>
+<p><a href="https://dirigity.github.io/fluidSim/">Link to the project I'm talking about</a></p>
+ </div>
+    </div>
+</div>
+
+<div class="blog-card" onclick="window.location='/posts/Waves/';">
+    <div class="meta">
+        <div class="photo" style="background-image: url(/images/Ondas.jpg)"></div>
+        <ul class="details">
+            <li class="author"><a href="#">Jaime González Fábregas</a></li>
+            <li class="date">2021-06-24</li>
+            <li class="tags">
+                <ul>
+                    
+                    <li><a href="#">web dev</a></li>
+                    
+                    <li><a href="#">physics</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="description">
+        <h1>Waves</h1>
+        <h2>A celular automata aproach to physic simulation</h2>
+
+        <div class="peek" style="  background: -webkit-linear-gradient(#000, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+  float: left;"> <p>This phenomena that I have simulated is a very complex one, therefore to wrap my head arround it I started with a lilte 1D project.</p>
+<p>1D usage:</p>
+<ul>
+<li>click whereever to force the level on that x position to the height of your mouse.</li>
+<li>release click and watch</li>
+<li>you can click at any moment anywhere</li>
+</ul>
+<p><a href="https://dirigity.github.io/htmlProyects/ondas/1d.html">1D version</a></p>
+<p>Once I properly understood the simulation I developed a new 2D version</p>
+<p>2D usage:</p>
+<ul>
+<li>left click will create a dip that will evolve into a wave.</li>
+<li>right click will switch between shaded mode and depth mode:
+<ul>
+<li><strong>shaded</strong>: darker tiles mean that their are looking away from the light source.</li>
+<li><strong>depth mode</strong>: black = 0, green = valey, red = mountain.</li>
+</ul>
+</li>
+</ul>
+<p>You will be able to see that the 2d version doesnt have perfect circular waves, they have a octogonal shape to them. This is because the celular automata part. As my cells are squared you get octagons. I'm planing a fix for this in the future, but for the moment I'm happy with what I learned.</p>
+<p><a href="https://dirigity.github.io/htmlProyects/ondas/2d2d.html">2D version</a></p>
+ </div>
+    </div>
+</div>
+
+<div class="blog-card" onclick="window.location='/posts/Time fractal/';">
+    <div class="meta">
+        <div class="photo" style="background-image: url(/images/TimeFractal.jpg)"></div>
+        <ul class="details">
+            <li class="author"><a href="#">Jaime González Fábregas</a></li>
+            <li class="date">2021-06-24</li>
+            <li class="tags">
+                <ul>
+                    
+                    <li><a href="#">web dev</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="description">
+        <h1>Time Fractal</h1>
+        <h2>The eye of agamotto</h2>
+
+        <div class="peek" style="  background: -webkit-linear-gradient(#000, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+  float: left;"> <p>This project was inspired by <a href="https://www.youtube.com/channel/UC0e3QhIYukixgh5VVpKHH9Q">code bullet</a> or <a href="https://www.youtube.com/channel/UC9z7EZAbkphEMg0SP7rw44A">carykh</a> or a similar youtuber I can't for the shake of me remeber. Any way the idea is not mine, I just implemented it on HTML and JS.</p>
+<p>Have ever wonderded how would it look if you drew an analogic clock (with 2 haddles) and on the tip of each handle drew the same clock again, and again, and again, forever? It is a pretty specific think to wonder, but it is not imposible. For the large mayority of you that have been waiting for this your hole life here you go.</p>
+<p>Now in a more serius note, this is an aparently simple concept, and in the begining it is king of dull, but as time passes new paters emerge. I recomend to open the tab in your browser and leave it there for a while. Each time you want to change the mind set for a second just go to the tab an look at it evolve for some seconds.</p>
+<p><a href="https://dirigity.github.io/htmlProyects/TimeFractal/">Link to the project I'm talking about</a></p>
+<p>I also made a blender version of the same idea using procedural nodes and eevee, but due to the system's limitations it does not suport more than a few layers of recursion. And I may or may not have lost the file on my endless pile of unnamed .blend files. 😅</p>
+<p>PD: I remembered, the inspiration came from <a href="http://codeparade.net/">code parade</a></p>
+ </div>
+    </div>
+</div>
+
+<div class="blog-card" onclick="window.location='/posts/Shudoku/';">
+    <div class="meta">
+        <div class="photo" style="background-image: url(/images/Shudoku.jpg)"></div>
+        <ul class="details">
+            <li class="author"><a href="#">Jaime González Fábregas</a></li>
+            <li class="date">2021-06-24</li>
+            <li class="tags">
+                <ul>
+                    
+                    <li><a href="#">web dev</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="description">
+        <h1>Sudoku</h1>
+        <h2>Just a sudoku solver</h2>
+
+        <div class="peek" style="  background: -webkit-linear-gradient(#000, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+  float: left;"> <p>So I made a thing that solves sudokus, not much to coment. The AI is not more inteligent than me, it does exactly what I would do but faster, therefore there are a lot of sudoku games that it will not be able to finish.</p>
+<p>The other option would have been to implement backtraking, but I've done that a million times and I wanted to take a different aproach. Also by my &quot;humanish&quot; aproach you can see how the AI fills the sudoku as a human would, wich in my opinion is pretty cute.</p>
+<p>To use it bear in mind:</p>
+<ul>
+<li>W-S or 1-9 while hovering a cell will change its value.</li>
+<li>Q will try to solve the puzzle and stop when it has no more information.</li>
+<li>If you open the dev console SPACE displays some debug info</li>
+</ul>
+<p><em>As a sudoku solver my AI is not the best one, so dont be very confident with difficult sudokus</em></p>
+<p><a href="https://dirigity.github.io/htmlProyects/Sudoku/">Link to the project I'm talking about</a></p>
+ </div>
+    </div>
+</div>
+
+<div class="blog-card" onclick="window.location='/posts/Planets/';">
+    <div class="meta">
+        <div class="photo" style="background-image: url(/images/GravityPlanets.jpg)"></div>
+        <ul class="details">
+            <li class="author"><a href="#">Jaime González Fábregas</a></li>
+            <li class="date">2021-06-24</li>
+            <li class="tags">
+                <ul>
+                    
+                    <li><a href="#">web dev</a></li>
+                    
+                    <li><a href="#">physics</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="description">
+        <h1>Planets</h1>
+        <h2>A newtonian phisics simulator</h2>
+
+        <div class="peek" style="  background: -webkit-linear-gradient(#000, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+  float: left;"> <p>Newton could be a <a href="https://www.quora.com/What-was-Isaac-Newton-like-as-a-person?share=1">pretty mean guy</a>, but had some good ideas, for example gravity. This program applies the simple equations that Newton came out with to a bunch of white circles in the screen, there is not much more to it actualy.</p>
+<p>Interface</p>
+<ul>
+<li>Click to create new planet with no speed</li>
+<li>Click and drag to create a new planet with some speed</li>
+<li>Click on a planet to make it fixed</li>
+<li>Mouse wheel to enlarge or shirink the planets</li>
+</ul>
+<p>Actualy it is very hard to get planets to orbit themselves, they tend to crash on each other, wich is suboptimal to say the least.</p>
+<p><a href="https://dirigity.github.io/htmlProyects/Planetas/">Link to the project I'm talking about</a></p>
+ </div>
+    </div>
+</div>
+
 <div class="blog-card" onclick="window.location='/posts/HangerGame/';">
     <div class="meta">
         <div class="photo" style="background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.gamezebo.com%2Fwp-content%2Fuploads%2F2018%2F11%2FStickman-Hook.jpg&f=1&nofb=1)"></div>
@@ -47,46 +296,6 @@
 <p>The focus is on physics, so in my version the graphics are somewhat not as good and the rope is somewhat stiff. My game is a randomly generated inifinite level and the goal is to get as far as posible (despite there not being a proper score counter or anything). To grab onto the closest hook you have to click with your mouse or tap and hold the screen, that is it.</p>
 <p>This is just a lil project, so control your spectations.🙂</p>
 <p><a href="https://dirigity.github.io/htmlProyects/hanger%20game/">Link to the project I'm talking about</a></p>
- </div>
-    </div>
-</div>
-
-<div class="blog-card" onclick="window.location='/posts/Ice_o_matic/';">
-    <div class="meta">
-        <div class="photo" style="background-image: url(/images/Ice.jpg)"></div>
-        <ul class="details">
-            <li class="author"><a href="#">Jaime González Fábregas</a></li>
-            <li class="date">2021-06-24</li>
-            <li class="tags">
-                <ul>
-                    
-                    <li><a href="#">web dev</a></li>
-                    
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="description">
-        <h1>Ice-O-matic</h1>
-        <h2>Complex level randomization</h2>
-
-        <div class="peek" style="  background: -webkit-linear-gradient(#000, #fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  height: 100px;
-  width: 100%;
-  overflow: hidden;
-  float: left;"> <p>This is one of my most proudest achievements. The idea came to me when playing <a href="https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_The_Minish_Cap">The Legend of Zelda: The Minish Cap</a>, which is the most underrated game in the zelda series and my top 2 game of the GBA after <a href="https://es.wikipedia.org/wiki/Wario_Land_3">Wario land 3</a>, but that is beyond the point. When I was about to finish my playthrough of The Minish Cap I had the idea of creating puzzles like the ones in the game proceduraly. This proved itself to be quite a difficult task, so I lowered my goals to create sliding based puzzles.</p>
-<p>The complex part is that it is not enough to randomly populate a grid with walls, there needs to be a solution, and the solution needs to be somewhat fun to find. To guarantee this and some other asthetic criterium I solve every puzzle and judge whether it is good enough to present it to the user. As this is all running on client side, the browser is in charge of the calculations, and the code was programed in JS. This limits my computational speed greatly and I am forced to trade quality over quantity.</p>
-<p>Also I fell the need of writing about the textures, wich are fully made by me. Not only that, but the tiling logic is also coded by me, that way walls follow the floor and all that cool stuff that people take for granted in modern game engines. I know it is not the most beautifull thing you will ever see, but it is home brewed with all my love. 😗</p>
-<p>Any way I am as proud of myself I one can be and I can't recomend you enough to play a cupple of levels.</p>
-<ul>
-<li>The arrow keys are for movement</li>
-<li>You need to get to the red dot</li>
-<li>Once you start walking you will slide until you crash into a wall</li>
-</ul>
-<p><a href="https://dirigity.github.io/htmlProyects/ice-o-matic/">Link to the project I'm talking about</a></p>
  </div>
     </div>
 </div>
@@ -267,215 +476,6 @@
     </div>
 </div>
 
-<div class="blog-card" onclick="window.location='/posts/Planets/';">
-    <div class="meta">
-        <div class="photo" style="background-image: url(/images/GravityPlanets.jpg)"></div>
-        <ul class="details">
-            <li class="author"><a href="#">Jaime González Fábregas</a></li>
-            <li class="date">2021-06-24</li>
-            <li class="tags">
-                <ul>
-                    
-                    <li><a href="#">web dev</a></li>
-                    
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="description">
-        <h1>Planets</h1>
-        <h2>A newtonian phisics simulator</h2>
-
-        <div class="peek" style="  background: -webkit-linear-gradient(#000, #fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  height: 100px;
-  width: 100%;
-  overflow: hidden;
-  float: left;"> <p>Newton could be a <a href="https://www.quora.com/What-was-Isaac-Newton-like-as-a-person?share=1">pretty mean guy</a>, but had some good ideas, for example gravity. This program applies the simple equations that Newton came out with to a bunch of white circles in the screen, there is not much more to it actualy.</p>
-<p>Interface</p>
-<ul>
-<li>Click to create new planet with no speed</li>
-<li>Click and drag to create a new planet with some speed</li>
-<li>Click on a planet to make it fixed</li>
-<li>Mouse wheel to enlarge or shirink the planets</li>
-</ul>
-<p>Actualy it is very hard to get planets to orbit themselves, they tend to crash on each other, wich is suboptimal to say the least.</p>
-<p><a href="https://dirigity.github.io/htmlProyects/Planetas/">Link to the project I'm talking about</a></p>
- </div>
-    </div>
-</div>
-
-<div class="blog-card" onclick="window.location='/posts/Waves/';">
-    <div class="meta">
-        <div class="photo" style="background-image: url(/images/Ondas.jpg)"></div>
-        <ul class="details">
-            <li class="author"><a href="#">Jaime González Fábregas</a></li>
-            <li class="date">2021-03-04</li>
-            <li class="tags">
-                <ul>
-                    
-                    <li><a href="#">web dev</a></li>
-                    
-                    <li><a href="#">phisics</a></li>
-                    
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="description">
-        <h1>Waves</h1>
-        <h2>A celular automata aproach to physic simulation</h2>
-
-        <div class="peek" style="  background: -webkit-linear-gradient(#000, #fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  height: 100px;
-  width: 100%;
-  overflow: hidden;
-  float: left;"> <p>This phenomena that I have simulated is a very complex one, therefore to wrap my head arround it I started with a lilte 1D project.</p>
-<p>1D usage:</p>
-<ul>
-<li>click whereever to force the level on that x position to the height of your mouse.</li>
-<li>release click and watch</li>
-<li>you can click at any moment anywhere</li>
-</ul>
-<p><a href="https://dirigity.github.io/htmlProyects/ondas/1d.html">1D version</a></p>
-<p>Once I properly understood the simulation I developed a new 2D version</p>
-<p>2D usage:</p>
-<ul>
-<li>left click will create a dip that will evolve into a wave.</li>
-<li>right click will switch between shaded mode and depth mode:
-<ul>
-<li><strong>shaded</strong>: darker tiles mean that their are looking away from the light source.</li>
-<li><strong>depth mode</strong>: black = 0, green = valey, red = mountain.</li>
-</ul>
-</li>
-</ul>
-<p>You will be able to see that the 2d version doesnt have perfect circular waves, they have a octogonal shape to them. This is because the celular automata part. As my cells are squared you get octagons. I'm planing a fix for this in the future, but for the moment I'm happy with what I learned.</p>
-<p><a href="https://dirigity.github.io/htmlProyects/ondas/2d2d.html">2D version</a></p>
- </div>
-    </div>
-</div>
-
-<div class="blog-card" onclick="window.location='/posts/Time fractal/';">
-    <div class="meta">
-        <div class="photo" style="background-image: url(/images/TimeFractal.jpg)"></div>
-        <ul class="details">
-            <li class="author"><a href="#">Jaime González Fábregas</a></li>
-            <li class="date">2021-03-04</li>
-            <li class="tags">
-                <ul>
-                    
-                    <li><a href="#">web dev</a></li>
-                    
-                    <li><a href="#">11ty</a></li>
-                    
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="description">
-        <h1>Time Fractal</h1>
-        <h2>The eye of agamotto</h2>
-
-        <div class="peek" style="  background: -webkit-linear-gradient(#000, #fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  height: 100px;
-  width: 100%;
-  overflow: hidden;
-  float: left;"> <p>This project was inspired by <a href="https://www.youtube.com/channel/UC0e3QhIYukixgh5VVpKHH9Q">code bullet</a> or <a href="https://www.youtube.com/channel/UC9z7EZAbkphEMg0SP7rw44A">carykh</a> or a similar youtuber I can't for the shake of me remeber. Any way the idea is not mine, I just implemented it on HTML and JS.</p>
-<p>Have ever wonderded how would it look if you drew an analogic clock (with 2 haddles) and on the tip of each handle drew the same clock again, and again, and again, forever? It is a pretty specific think to wonder, but it is not imposible. For the large mayority of you that have been waiting for this your hole life here you go.</p>
-<p>Now in a more serius note, this is an aparently simple concept, and in the begining it is king of dull, but as time passes new paters emerge. I recomend to open the tab in your browser and leave it there for a while. Each time you want to change the mind set for a second just go to the tab an look at it evolve for some seconds.</p>
-<p><a href="https://dirigity.github.io/htmlProyects/TimeFractal/">Link to the project I'm talking about</a></p>
-<p>I also made a blender version of the same idea using procedural nodes and eevee, but due to the system's limitations it does not suport more than a few layers of recursion. And I may or may not have lost the file on my endless pile of unnamed .blend files. 😅</p>
-<p>PD: I remembered, the inspiration came from <a href="http://codeparade.net/">code parade</a></p>
- </div>
-    </div>
-</div>
-
-<div class="blog-card" onclick="window.location='/posts/Shudoku/';">
-    <div class="meta">
-        <div class="photo" style="background-image: url(/images/Shudoku.jpg)"></div>
-        <ul class="details">
-            <li class="author"><a href="#">Jaime González Fábregas</a></li>
-            <li class="date">2021-03-04</li>
-            <li class="tags">
-                <ul>
-                    
-                    <li><a href="#">web dev</a></li>
-                    
-                    <li><a href="#">11ty</a></li>
-                    
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="description">
-        <h1>Sudoku</h1>
-        <h2>Just a sudoku solver</h2>
-
-        <div class="peek" style="  background: -webkit-linear-gradient(#000, #fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  height: 100px;
-  width: 100%;
-  overflow: hidden;
-  float: left;"> <p>So I made a thing that solves sudokus, not much to coment. The AI is not more inteligent than me, it does exactly what I would do but faster, therefore there are a lot of sudoku games that it will not be able to finish.</p>
-<p>The other option would have been to implement backtraking, but I've done that a million times and I wanted to take a different aproach. Also by my &quot;humanish&quot; aproach you can see how the AI fills the sudoku as a human would, wich in my opinion is pretty cute.</p>
-<p>To use it bear in mind:</p>
-<ul>
-<li>W-S or 1-9 while hovering a cell will change its value.</li>
-<li>Q will try to solve the puzzle and stop when it has no more information.</li>
-<li>If you open the dev console SPACE displays some debug info</li>
-</ul>
-<p><em>As a sudoku solver my AI is not the best one, so dont be very confident with difficult sudokus</em></p>
-<p><a href="https://dirigity.github.io/htmlProyects/Sudoku/">Link to the project I'm talking about</a></p>
- </div>
-    </div>
-</div>
-
-<div class="blog-card" onclick="window.location='/posts/Predictor/';">
-    <div class="meta">
-        <div class="photo" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/cd/Sherlock_Holmes_Portrait_Paget.jpg)"></div>
-        <ul class="details">
-            <li class="author"><a href="#">Jaime González Fábregas</a></li>
-            <li class="date">2021-03-04</li>
-            <li class="tags">
-                <ul>
-                    
-                    <li><a href="#">web dev</a></li>
-                    
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="description">
-        <h1>Word predictor</h1>
-        <h2>Based on some random S. Holmes book found on P.Guttemberg</h2>
-
-        <div class="peek" style="  background: -webkit-linear-gradient(#000, #fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  height: 100px;
-  width: 100%;
-  overflow: hidden;
-  float: left;"> <p>There is this thing with mobile phone's keyboards wich is preaty neat. They will try to guess what word comes next. That is not only a concerning privacy flaw, but also good inspiration for a litle program. The premise is that you write in a text input and the program tries to guess what key you will press next.</p>
-<p>On load my program will read and analyze the whole book and create a probability map for every leter conbination (this will lag when the page loads, you have been warned). The book used was a random Serlock Holmes book form <a href="http://www.gutenberg.org/">project guttemberg</a>(wich btw is in English).</p>
-<p>This is a web version of a c++ program I made that works with prebaked regexes that goes much faster. That other program works with full words instead of individual leters using data from multiple books. The web version uses only one book and is based on leters, this means that there are many cases it doesn't know what to say.</p>
-<p>Just an explanation on what you will see: In my program you can see bellow the input the prediction. '#' means that it has no idea what you are talking about.Anything else is a prediction. My program also only looks for the last few leters (the ones underlined), so don't even think about coherency.</p>
-<p><strong>WARNING: EXPECT GIGONOURMUS LAG SPIKE ON LOAD</strong></p>
-<p><a href="https://dirigity.github.io/htmlProyects/Predictor%20de%20latras/">Link to the project I'm talking about</a></p>
- </div>
-    </div>
-</div>
-
 <div class="blog-card" onclick="window.location='/posts/Molecube/';">
     <div class="meta">
         <div class="photo" style="background-image: url(/images/Molecube.jpg)"></div>
@@ -531,7 +531,7 @@
         <div class="photo" style="background-image: url(/images/iso_patience.jpg)"></div>
         <ul class="details">
             <li class="author"><a href="#">Jaime González Fábregas</a></li>
-            <li class="date">2021-03-04</li>
+            <li class="date">2021-01-01</li>
             <li class="tags">
                 <ul>
                     
@@ -569,18 +569,56 @@ orange = orange flavour</p>
     </div>
 </div>
 
-<div class="blog-card" onclick="window.location='/posts/Snake/';">
+<div class="blog-card" onclick="window.location='/posts/Ice_o_matic/';">
     <div class="meta">
-        <div class="photo" style="background-image: url(/images/SNAKE!.jpg)"></div>
+        <div class="photo" style="background-image: url(/images/Ice.jpg)"></div>
         <ul class="details">
             <li class="author"><a href="#">Jaime González Fábregas</a></li>
-            <li class="date">2019-01-11</li>
+            <li class="date">2020-07-15</li>
             <li class="tags">
                 <ul>
                     
                     <li><a href="#">web dev</a></li>
                     
-                    <li><a href="#">phisics</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="description">
+        <h1>Ice-O-matic</h1>
+        <h2>Complex level randomization</h2>
+
+        <div class="peek" style="  background: -webkit-linear-gradient(#000, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+  float: left;"> <p>This is one of my most proudest achievements. The idea came to me when playing <a href="https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_The_Minish_Cap">The Legend of Zelda: The Minish Cap</a>, which is the most underrated game in the zelda series and my top 2 game of the GBA after <a href="https://es.wikipedia.org/wiki/Wario_Land_3">Wario land 3</a>, but that is beyond the point. When I was about to finish my playthrough of The Minish Cap I had the idea of creating puzzles like the ones in the game proceduraly. This proved itself to be quite a difficult task, so I lowered my goals to create sliding based puzzles.</p>
+<p>The complex part is that it is not enough to randomly populate a grid with walls, there needs to be a solution, and the solution needs to be somewhat fun to find. To guarantee this and some other asthetic criterium I solve every puzzle and judge whether it is good enough to present it to the user. As this is all running on client side, the browser is in charge of the calculations, and the code was programed in JS. This limits my computational speed greatly and I am forced to trade quality over quantity.</p>
+<p>Also I fell the need of writing about the textures, wich are fully made by me. Not only that, but the tiling logic is also coded by me, that way walls follow the floor and all that cool stuff that people take for granted in modern game engines. I know it is not the most beautifull thing you will ever see, but it is home brewed with all my love. 😗</p>
+<p>Any way I am as proud of myself I one can be and I can't recomend you enough to play a cupple of levels.</p>
+<ul>
+<li>The arrow keys are for movement</li>
+<li>You need to get to the red dot</li>
+<li>Once you start walking you will slide until you crash into a wall</li>
+</ul>
+<p><a href="https://dirigity.github.io/htmlProyects/ice-o-matic/">Link to the project I'm talking about</a></p>
+ </div>
+    </div>
+</div>
+
+<div class="blog-card" onclick="window.location='/posts/Snake/';">
+    <div class="meta">
+        <div class="photo" style="background-image: url(/images/SNAKE!.jpg)"></div>
+        <ul class="details">
+            <li class="author"><a href="#">Jaime González Fábregas</a></li>
+            <li class="date">1900-01-10</li>
+            <li class="tags">
+                <ul>
+                    
+                    <li><a href="#">web dev</a></li>
                     
                 </ul>
             </li>
@@ -612,7 +650,7 @@ orange = orange flavour</p>
         <div class="photo" style="background-image: url(/images/EleventyLogo.png)"></div>
         <ul class="details">
             <li class="author"><a href="#">Jaime González Fábregas</a></li>
-            <li class="date">2019-01-10</li>
+            <li class="date">1900-01-09</li>
             <li class="tags">
                 <ul>
                     

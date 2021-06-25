@@ -1,5 +1,5 @@
 ---
-tags: ["web dev"]
+tags: ["web dev","physics"]
 ThumbNailUrl: "/images/GravityPlanets.jpg"
 Images: ["/images/GravityPlanets2.jpg"]
 PostTitle: Planets

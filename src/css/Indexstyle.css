@@ -9,6 +9,10 @@
   font-size: 30px;
 }
 
+p{
+  font-family: Poppins, sans-serif;
+}
+
 * {
   box-sizing: border-box;
 }

@@ -1,7 +1,7 @@
 ---
 tags: ["web dev"]
 ThumbNailUrl: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Sherlock_Holmes_Portrait_Paget.jpg"
-Images: [""]
+Images: []
 PostTitle: Word predictor
 PostDescription : Based on some random S. Holmes book found on P.Guttemberg
 Author : Jaime González Fábregas

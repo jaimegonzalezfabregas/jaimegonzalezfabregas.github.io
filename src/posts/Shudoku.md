@@ -1,5 +1,5 @@
 ---
-tags: ["web dev","11ty"]
+tags: ["web dev"]
 ThumbNailUrl: "/images/Shudoku.jpg"
 Images: []
 PostTitle: Sudoku

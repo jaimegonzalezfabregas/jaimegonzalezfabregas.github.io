@@ -1,5 +1,5 @@
 ---
-tags: ["web dev", "phisics"]
+tags: ["web dev", "physics"]
 ThumbNailUrl: "/images/Ondas.jpg"
 Images: ["/images/Ondas1.jpg","/images/Ondas2.jpg","/images/Ondas3.jpg"]
 PostTitle: Waves

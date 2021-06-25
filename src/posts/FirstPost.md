@@ -5,7 +5,7 @@ Images: []
 PostTitle: My first blog post
 PostDescription : This is my first post in my blog
 Author : Jaime González Fábregas
-date: 2019-01-10
+date: 0000-01-10
 ---
 
 I've finaly decided to create my very own blog. I plan to post the little thinks I do from now on, but I'll probably also update it with the thigs I've done in the past. 
