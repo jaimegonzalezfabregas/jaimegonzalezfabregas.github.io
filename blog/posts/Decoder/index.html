@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Decoder</title>
+    </head>
+    <body>
+        <h1>Decoder</h1>
+        <p>Im sure you've hear about <a href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar cipher</a>, but you can go one step further. Instead of relating each letter with other one with a given offset you can scramble the abecedary to get a harder encription.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Abecedary</th>
+<th style="text-align:center">Caesar 3</th>
+<th style="text-align:center">Scrambled</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">a</td>
+<td style="text-align:center">d</td>
+<td style="text-align:center">q</td>
+</tr>
+<tr>
+<td style="text-align:center">b</td>
+<td style="text-align:center">e</td>
+<td style="text-align:center">w</td>
+</tr>
+<tr>
+<td style="text-align:center">c</td>
+<td style="text-align:center">f</td>
+<td style="text-align:center">e</td>
+</tr>
+<tr>
+<td style="text-align:center">d</td>
+<td style="text-align:center">g</td>
+<td style="text-align:center">r</td>
+</tr>
+<tr>
+<td style="text-align:center">e</td>
+<td style="text-align:center">h</td>
+<td style="text-align:center">t</td>
+</tr>
+<tr>
+<td style="text-align:center">f</td>
+<td style="text-align:center">i</td>
+<td style="text-align:center">y</td>
+</tr>
+<tr>
+<td style="text-align:center">g</td>
+<td style="text-align:center">j</td>
+<td style="text-align:center">u</td>
+</tr>
+<tr>
+<td style="text-align:center">h</td>
+<td style="text-align:center">k</td>
+<td style="text-align:center">i</td>
+</tr>
+<tr>
+<td style="text-align:center">i</td>
+<td style="text-align:center">l</td>
+<td style="text-align:center">o</td>
+</tr>
+<tr>
+<td style="text-align:center">j</td>
+<td style="text-align:center">m</td>
+<td style="text-align:center">p</td>
+</tr>
+<tr>
+<td style="text-align:center">k</td>
+<td style="text-align:center">n</td>
+<td style="text-align:center">a</td>
+</tr>
+<tr>
+<td style="text-align:center">l</td>
+<td style="text-align:center">o</td>
+<td style="text-align:center">s</td>
+</tr>
+<tr>
+<td style="text-align:center">m</td>
+<td style="text-align:center">p</td>
+<td style="text-align:center">d</td>
+</tr>
+<tr>
+<td style="text-align:center">n</td>
+<td style="text-align:center">q</td>
+<td style="text-align:center">f</td>
+</tr>
+<tr>
+<td style="text-align:center">o</td>
+<td style="text-align:center">r</td>
+<td style="text-align:center">g</td>
+</tr>
+<tr>
+<td style="text-align:center">p</td>
+<td style="text-align:center">s</td>
+<td style="text-align:center">h</td>
+</tr>
+<tr>
+<td style="text-align:center">q</td>
+<td style="text-align:center">t</td>
+<td style="text-align:center">j</td>
+</tr>
+<tr>
+<td style="text-align:center">r</td>
+<td style="text-align:center">u</td>
+<td style="text-align:center">k</td>
+</tr>
+<tr>
+<td style="text-align:center">s</td>
+<td style="text-align:center">v</td>
+<td style="text-align:center">l</td>
+</tr>
+<tr>
+<td style="text-align:center">t</td>
+<td style="text-align:center">w</td>
+<td style="text-align:center">z</td>
+</tr>
+<tr>
+<td style="text-align:center">u</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">x</td>
+</tr>
+<tr>
+<td style="text-align:center">v</td>
+<td style="text-align:center">y</td>
+<td style="text-align:center">c</td>
+</tr>
+<tr>
+<td style="text-align:center">w</td>
+<td style="text-align:center">z</td>
+<td style="text-align:center">v</td>
+</tr>
+<tr>
+<td style="text-align:center">x</td>
+<td style="text-align:center">a</td>
+<td style="text-align:center">n</td>
+</tr>
+<tr>
+<td style="text-align:center">y</td>
+<td style="text-align:center">b</td>
+<td style="text-align:center">m</td>
+</tr>
+<tr>
+<td style="text-align:center">z</td>
+<td style="text-align:center">c</td>
+<td style="text-align:center">b</td>
+</tr>
+</tbody>
+</table>
+<p>(btw, the resulting encryption is very week for modern standars)</p>
+<p>To try to crack these types of encryption, it is used a fequency analysis, wich is what my algorithm does, so if you want you can go to an online encryptor, get a encrypted book and put my system to the test.</p>
+<p>(It will probably not work without big chunks of text)</p>
+<p><a href="https://dirigity.github.io/htmlProyects/decoder/">Link to the project I'm talking about</a></p>
+
+    </body>
+</html>
