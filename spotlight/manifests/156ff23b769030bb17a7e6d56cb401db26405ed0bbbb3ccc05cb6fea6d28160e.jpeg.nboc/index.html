@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/media/css/main.css">
+        <title>/media/img/156ff23b769030bb17a7e6d56cb401db26405ed0bbbb3ccc05cb6fea6d28160e.jpeg</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            body,
+            html {
+                height: 100%;
+                background: black;
+            }
+            #bg {
+                background-image: url(/media/img/156ff23b769030bb17a7e6d56cb401db26405ed0bbbb3ccc05cb6fea6d28160e.jpeg);
+                /* Add the blur effect */
+                filter: blur(8px);
+                /* Full height */
+                height: 100%;
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            #center {
+                flex-flow: column;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: 0;
+                position: absolute;
+                height: 100vh;
+                width: 100vw;
+            }
+            #centered {
+                height: 90%;
+                width: fit-content;
+            }
+            #img {
+                position: relative;
+                top: 30px;
+                max-width: 100%;
+                max-height: 80%;
+                box-shadow: 0 0 50px #0009;
+            }
+            #navigation_row {
+                display: flex;
+                flex-flow: row;
+                border: white 3px;
+                border-radius: 4px;
+            }
+            #exit {
+                font-family: roboto_regular;
+                font-size: 30px;
+                backdrop-filter: blur(100px);
+                background: #0000;
+                height: 70px;
+                display: inline-block;
+                text-align: center;
+                padding: 5px;
+                width: fit-content;
+                line-height: 60px;
+                box-shadow: 0 0 50px #0009;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="bg"></div>
+        <div id="center">
+            <div id="centered">
+                <div id="navigation_row">
+                    <a href="/">
+                        <butt id="exit">
+                            back
+                        </butt>
+                    </a>
+                    <a href="/spotlight/manifests/152ab6ec1489a7b31387394e4e20667f276bb6179297da7736f25b2a3a9e1c67.jpeg.nboc">
+                        <butt id="exit">
+                            prev
+                        </butt>
+                    </a>
+                    <a href="/spotlight/manifests/16cb0359cf6c89f3745f093c0db4772d4a45b629204ed3521cc26c281595c513.jpeg.nboc">
+                        <butt id="exit">
+                            next
+                        </butt>
+                    </a>
+                </div>
+                <img id="img" src="/media/img/156ff23b769030bb17a7e6d56cb401db26405ed0bbbb3ccc05cb6fea6d28160e.jpeg" alt="the image 156ff23b769030bb17a7e6d56cb401db26405ed0bbbb3ccc05cb6fea6d28160e.jpeg cant be displayed">
+            </div>
+        </div>
+    </body>
+</html>
