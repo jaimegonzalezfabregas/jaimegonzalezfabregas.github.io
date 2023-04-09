@@ -16,8 +16,7 @@
                 height: 100%;
                 background: black;
             }
-            #bg {
-                background-image: url(/media/img/f05ddc1eff5e1834d273a745db9e988a1f4cf000d209880acdff39e9189418e0.jpeg);
+            .bg {
                 /* Add the blur effect */
                 filter: blur(8px);
                 /* Full height */
@@ -27,7 +26,7 @@
                 background-repeat: no-repeat;
                 background-size: cover;
             }
-            #center {
+            .center {
                 flex-flow: column;
                 display: flex;
                 justify-content: center;
@@ -37,9 +36,13 @@
                 height: 100vh;
                 width: 100vw;
             }
-            #centered {
+            .centered {
                 height: 90%;
                 width: fit-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-flow: column;
             }
             #img {
                 position: relative;
@@ -49,12 +52,14 @@
                 box-shadow: 0 0 50px #0009;
             }
             #navigation_row {
+                width: 33vw;
                 display: flex;
                 flex-flow: row;
                 border: white 3px;
                 border-radius: 4px;
             }
-            #exit {
+            .navigation_butt {
+                transition: all 0.2s;
                 font-family: roboto_regular;
                 font-size: 30px;
                 backdrop-filter: blur(100px);
@@ -63,35 +68,87 @@
                 display: inline-block;
                 text-align: center;
                 padding: 5px;
-                width: fit-content;
                 line-height: 60px;
                 box-shadow: 0 0 50px #0009;
+                width: 100%;
+            }
+            .navigation_butt:hover {
+                background: #FFF3;
+            }
+            .navigation_butt:active {
+                background: #0003;
+            }
+            .anti_a {
+                flex: 1;
+                color: black;
+            }
+            #swup {
+                width: 100vw;
+                height: 100vh;
+            }
+            .transition-parent {
+                transition: opacity 1s;
+            }
+            .transition-parent .bg {
+                transition: opacity 0.5s;
+                opacity: 1;
+            }
+            html.is-animating .transition-parent .bg {
+                transition-delay: 0.5s;
+                opacity: 0;
+            }
+            .transition-parent #img {
+                transition-delay: 0.5s;
+                transition: transform 0.5s ease-in-out;
+                transform: translate(0);
+            }
+            html.is-leaving.to-right .transition-parent #img {
+                transform: translate(-100vw);
+            }
+            html.is-rendering.to-right .transition-parent #img {
+                transform: translate(100vw);
+            }
+            html.is-leaving.to-left .transition-parent #img {
+                transform: translate(100vw);
+            }
+            html.is-rendering.to-left .transition-parent #img {
+                transform: translate(-100vw);
             }
         </style>
     </head>
     <body>
-        <div id="bg"></div>
-        <div id="center">
-            <div id="centered">
-                <div id="navigation_row">
-                    <a href="/">
-                        <butt id="exit">
-                            back
-                        </butt>
-                    </a>
-                    <a href="/spotlight/manifests/eea96b69e4bc07461fb76ff8f633c3e933aac5294c7f635dbc7b21e48f2de0bc.jpeg.nboc">
-                        <butt id="exit">
-                            prev
-                        </butt>
-                    </a>
-                    <a href="/spotlight/manifests/f7182dc3c17d55bfa180fdff7bfb1b02d0d3e1d34cada88f99fc70cb9a75b23c.jpeg.nboc">
-                        <butt id="exit">
-                            next
-                        </butt>
-                    </a>
+        <div id="swup" class="transition-parent">
+            <div class="bg" style="background-image: url(/media/img/f05ddc1eff5e1834d273a745db9e988a1f4cf000d209880acdff39e9189418e0.jpeg);"></div>
+            <div class="center">
+                <div class="centered">
+                    <div id="navigation_row">
+                        <a href="/spotlight/manifests/eea96b69e4bc07461fb76ff8f633c3e933aac5294c7f635dbc7b21e48f2de0bc.jpeg.nboc" class="anti_a" data-swup-transition="left">
+                            <nav_butt class="navigation_butt">
+                                prev
+                            </nav_butt>
+                        </a>
+                        <a data-no-swup href="/" class="anti_a">
+                            <nav_butt class="navigation_butt">
+                                back
+                            </nav_butt>
+                        </a>
+                        <a href="/spotlight/manifests/f7182dc3c17d55bfa180fdff7bfb1b02d0d3e1d34cada88f99fc70cb9a75b23c.jpeg.nboc" class="anti_a" data-swup-transition="right">
+                            <nav_butt class="navigation_butt">
+                                next
+                            </nav_butt>
+                        </a>
+                    </div>
+                    <img id="img" class="transition-slide" src="/media/img/f05ddc1eff5e1834d273a745db9e988a1f4cf000d209880acdff39e9189418e0.jpeg" alt="the image f05ddc1eff5e1834d273a745db9e988a1f4cf000d209880acdff39e9189418e0.jpeg cant be displayed">
                 </div>
-                <img id="img" src="/media/img/f05ddc1eff5e1834d273a745db9e988a1f4cf000d209880acdff39e9189418e0.jpeg" alt="the image f05ddc1eff5e1834d273a745db9e988a1f4cf000d209880acdff39e9189418e0.jpeg cant be displayed">
             </div>
         </div>
+        <script src="https://unpkg.com/@swup/preload-plugin@2"></script>
+        <script src="https://unpkg.com/swup@3"></script>
+        <script>
+            const swup = new Swup({
+                plugins: [new SwupPreloadPlugin()],
+                ignoreVisit: (url, {el} = {}) => el ?. closest('[data-no-swup]')
+            });
+        </script>
     </body>
 </html>
