@@ -1,0 +1,69 @@
+.transition-parent {
+    transition: opacity 0.3s;
+}
+
+.img {
+    transition: all 0.3s ease;
+    transform: translate(0);
+    opacity: 1;
+}
+
+.bg {
+    transition: opacity 0.3s;
+}
+
+.bg_main {
+    z-index: 1;
+    opacity: 1;
+}
+
+.bg_prev {
+    z-index: 1;
+    opacity: 0;
+}
+
+.bg_next {
+    z-index: 1;
+    opacity: 0;
+}
+
+
+html.is-leaving.to-next .transition-parent .img {
+    transform: translate(-100vw);
+    opacity: 0;
+}
+
+html.is-rendering.to-next .transition-parent .img {
+    transform: translate(100vw);
+    opacity: 0;
+}
+
+html.is-leaving.to-prev .transition-parent .img {
+    transform: translate(100vw);
+    opacity: 0;
+}
+
+html.is-rendering.to-prev .transition-parent .img {
+    transform: translate(-100vw);
+    opacity: 0;
+}
+
+html.is-leaving .transition-parent .bg_main {
+    opacity: 1;
+}
+
+html.is-leaving.to-prev .transition-parent .bg_prev {
+    opacity: 0;
+}
+
+html.is-leaving.to-prev .transition-parent .bg_next {
+    opacity: 1;
+}
+
+html.is-leaving.to-next .transition-parent .bg_prev {
+    opacity: 1;
+}
+
+html.is-leaving.to-next .transition-parent .bg_next {
+    opacity: 0;
+}

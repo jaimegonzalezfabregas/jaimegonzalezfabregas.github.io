@@ -1,144 +1,42 @@
 <!doctype html>
 <html lang="en">
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/media/css/main.css">
+        <link rel="stylesheet" href="/media/css/galery_static.css">
+        <link rel="stylesheet" href="/media/css/galery_transition.css">
+
         <title>/media/img/4368c89752f86dcae8561ab147d34ac0516b62517e6b18e5054eab0f9c966c80.jpeg</title>
-        <style>
-            * {
-                box-sizing: border-box;
-                padding: 0;
-                margin: 0;
-            }
-            body,
-            html {
-                height: 100%;
-                background: black;
-            }
-            .bg {
-                /* Add the blur effect */
-                filter: blur(8px);
-                /* Full height */
-                height: 100%;
-                /* Center and scale the image nicely */
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-            .center {
-                flex-flow: column;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                top: 0;
-                position: absolute;
-                height: 100vh;
-                width: 100vw;
-            }
-            .centered {
-                height: 90%;
-                width: fit-content;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-flow: column;
-            }
-            #img {
-                position: relative;
-                top: 30px;
-                max-width: 100%;
-                max-height: 80%;
-                box-shadow: 0 0 50px #0009;
-            }
-            #navigation_row {
-                width: 33vw;
-                display: flex;
-                flex-flow: row;
-                border: white 3px;
-                border-radius: 4px;
-            }
-            .navigation_butt {
-                transition: all 0.2s;
-                font-family: roboto_regular;
-                font-size: 30px;
-                backdrop-filter: blur(100px);
-                background: #0000;
-                height: 70px;
-                display: inline-block;
-                text-align: center;
-                padding: 5px;
-                line-height: 60px;
-                box-shadow: 0 0 50px #0009;
-                width: 100%;
-            }
-            .navigation_butt:hover {
-                background: #FFF3;
-            }
-            .navigation_butt:active {
-                background: #0003;
-            }
-            .anti_a {
-                flex: 1;
-                color: black;
-            }
-            #swup {
-                width: 100vw;
-                height: 100vh;
-            }
-            .transition-parent {
-                transition: opacity 1s;
-            }
-            .transition-parent .bg {
-                transition: opacity 0.5s;
-                opacity: 1;
-            }
-            html.is-animating .transition-parent .bg {
-                transition-delay: 0.5s;
-                opacity: 0;
-            }
-            .transition-parent #img {
-                transition-delay: 0.5s;
-                transition: transform 0.5s ease-in-out;
-                transform: translate(0);
-            }
-            html.is-leaving.to-right .transition-parent #img {
-                transform: translate(-100vw);
-            }
-            html.is-rendering.to-right .transition-parent #img {
-                transform: translate(100vw);
-            }
-            html.is-leaving.to-left .transition-parent #img {
-                transform: translate(100vw);
-            }
-            html.is-rendering.to-left .transition-parent #img {
-                transform: translate(-100vw);
-            }
-        </style>
+
     </head>
+
     <body>
         <div id="swup" class="transition-parent">
-            <div class="bg" style="background-image: url(/media/img/4368c89752f86dcae8561ab147d34ac0516b62517e6b18e5054eab0f9c966c80.jpeg);"></div>
+            <div class="bg bg_main" style="background-image: url(/media/img/4368c89752f86dcae8561ab147d34ac0516b62517e6b18e5054eab0f9c966c80.jpeg);"></div>
+            <div class="bg bg_next" style="background-image: url(/media/img/462b0bc2fd33c20d1b5cda96c5d578ba4f95a63fd6e6af2a8646c561a3100eb4.jpeg);"></div>
+            <div class="bg bg_prev" style="background-image: url(/media/img/43163a36c57163648193f9ae79efc66af3b73285170377a8a6656a2f047d86d3.jpeg);"></div>
             <div class="center">
                 <div class="centered">
                     <div id="navigation_row">
-                        <a href="/spotlight/manifests/43163a36c57163648193f9ae79efc66af3b73285170377a8a6656a2f047d86d3.jpeg.nboc" class="anti_a" data-swup-transition="left">
-                            <nav_butt class="navigation_butt">
-                                prev
-                            </nav_butt>
+                        <a href="/spotlight/manifests/462b0bc2fd33c20d1b5cda96c5d578ba4f95a63fd6e6af2a8646c561a3100eb4.jpeg.nboc" class="anti_a" data-swup-transition="prev">
+                            <nav_butt class="navigation_butt prev_butt">
+                            ◀
+                        </nav_butt>
                         </a>
                         <a data-no-swup href="/" class="anti_a">
-                            <nav_butt class="navigation_butt">
-                                back
-                            </nav_butt>
+                            <nav_butt class="navigation_butt back_butt">
+                            &#x2715
+                        </nav_butt>
                         </a>
-                        <a href="/spotlight/manifests/462b0bc2fd33c20d1b5cda96c5d578ba4f95a63fd6e6af2a8646c561a3100eb4.jpeg.nboc" class="anti_a" data-swup-transition="right">
-                            <nav_butt class="navigation_butt">
-                                next
-                            </nav_butt>
+                        <a href="/spotlight/manifests/43163a36c57163648193f9ae79efc66af3b73285170377a8a6656a2f047d86d3.jpeg.nboc" class="anti_a" data-swup-transition="next">
+                            <nav_butt class="navigation_butt next_butt">
+                            ▶
+                        </nav_butt>
                         </a>
                     </div>
-                    <img id="img" class="transition-slide" src="/media/img/4368c89752f86dcae8561ab147d34ac0516b62517e6b18e5054eab0f9c966c80.jpeg" alt="the image 4368c89752f86dcae8561ab147d34ac0516b62517e6b18e5054eab0f9c966c80.jpeg cant be displayed">
+                    <img class="img" src="/media/img/4368c89752f86dcae8561ab147d34ac0516b62517e6b18e5054eab0f9c966c80.jpeg" alt="the image 4368c89752f86dcae8561ab147d34ac0516b62517e6b18e5054eab0f9c966c80.jpeg cant be displayed">
                 </div>
             </div>
         </div>
@@ -147,8 +45,10 @@
         <script>
             const swup = new Swup({
                 plugins: [new SwupPreloadPlugin()],
-                ignoreVisit: (url, {el} = {}) => el ?. closest('[data-no-swup]')
+                ignoreVisit: (url, {el} = {}) => el
+                    ?.closest('[data-no-swup]')
             });
         </script>
     </body>
+
 </html>
