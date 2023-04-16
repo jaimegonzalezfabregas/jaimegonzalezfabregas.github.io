@@ -12,17 +12,15 @@ html {
 }
 
 .bg {
-    /* Add the blur effect */
-    filter: blur(8px);
-    /* Full height */
+
     height: 100vh;
     width: 100vw;
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
     top: 0;
+    filter: blur(8px);
 }
 
 
@@ -57,7 +55,7 @@ html {
 }
 
 #navigation_row {
-    width: 20vw;
+    width: 30vw;
     display: flex;
     flex-flow: row;
     border: white 3px;
@@ -65,36 +63,21 @@ html {
 }
 
 .navigation_butt {
-    text-shadow: rgba(255, 255, 255, 0.387) 0px 0 10px;
     z-index: 5;
-    transition: all 0.2s;
-    font-family: roboto_regular;
+
     font-size: 30px;
-    backdrop-filter: blur(100px);
-    background: #0000;
     height: 70px;
-    display: inline-block;
-    text-align: center;
-    padding: 5px;
     line-height: 60px;
-    box-shadow: 0 0 50px #0009;
     width: 100%;
     position: relative;
+
 }
 
-.navigation_butt:hover {
-    z-index: 7;
-    background: #FFF3;
-}
-
-.navigation_butt:active {
-    z-index: 7;
-    background: #0003;
-}
 
 .anti_a {
     flex: 1;
     color: black;
+    margin: 1vw;
 }
 
 #swup {

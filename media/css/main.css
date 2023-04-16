@@ -2,3 +2,36 @@
     font-family: roboto_regular;
     src: url(/media/fonts/Roboto-Regular.ttf);
 }
+
+* {
+    font-family: roboto_regular;
+}
+
+.navigation_butt {
+    text-shadow: rgba(0, 0, 0, 0.387) 0px 0 10px;
+    transition: box-shadow 0.2s, background 0.2s;
+
+    backdrop-filter: blur(50px);
+    background: #0000;
+    color: #FFF;
+    height: 70px;
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    line-height: 70px;
+    box-shadow: 0 0 20px #0009;
+    font-size: 30px;
+
+    border-radius: 10px;
+    
+}
+
+.navigation_butt:hover {
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    background: #FFF3;
+}
+
+.navigation_butt:active {
+    box-shadow: 0 0 0px #0009;
+    background: #0003;
+}

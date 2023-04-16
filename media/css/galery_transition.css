@@ -9,7 +9,7 @@
 }
 
 .bg {
-    transition: opacity 0.3s;
+    transition: opacity 1.5s;
 }
 
 .bg_main {
@@ -52,18 +52,22 @@ html.is-leaving .transition-parent .bg_main {
     opacity: 1;
 }
 
-html.is-leaving.to-prev .transition-parent .bg_prev {
+html.is-rendering .transition-parent .bg_main {
     opacity: 0;
 }
 
-html.is-leaving.to-prev .transition-parent .bg_next {
+html.is-rendering.to-prev .transition-parent .bg_prev {
     opacity: 1;
 }
 
-html.is-leaving.to-next .transition-parent .bg_prev {
-    opacity: 1;
-}
-
-html.is-leaving.to-next .transition-parent .bg_next {
+html.is-rendering.to-prev .transition-parent .bg_next {
     opacity: 0;
+}
+
+html.is-rendering.to-next .transition-parent .bg_prev {
+    opacity: 0;
+}
+
+html.is-rendering.to-next .transition-parent .bg_next {
+    opacity: 1;
 }

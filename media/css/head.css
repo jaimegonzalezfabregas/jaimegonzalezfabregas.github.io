@@ -1,0 +1,29 @@
+.head_container {
+    background-color: rgb(230, 0, 255);
+    width: 100vw;
+    height: 90vh;
+
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    animation: 1s linear forwards adjust-paralax;
+    animation-timeline: paralax-timeline;
+}
+
+.title {
+    max-width: 40vw;
+    font-size: calc(min(10vw, 19vh));
+
+    padding: calc(min(5vw, 10vh));
+    color: white;
+    text-shadow: 1px 1px 10px rgb(0, 0, 0);
+}
+
+#spotlight_butt {
+    top: calc(80vh - 70px);
+    right: 10vw;
+    position: absolute;
+    width: 30vw;
+}
