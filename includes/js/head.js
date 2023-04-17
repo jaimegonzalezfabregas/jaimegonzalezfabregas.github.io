@@ -37,6 +37,9 @@ function go_to_spotlight(){
 function set_random_image() {
     let i = Math.floor(Math.random() * imgs.length);
     document.getElementById("head_banner").style.backgroundImage = "url(" + imgs[i].data.src + ")"
+    // document.getElementById("head_banner").style.backgroundImage = "url(" + imgs[i].data.ultra_minifyed + ")"
+
+    
     spotlight_detail = imgs[i].url
 }
 

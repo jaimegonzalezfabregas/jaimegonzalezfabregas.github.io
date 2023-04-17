@@ -8,8 +8,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    animation: 1s linear forwards adjust-paralax;
-    animation-timeline: paralax-timeline;
 }
 
 .title {
@@ -26,4 +24,6 @@
     right: 10vw;
     position: absolute;
     width: 30vw;
+    min-width: fit-content;
+    height: fit-content;
 }
