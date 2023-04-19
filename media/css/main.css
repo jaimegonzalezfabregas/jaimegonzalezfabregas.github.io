@@ -14,7 +14,7 @@
     border-radius: 10px;
 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.15);
 
 }
 
@@ -31,14 +31,14 @@
 
 .navigation_butt.glass_box:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .navigation_butt.glass_box:active {
     box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
-    background-color: rgba(133, 133, 133, 0);
+    background-color: rgba(0, 0, 0, 0);
 }
 
-[js_lang="en"]{
+[js_lang="en"] {
     display: none;
 }
