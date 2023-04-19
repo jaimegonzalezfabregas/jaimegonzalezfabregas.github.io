@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/media/css/main.css">
+        <link rel="stylesheet" href="/media/css/galery_static.css">
+        <link rel="stylesheet" href="/media/css/galery_transition.css">
+
+        <title>/media/img/fbe070ee6198dba2f67611351fa99e0402e7f702ae66b5f65a5d4a55da1ff8bd7da967cd.jpeg</title>
+
+    </head>
+
+    <body>
+        <div id="swup" class="transition-parent">
+            <div class="bg bg_main" style="background-image: url(/media/img/fbe070ee6198dba2f67611351fa99e0402e7f702ae66b5f65a5d4a55da1ff8bd7da967cd.jpeg);"></div>
+            <div class="bg bg_next" style="background-image: url(/media/img/thumbnail_fbedad35526abfeb91bea8fac3b740d5170bb0a1fa12c9f55dfbd14564c86e95f7d6c4ee.jpeg);"></div>
+            <div class="bg bg_prev" style="background-image: url(/media/img/thumbnail_fb27972ebb7f5b0bb762451ca1302c3d056ab6ec5f9e6170a5cbdc598535f0d9df06e283.jpeg);"></div>
+            <div class="center">
+                <div class="centered">
+                    <div id="navigation_row">
+                        <a href="/spotlight/manifests/fbedad35526abfeb91bea8fac3b740d5170bb0a1fa12c9f55dfbd14564c86e95f7d6c4ee.jpeg.nboc" class="anti_a" data-swup-transition="prev">
+                            <nav_butt class="navigation_butt prev_butt">
+                            ◀
+                        </nav_butt>
+                        </a>
+                        <a data-no-swup href="/" class="anti_a">
+                            <nav_butt class="navigation_butt back_butt">
+                            &#x2715
+                        </nav_butt>
+                        </a>
+                        <a href="/spotlight/manifests/fb27972ebb7f5b0bb762451ca1302c3d056ab6ec5f9e6170a5cbdc598535f0d9df06e283.jpeg.nboc" class="anti_a" data-swup-transition="next">
+                            <nav_butt class="navigation_butt next_butt">
+                            ▶
+                        </nav_butt>
+                        </a>
+                    </div>
+                    <img class="img" src="/media/img/fbe070ee6198dba2f67611351fa99e0402e7f702ae66b5f65a5d4a55da1ff8bd7da967cd.jpeg" alt="the image fbe070ee6198dba2f67611351fa99e0402e7f702ae66b5f65a5d4a55da1ff8bd7da967cd.jpeg cant be displayed">
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/@swup/preload-plugin@2"></script>
+        <script src="https://unpkg.com/swup@3"></script>
+        <script>
+            const swup = new Swup({
+                plugins: [new SwupPreloadPlugin()],
+                ignoreVisit: (url, {el} = {}) => el
+                    ?.closest('[data-no-swup]')
+            });
+        </script>
+    </body>
+
+</html>
