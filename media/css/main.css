@@ -7,36 +7,38 @@
     font-family: roboto_regular;
 }
 
-.glass_box{
+.glass_box {
     text-shadow: rgba(0, 0, 0, 0.387) 0px 0 10px;
-    backdrop-filter: blur(20px) ;
-    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
     color: #FFF;
-    box-shadow: 0 0 20px #0009;
     border-radius: 10px;
+
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
 
 }
 
 .navigation_butt {
     transition: box-shadow 0.2s, background 0.2s;
 
-    
     height: 70px;
     display: inline-block;
     text-align: center;
     padding: 5px;
     line-height: 70px;
     font-size: 30px;
-
-    
 }
 
-.navigation_butt:hover {
-    box-shadow: 0 0 15px rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.073);
+.navigation_butt.glass_box:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
-.navigation_butt:active {
-    box-shadow: 0 0 10px #0009;
-    background: rgba(255, 255, 255, 0.076);
+.navigation_butt.glass_box:active {
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
+    background-color: rgba(133, 133, 133, 0);
+}
+
+[js_lang="en"]{
+    display: none;
 }

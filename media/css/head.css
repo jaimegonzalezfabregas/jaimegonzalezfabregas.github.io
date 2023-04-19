@@ -2,7 +2,6 @@
     background-color: rgb(230, 0, 255);
     width: 100vw;
     height: 90vh;
-    top: 0;
 
     background-attachment: scroll;
     background-position: center;
@@ -23,12 +22,20 @@
 }
 
 #spotlight_butt {
-    top: calc(80vh - 70px);
-    right: 10vw;
+    font-size: inherit;
+    top: calc(90vh - 90px);
+    right: 30px;
     position: absolute;
-    min-width: fit-content;
-    height: fit-content;
+    height: 20px;
+    line-height: 20px;
 
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.text {
+    max-width: 30vw;
+    margin: 30px;
+    padding: 10px;
 }

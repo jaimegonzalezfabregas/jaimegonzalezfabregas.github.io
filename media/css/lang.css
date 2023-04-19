@@ -1,0 +1,21 @@
+.half {
+    transition: all 0.2s;
+    display: inline;
+    text-align: center;
+    font-size: 8vh;
+}
+
+#toggle {
+    position: absolute;
+    top: calc(80vh - 70px);
+    transition: all 0.2s;
+    user-select: none;
+    width: fit-content;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.half[selected="true"] {
+    font-size: 10vh;
+    text-shadow: 0px 0px 7px white;
+}
