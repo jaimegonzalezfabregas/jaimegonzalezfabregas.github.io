@@ -2,4 +2,15 @@ body,
 html {
     margin: 0;
     overflow-x: hidden;
+    background-color: black;
+}
+
+.separator {
+    width: 100vw;
+    height: 10vh;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 25vh;
+    font-size: 20vh;
 }

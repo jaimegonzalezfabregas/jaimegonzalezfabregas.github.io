@@ -46,4 +46,5 @@ function set_random_image() {
 
 set_random_image();
 console.log(imgs);
-document.getElementById("spotlight_butt").addEventListener("click",go_to_spotlight);
+document.getElementById("spotlight_butt_en").addEventListener("click", go_to_spotlight);
+document.getElementById("spotlight_butt_es").addEventListener("click",go_to_spotlight);

@@ -1,0 +1,17 @@
+.blog_box{
+    background-color: black;
+    position: relative;
+    height: fit-content;
+}
+
+#background_canvas{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#blog_list{
+    z-index: 10;
+    top: 0;
+    position: absolute;
+}

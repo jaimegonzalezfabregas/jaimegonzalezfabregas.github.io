@@ -13,15 +13,16 @@
     box-sizing: border-box;
 }
 
-.title.glass_box {
-
+.title {
+    text-align: center;
     max-width: fit-content;
-    font-size: 10vh;
+    font-size: 5vw;
     padding: 5vh;
-
+    margin: auto;
+    margin-top: 20vh;
 }
 
-#spotlight_butt {
+#spotlight_butt_en,#spotlight_butt_es {
     font-size: inherit;
     top: calc(90vh - 90px);
     right: 30px;
@@ -35,7 +36,9 @@
 }
 
 .text {
-    max-width: 30vw;
-    margin: 30px;
+    margin: auto;
+    width: 40%;
+    color: #ffffff;
+    font-size: 2vh;
     padding: 10px;
 }
