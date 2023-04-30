@@ -1,98 +1,135 @@
 let particles = [];
+
+const content = document.getElementById("blog_list");
+const blog_box = document.getElementById("blog_box");
 let canvas = document.getElementById("background_canvas");
 let ctx = canvas.getContext('2d');
 
+
+
 function bump(x) {
-    return 4 * (-x * x + x)
+    // y = 3.330669e-16 + 8.513889*x - 26.56944*x^2 + 36.11111*x^3 - 18.05556*x^4
+    return 8.513889 * x - 26.56944 * x * x + 36.11111 * x * x * x - 18.05556 * x * x * x * x
 }
 
-let view_margin = 300;
+const view_margin = 300;
+const max_particles = 20;
+const initial_speed_max = 5;
+const max_particle_size = 0.3;
+
+function init() {
+    blog_box.style.height = content.clientHeight + "px";
+
+    resize()
+
+    for (let i = 0; i < max_particles / 10; i++) {
+        particles.push(new_particle(Math.random()))
+    }
+
+    tick()
+}
+
 
 let cooldown = 0
 
+function resize() {
+
+    // canvas.width = canvas.clientWidth;
+    // canvas.height = canvas.clientHeight;
+}
+
+function new_particle(t) {
+    let initial_size = (0.5 + Math.random() * 0.5) * max_particle_size * canvas.width;
+
+    return {
+        x: Math.random() * canvas.clientWidth,
+        y: Math.random() * canvas.clientHeight,
+        vx: (0.5 - Math.random()) * initial_speed_max, // TODO: calculate furthest point form others;
+        vy: (0.5 - Math.random()) * initial_speed_max,
+        t: initial_size * t,
+        total: initial_size,
+    }
+}
+
 function tick() {
 
-    let content = document.getElementById("blog_list");
-    let blog_box = document.getElementById("blog_box");
-
-    blog_box.style.height = content.clientHeight + "px";
-
+    resize()
     canvas.width = canvas.clientWidth;
     canvas.height = canvas.clientHeight;
 
-    let base_y_position = - canvas.getBoundingClientRect().top;
     cooldown--;
 
-    if (particles.length < 100 && cooldown < 0) {
-        cooldown = 10;
-        let initial_size = Math.min(canvas.width * 0.5, Math.min(canvas.height * 0.5, 30 + Math.random() * 100));
-
-        let particula = {
-            x: Math.random() * canvas.clientWidth,
-            y: Math.random() * (window.innerHeight + view_margin * 2) + base_y_position - view_margin,
-            vx: (0.5 - Math.random()) * 5,
-            vy: (0.5 - Math.random()) * 5,
-            t: initial_size,
-            total: initial_size,
-        }
-
-        particles.push(particula)
+    if (particles.length < max_particles && cooldown < 0) {
+        cooldown = 4;
+        particles.push(new_particle(1))
     }
     particles = particles.filter(({ t }) => t > 0);
 
     particles.forEach(p => {
-        p.t -= 0.3;
+        p.t -= 0.1;
+
         let r = Math.max(0, bump(p.t / p.total) * p.total);
-
-        if (base_y_position - view_margin > p.y + r) {
-            p.t = 0;
-        }
-        if (base_y_position + window.innerHeight + view_margin < p.y - r) {
-            p.t = 0;
-        }
-
-        particles.forEach(f => {
-            let l = Math.sqrt((f.y - p.y) * (f.y - p.y) + (f.x - p.x) * (f.x - p.x));
-            if (l < 0.001) return;
-            p.vy -= 2 * (f.y - p.y) / l / l;
-            p.vx -= 2 * (f.x - p.x) / l / l;
-
-        })
-
-
-        // if (p.y + r > canvas.height || p.y - r < 0) {
-        //     p.vy *= -0.9;
-        //     p.y = Math.max(r, Math.min(p.y, canvas.height - r))
-        // }
-
-        if (p.x + r > canvas.width || p.x - r < 0) {
-            p.vx *= -0.9;
-            p.x = Math.max(r, Math.min(p.x, canvas.width - r))
-        }
-
-
 
         p.x += p.vx;
         p.y += p.vy;
 
-        let stroke_gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-        stroke_gradient.addColorStop("0", "rgba(0, 255, 255, 0.5)");
-        stroke_gradient.addColorStop("0.5", "rgba(255, 0, 255, 0.5)");
-        stroke_gradient.addColorStop("1", "rgba(255, 255, 0, 0.5)");
+        if (p.x - r - view_margin > canvas.width) {
+            p.t = 0;
+            return;
+        }
+        if (p.x + r + view_margin < 0) {
+            p.t = 0;
+            return;
+        }
 
-        // Fill with gradient
-        ctx.strokeStyle = stroke_gradient;
+        if (p.y + r < canvas.clientTop) {
+            return;
+        }
 
-        let fill_gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-        fill_gradient.addColorStop("0", "rgba(0, 255, 255, 0.2)");
-        fill_gradient.addColorStop("0.5", "rgba(255, 0, 255, 0.2)");
-        fill_gradient.addColorStop("1", "rgba(255, 255,0, 0.2)");
+        if (p.y - r > canvas.clientTop + window.clientHeight) {
+            return;
+        }
 
-        // Fill with gradient
-        ctx.fillStyle = fill_gradient;
 
-        let blur = 5 + Math.abs(p.t - p.total / 2) / p.total * 30;
+
+
+
+        let blur = Math.abs(p.t - p.total / 2) / p.total * 30;
         ctx.filter = "blur(" + blur + "px)";
+
+        const fill_opacity = 0.2;
+        const stroke_opacity = 0.7;
+
+        const fill_gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+        fill_gradient.addColorStop("0", "rgba(0, 255, 255, " + fill_opacity + ")");
+        fill_gradient.addColorStop("0.1", "rgba(255, 0, 255, " + fill_opacity + ")");
+        fill_gradient.addColorStop("0.2", "rgba(255, 255, 0, " + fill_opacity + ")");
+        fill_gradient.addColorStop("0.3", "rgba(0, 255, 255, " + fill_opacity + ")");
+        fill_gradient.addColorStop("0.4", "rgba(255, 0, 255, " + fill_opacity + ")");
+        fill_gradient.addColorStop("0.5", "rgba(255, 255, 0, " + fill_opacity + ")");
+        fill_gradient.addColorStop("0.6", "rgba(0, 255, 255, " + fill_opacity + ")");
+        fill_gradient.addColorStop("0.7", "rgba(255, 0, 255, " + fill_opacity + ")");
+        fill_gradient.addColorStop("0.8", "rgba(255, 255, 0, " + fill_opacity + ")");
+        fill_gradient.addColorStop("0.9", "rgba(0, 255, 255, " + fill_opacity + ")");
+        fill_gradient.addColorStop("1", "rgba(255, 0, 255, " + fill_opacity + ")");
+
+        const stroke_gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+        stroke_gradient.addColorStop("0", "rgba(0, 255, 255, " + stroke_opacity + ")");
+        stroke_gradient.addColorStop("0.1", "rgba(255, 0, 255, " + stroke_opacity + ")");
+        stroke_gradient.addColorStop("0.2", "rgba(255, 255, 0, " + stroke_opacity + ")");
+        stroke_gradient.addColorStop("0.3", "rgba(0, 255, 255, " + stroke_opacity + ")");
+        stroke_gradient.addColorStop("0.4", "rgba(255, 0, 255, " + stroke_opacity + ")");
+        stroke_gradient.addColorStop("0.5", "rgba(255, 255, 0, " + stroke_opacity + ")");
+        stroke_gradient.addColorStop("0.6", "rgba(0, 255, 255, " + stroke_opacity + ")");
+        stroke_gradient.addColorStop("0.7", "rgba(255, 0, 255, " + stroke_opacity + ")");
+        stroke_gradient.addColorStop("0.8", "rgba(255, 255, 0, " + stroke_opacity + ")");
+        stroke_gradient.addColorStop("0.9", "rgba(0, 255, 255, " + stroke_opacity + ")");
+        stroke_gradient.addColorStop("1", "rgba(255, 0, 255, " + stroke_opacity + "");
+
+
+
+        ctx.strokeStyle = stroke_gradient;
+        ctx.fillStyle = fill_gradient;
 
         ctx.lineWidth = r / 10;
         ctx.beginPath();
@@ -104,7 +141,6 @@ function tick() {
 
 
     setTimeout(tick, 1000 / 30);
-
 }
 
-requestAnimationFrame(tick);
+init()
