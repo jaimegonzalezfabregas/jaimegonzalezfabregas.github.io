@@ -14,10 +14,12 @@
     border-radius: 10px;
     color: white;
 
+    border: 1px solid rgb(187, 187, 187);
+
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-.navigation_butt {
+.clickable {
     transition: box-shadow 0.2s;
 
     height: 70px;
@@ -28,16 +30,25 @@
     font-size: 30px;
 }
 
-.navigation_butt.glass_box:hover {
+.clickable.glass_box:hover {
     background-image: linear-gradient(rgba(129, 129, 129, 0.2), rgba(129, 129, 129, 0.2));
 
 }
 
-.navigation_butt.glass_box:active {
+.clickable.glass_box:active {
     box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
 }
 
 [js_lang="en"] {
     display: none;
+}
+
+.clickable {
+    cursor: pointer;
+    user-select: none;
+}
+
+body{
+    overflow-y: hidden;
 }

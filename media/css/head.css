@@ -1,5 +1,6 @@
 .head_container {
-    background-color: rgb(230, 0, 255);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(25deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
     width: 100vw;
     height: 90vh;
 
@@ -8,10 +9,17 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    padding: 30px;
+    padding: 0;
 
     box-sizing: border-box;
+
+    position: relative;
 }
+
+.head_content {
+    padding-top: 20vh;
+}
+
 
 .title {
     text-align: center;
@@ -19,13 +27,13 @@
     font-size: 5vw;
     padding: 5vh;
     margin: auto;
-    margin-top: 20vh;
 }
 
-#spotlight_butt_en,#spotlight_butt_es {
+#spotlight_butt_en,
+#spotlight_butt_es {
     font-size: inherit;
     top: calc(90vh - 90px);
-    right: 30px;
+    right: 5vw;
     position: absolute;
     height: 20px;
     line-height: 20px;
@@ -41,4 +49,11 @@
     color: #ffffff;
     font-size: 2vh;
     padding: 10px;
+}
+
+.head_banner {
+    transition: opacity 3s;
+    position: absolute;
+    width: 100vw;
+    height: 90vh;
 }

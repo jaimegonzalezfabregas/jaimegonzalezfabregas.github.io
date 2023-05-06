@@ -1,11 +1,9 @@
 let particles = [];
 
-const content = document.getElementById("blog_list");
+const content = document.getElementById("blog_flex");
 const blog_box = document.getElementById("blog_box");
 let canvas = document.getElementById("background_canvas");
 let ctx = canvas.getContext('2d');
-
-
 
 function bump(x) {
     // y = 3.330669e-16 + 8.513889*x - 26.56944*x^2 + 36.11111*x^3 - 18.05556*x^4
@@ -13,16 +11,16 @@ function bump(x) {
 }
 
 const view_margin = 300;
-const max_particles = 20;
-const initial_speed_max = 5;
-const max_particle_size = 0.3;
+const initial_speed_max = 2;
+const max_particle_size = 0.15;
+
+let max_particles;
 
 function init() {
-    blog_box.style.height = content.clientHeight + "px";
 
     resize()
 
-    for (let i = 0; i < max_particles / 10; i++) {
+    for (let i = 0; i < max_particles; i++) {
         particles.push(new_particle(Math.random()))
     }
 
@@ -33,29 +31,86 @@ function init() {
 let cooldown = 0
 
 function resize() {
+    blog_box.style.height = content.clientHeight + "px";
 
-    // canvas.width = canvas.clientWidth;
-    // canvas.height = canvas.clientHeight;
+    canvas.width = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
+
+    max_particles = canvas.height / (canvas.width * max_particle_size);
+}
+
+function position_energy(x, y) {
+    let e = particles.reduce(
+        (energy, p) => {
+            energy - Math.sqrt((p.x - x) * (p.x - x) + (p.y - y) * (p.y - y))
+        }, 0);
+    // console.log("energy of ", x, y, e);
+    return e;
+}
+
+function find_position() {
+    let posibilities = [];
+
+    for (let j = 0; j < 3000; j++) {
+        posibilities.push({
+            x: Math.random() * canvas.clientWidth,
+            y: Math.random() * canvas.clientHeight,
+        })
+    }
+
+    posibilities = posibilities.map(({ x, y }) => {
+        return {
+            x, y, e: position_energy(x, y)
+        }
+    });
+
+
+    let { x_min, y_min } = posibilities.reduce(({ x_min, y_min, e_min }, { x, y, e }) => {
+        if (!e_min || e_min > e) {
+            return { x_min: x, y_min: y, e_min: e };
+        } else {
+            return { x_min, y_min, e_min };
+        }
+    }, {});
+
+
+
+
+    return { x: x_min, y: y_min };
 }
 
 function new_particle(t) {
     let initial_size = (0.5 + Math.random() * 0.5) * max_particle_size * canvas.width;
+    let { x, y } = find_position();
 
     return {
-        x: Math.random() * canvas.clientWidth,
-        y: Math.random() * canvas.clientHeight,
-        vx: (0.5 - Math.random()) * initial_speed_max, // TODO: calculate furthest point form others;
+        x,
+        y,
+        vx: (0.5 - Math.random()) * initial_speed_max,
         vy: (0.5 - Math.random()) * initial_speed_max,
         t: initial_size * t,
         total: initial_size,
     }
 }
 
+let mouse_x, mouse_y;
+
+document.addEventListener("mousemove", (e) => {
+    mouse_x = e.clientX;
+    mouse_y = e.clientY;
+    console.log(mouse_x, mouse_y);
+})
+
 function tick() {
 
     resize()
-    canvas.width = canvas.clientWidth;
-    canvas.height = canvas.clientHeight;
+
+    ctx.fillStyle = "white";
+    ctx.arc(mouse_x, mouse_y, 1, 0, 2 * Math.PI, true);
+    
+    ctx.filter = "blur(40px)";
+    ctx.fill();
+    ctx.filter = "blur(0px)";
 
     cooldown--;
 
@@ -66,9 +121,11 @@ function tick() {
     particles = particles.filter(({ t }) => t > 0);
 
     particles.forEach(p => {
-        p.t -= 0.1;
+        p.t -= 0.05;
 
-        let r = Math.max(0, bump(p.t / p.total) * p.total);
+        const normal_t = bump(p.t / p.total);
+
+        let r = Math.max(0, normal_t * p.total);
 
         p.x += p.vx;
         p.y += p.vy;
@@ -94,11 +151,18 @@ function tick() {
 
 
 
-        let blur = Math.abs(p.t - p.total / 2) / p.total * 30;
-        ctx.filter = "blur(" + blur + "px)";
+        // let blur = Math.abs(p.t - p.total / 2) / p.total * 30;
+        // ctx.filter = "blur(" + blur + "px)";
 
-        const fill_opacity = 0.2;
-        const stroke_opacity = 0.7;
+        const base_fill_opacity = 0.0;
+        const base_stroke_opacity = 0.2;
+
+        const max_fill_opacity = 0.3;
+        const max_stroke_opacity = 0.7;
+
+        const fill_opacity = base_fill_opacity + (max_fill_opacity - base_fill_opacity) * normal_t
+        const stroke_opacity = base_stroke_opacity + (max_stroke_opacity - base_stroke_opacity) * normal_t
+
 
         const fill_gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
         fill_gradient.addColorStop("0", "rgba(0, 255, 255, " + fill_opacity + ")");
@@ -131,10 +195,15 @@ function tick() {
         ctx.strokeStyle = stroke_gradient;
         ctx.fillStyle = fill_gradient;
 
-        ctx.lineWidth = r / 10;
+        const border_size = 0.1;
+
+        ctx.lineWidth = r * border_size;
         ctx.beginPath();
         ctx.arc(p.x, p.y, r, 0, 2 * Math.PI, true);
         ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, r * (1 + border_size / 2), 0, 2 * Math.PI, true);
         ctx.stroke();
 
     });

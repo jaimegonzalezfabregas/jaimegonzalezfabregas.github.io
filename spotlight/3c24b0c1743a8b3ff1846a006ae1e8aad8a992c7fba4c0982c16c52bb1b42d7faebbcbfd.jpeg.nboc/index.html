@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/media/css/main.css">
+        <link rel="stylesheet" href="/media/css/galery_static.css">
+        <link rel="stylesheet" href="/media/css/galery_transition.css">
+
+        <title>/media/img/3c24b0c1743a8b3ff1846a006ae1e8aad8a992c7fba4c0982c16c52bb1b42d7faebbcbfd.jpeg</title>
+
+    </head>
+
+    <body>
+        <div id="swup" class="transition-parent">
+            <div class="bg bg_main" style="background-image: url(/media/img/3c24b0c1743a8b3ff1846a006ae1e8aad8a992c7fba4c0982c16c52bb1b42d7faebbcbfd.jpeg);"></div>
+            <div class="bg bg_next" style="background-image: url(/media/img/thumbnail_3d0ecaaec50127c26bdda450560dd48b4b176a3cd4682347234b5a75f755286cfce847df.jpeg);"></div>
+            <div class="bg bg_prev" style="background-image: url(/media/img/thumbnail_3bd094eeaf9547299fdebaa004f21214fd80dbca4a76af82fd49f05d6f6c712e93af597d.jpeg);"></div>
+            <div class="center">
+                <div class="centered">
+                    <div id="navigation_row">
+                        <a href="/spotlight/3d0ecaaec50127c26bdda450560dd48b4b176a3cd4682347234b5a75f755286cfce847df.jpeg.nboc" class="anti_a" data-swup-transition="prev">
+                            <nav_butt class="clickable prev_butt glass_box">
+                            ◀
+                        </nav_butt>
+                        </a>
+                        <a data-no-swup href="/" class="anti_a">
+                            <nav_butt class="clickable back_butt glass_box">
+                            &#x2715
+                        </nav_butt>
+                        </a>
+                        <a href="/spotlight/3bd094eeaf9547299fdebaa004f21214fd80dbca4a76af82fd49f05d6f6c712e93af597d.jpeg.nboc" class="anti_a" data-swup-transition="next">
+                            <nav_butt class="clickable next_butt glass_box">
+                            ▶
+                        </nav_butt>
+                        </a>
+                    </div>
+                    <img class="img" src="/media/img/3c24b0c1743a8b3ff1846a006ae1e8aad8a992c7fba4c0982c16c52bb1b42d7faebbcbfd.jpeg" alt="the image 3c24b0c1743a8b3ff1846a006ae1e8aad8a992c7fba4c0982c16c52bb1b42d7faebbcbfd.jpeg cant be displayed">
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/@swup/preload-plugin@2"></script>
+        <script src="https://unpkg.com/swup@3"></script>
+        <script>
+            const swup = new Swup({
+                plugins: [new SwupPreloadPlugin()],
+                ignoreVisit: (url, {el} = {}) => el
+                    ?.closest('[data-no-swup]')
+            });
+        </script>
+    </body>
+
+</html>

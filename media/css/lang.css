@@ -8,6 +8,7 @@
 #toggle {
     position: absolute;
     top: calc(90vh - 120px);
+    left: 5vw;
     transition: all 0.2s;
     user-select: none;
     width: fit-content;
