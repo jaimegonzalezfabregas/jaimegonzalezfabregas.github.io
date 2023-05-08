@@ -36,7 +36,7 @@ function resize() {
     canvas.width = canvas.clientWidth;
     canvas.height = canvas.clientHeight;
 
-    max_particles = canvas.height / (canvas.width * max_particle_size);
+    max_particles = canvas.height / (canvas.width * max_particle_size) * 2;
 }
 
 function position_energy(x, y) {
@@ -93,24 +93,10 @@ function new_particle(t) {
     }
 }
 
-let mouse_x, mouse_y;
-
-document.addEventListener("mousemove", (e) => {
-    mouse_x = e.clientX;
-    mouse_y = e.clientY;
-    console.log(mouse_x, mouse_y);
-})
-
 function tick() {
 
     resize()
-
-    ctx.fillStyle = "white";
-    ctx.arc(mouse_x, mouse_y, 1, 0, 2 * Math.PI, true);
-    
-    ctx.filter = "blur(40px)";
-    ctx.fill();
-    ctx.filter = "blur(0px)";
+ 
 
     cooldown--;
 
@@ -146,10 +132,6 @@ function tick() {
         if (p.y - r > canvas.clientTop + window.clientHeight) {
             return;
         }
-
-
-
-
 
         // let blur = Math.abs(p.t - p.total / 2) / p.total * 30;
         // ctx.filter = "blur(" + blur + "px)";

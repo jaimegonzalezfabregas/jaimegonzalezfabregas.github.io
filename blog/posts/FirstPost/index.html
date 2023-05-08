@@ -8,5 +8,15 @@
     <body>
         <h1>My first blog post</h1>
         <img url="" alt=""/>
+        <p>&lt;p&gt;I&#39;ve finaly decided to create my very own blog. I plan to post the little thinks I do from now on, but I&#39;ll probably also update it with the thigs I&#39;ve done in the past.&lt;/p&gt;
+&lt;p&gt;This blog is &amp;quot;powered&amp;quot; by &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;eleventy (11ty)&lt;/a&gt;, which is a template engine designed for static webpages. I&#39;ve just started using it, so i&#39;m not an expert yet. So far I&#39;ve had to solve some interesting problems. I&#39;ll name them here and coment on my solution so that new people can get inspired for their own projects:&lt;/p&gt;
+&lt;p&gt;The photo galery on your screen is kind of a big achievement. 11th comes with its own template language (wich is lauched on build time), but i was not able to find enought documentation to get a simple for loop going. This is why I had to resort to client side javascript to dinamicaly build the galery in the browser from the data that I&#39;m able to extract from 11th.&lt;/p&gt;
+&lt;p&gt;11ty comes out of the box with a watchdog type server that will detect changes on the source files and will rebuild your files. The problem with it is that it will only update when some specific files were changed (namely .html, .md, .liquid). Specificaly .css were left out. It was a real pain to have to go to other file, save it, and then go to see how the css had changed the web page. The build times are very very fast, so changing of file was 50% of the proces. To fix this I now use some code really similar to the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;find . -path ./src/node_modules -prune -o -print | entr sh &#39;npx eleventy&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I&#39;m not gonna expain what it does, but it is just a line of code, I trust you can handle it. 😉&lt;/p&gt;
+&lt;p&gt;I also needed to use a server to host localy my page because i&#39;m working inside wsl, but that is maybe to specific and will not apply to your case.&lt;/p&gt;
+&lt;p&gt;As a conclusion I do recomend eleventy. I&#39;ve read about other static page generators (jekill, hugo, orgmode and such...) but as far as I know eleventy is better than all of them in build speed (maybe not better than hugo, but I haven&#39;t done any testing), wich is an incredible advantage when messing around with css of third party code you may or may not understand.&lt;/p&gt;
+
     </body>
 </html>

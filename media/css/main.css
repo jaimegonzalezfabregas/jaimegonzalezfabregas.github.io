@@ -10,20 +10,18 @@
 .glass_box {
     text-shadow: rgba(0, 0, 0, 0.387) 0px 0 10px;
     backdrop-filter: blur(10px);
-    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
-    border-top-left-radius: 30px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 0px;
+    border-radius: 30px;
     color: white;
+    background-color: rgba(255, 255, 255, 0.15);
 
     /* border: 1px solid rgb(187, 187, 187); */
 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
+
 .clickable {
-    transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s, background 0.2s;
 
     height: 70px;
     display: inline-block;
@@ -33,15 +31,30 @@
     font-size: 30px;
 }
 
-.clickable.glass_box:hover {
-    background-image: linear-gradient(rgba(129, 129, 129, 0.2), rgba(129, 129, 129, 0.2));
-
-}
 
 .clickable.glass_box:active {
     box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
 }
+
+.glass_box::before {
+    border-radius: 30px;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
+    position: absolute;
+    content: "";
+    inset: 0;
+    /* same as { top: 0; right: 0; bottom: 0; left: 0; } */
+    /* background-image: linear-gradient(to bottom, red, orange); */
+    z-index: -1;
+    opacity: 1;
+    transition: opacity 0.25s linear;
+}
+
+.clickable.glass_box:hover::before {
+    opacity: 0;
+}
+
+
+
 
 [js_lang="en"] {
     display: none;
