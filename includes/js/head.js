@@ -40,6 +40,8 @@ new Animation(
 
 imgs = imgs.filter(({ data }) => data.portrait == screen.height > screen.width);
 
+console.log(imgs)
+
 let spotlight_detail = "";
 
 function go_to_spotlight() {

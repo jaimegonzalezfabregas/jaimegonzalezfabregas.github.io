@@ -2,21 +2,26 @@
     transition: all 0.2s;
     display: inline;
     text-align: center;
-    font-size: 8vh;
+    font-size: 70px;
 }
 
 #toggle {
+    
+    margin: 0;
+    gap: 0px;
+    display: flex;
+
     position: absolute;
     top: calc(90vh - 120px);
     left: 5vw;
     transition: all 0.2s;
     user-select: none;
     width: fit-content;
-    padding-left: 30px;
-    padding-right: 30px;
+
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
-.half[selected="true"] {
-    font-size: 10vh;
-    text-shadow: 0px 0px 7px white;
+.half[selected="false"] {
+    font-size: 0px;
 }

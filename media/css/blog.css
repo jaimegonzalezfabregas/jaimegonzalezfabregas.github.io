@@ -24,7 +24,7 @@
 .blog_card {
     padding: 30px;
     margin: 30px;
-    width: 300px;
+    width: 200px;
     height: auto;
 
 }
@@ -46,7 +46,6 @@
 
     border: 1px solid white;
     box-sizing: border-box;
-    left: 50px;
 }
 
 .picture_div.sharp {
