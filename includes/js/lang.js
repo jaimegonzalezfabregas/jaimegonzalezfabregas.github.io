@@ -15,11 +15,18 @@ function retranslate(dst_lang) {
 }
 
 window.addEventListener("load", function () {
-    retranslate("es")
+    langChange("es")
 });
 
 function toggle_language() {
     lang_i++;
-    retranslate(langs[lang_i % langs.length])
+    let new_lang = langs[lang_i % langs.length]
+    langChange(new_lang)
 }
 
+function langChange(lang) {
+    retranslate(lang)
+
+    var event = new CustomEvent("onLangChange", { "detail": { lang } });
+    document.dispatchEvent(event);
+}

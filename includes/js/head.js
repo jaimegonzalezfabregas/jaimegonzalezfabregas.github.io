@@ -44,7 +44,7 @@ console.log(imgs)
 
 let spotlight_detail = "";
 
-function go_to_spotlight() {
+function goto_spotlight() {
     window.location = spotlight_detail;
 }
 
@@ -70,5 +70,4 @@ function set_random_image() {
 setInterval(set_random_image, 12000);
 set_random_image();
 console.log(imgs);
-document.getElementById("spotlight_butt_en").addEventListener("click", go_to_spotlight);
-document.getElementById("spotlight_butt_es").addEventListener("click", go_to_spotlight);
+document.querySelectorAll(".spotlight_butt").forEach(elm => elm.addEventListener("click", goto_spotlight))

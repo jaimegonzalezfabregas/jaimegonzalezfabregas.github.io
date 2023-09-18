@@ -29,8 +29,7 @@
     margin: auto;
 }
 
-#spotlight_butt_en,
-#spotlight_butt_es {
+.spotlight_butt_style {
     font-size: inherit;
     top: calc(90vh - 90px);
     right: 5vw;
@@ -46,9 +45,19 @@
 .text {
     margin: auto;
     width: 40%;
-    color: #ffffff;
+    color: #d2d2d2;
     font-size: 2vh;
     padding: 10px;
+    text-shadow: #000000;
+}
+
+a {
+    font-weight: bold;
+    transition: 0.1s;
+}
+
+a:hover {
+    color: #fff;
 }
 
 .head_banner {
