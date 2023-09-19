@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ondas V2</title>
+    </head>
+    <body>
+        <h1>Ondas V2</h1>
+        <img url="" alt=""/>
+        <div>
+            <p>Esta es la continuación de mi otro simulador de dinámica de fluidos. El otro proyecto se basó en una cuadrícula, lo que causó problemas con la forma de las ondas, lo mejor que logré fue hacerlas octogonales. El nuevo motor fluido, en lugar de utilizar sólo una rejilla, utiliza partículas. Las partículas viven en una cuadrícula, de esa manera podemos tomar atajos en los calculos.</p>
+<p>Fenómenos que puede simular:</p>
+<ul>
+<li><strong>Viscosidad</strong> (Rozamiento interno): en cada tick de simulación, calculo la velocidad general de una determinada celda, luego modifico las velocidades de las partículas individuales en esa celda y las celdas cercanas para que coincidan con la tendencia general. De esta manera las partículas se &quot;pegan&quot; entre sí.</li>
+<li><strong>Rozamiento externo</strong>: este es el fenómeno más fácil de simular, simplemente disminuye la velocidad de las particulas en cada tic de simulación.</li>
+<li><strong>Presión</strong>: Para simular presión a pequeña escala introduzco el movimiento browniano. A gran escala calculo la presión por celda, si es mayor de lo que debería ser aplico fuerza hacia afuera a todas las partículas de esta celda y su entorno, si es menor hago lo contrario.</li>
+</ul>
+<p>Soy consciente de que esta forma de computación está lejos de la realidad, pero esta técnica me permite ejecutarla fácilmente en tiempo real y al mismo tiempo obtener un resultado bastante realista.</p>
+<p>También me gustaría señalar que la cuadrícula crea artefactos cuando se deja sin tocar durante mucho tiempo. Esto se debe a un error de cálculo de la presión, donde espero que haya una menor cantidad de partículas en los bordes. Hay una foto de los artefactos en la galería y también puedes verla por ti mismo si haces clic en el enlace a continuación.</p>
+<p><a href="https://jaimegonzalezfabregas.github.io/fluidSim/">Enlace al proyecto del que hablo</a></p>
+
+        </div>
+
+    </body>
+</html>

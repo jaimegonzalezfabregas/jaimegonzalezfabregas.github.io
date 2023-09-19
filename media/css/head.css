@@ -65,4 +65,5 @@ a:hover {
     position: absolute;
     width: 100vw;
     height: 90vh;
+    background-size: 100vw;
 }
