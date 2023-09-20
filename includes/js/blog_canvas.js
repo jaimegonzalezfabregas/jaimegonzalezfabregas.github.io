@@ -1,35 +1,39 @@
-let background_color = "#071952"
 
-let transition_pixel_size = 400;
-
-// let color_pairs = [
-//     ["#1CEFEE", "#0AA3A3"],
-//     ["#F06B1D", "#A33C00"],
-// ]
-
-let color_pairs = [
-    ["#0B666A", "#0B666A"],
-    ["#35A29F", "#35A29F"],
-    ["#97FEED", "#97FEED"]
-]
-
-// let color_pairs = [
-//     ["#2987F0", "#2987F0"],
-//     ["#F04335", "#F04335"],
-//     ["#1CEFEE", "#1CEFEE"],
-//     ["#F09A05", "#F09A05"],
-//     ["#11F072", "#11F072"],
-// ]
-
-// let color_pairs = [
-//     ["#47F1FF", "#003B47"],
-//     ["#9E003E", "#FF468A"],
-// ]
+let transition_pixel_size = 100;
 
 
-let canvas_es = document.getElementById("background_canvas_es");
+let canvas_color_themes = {
+    "dark": {
+        web_background_color: "black",
+        background_color: "#071952",
+        dot_colors: [
+            "#0B666A",
+            "#35A29F",
+            "#97FEED"
+        ]
+    },
+    "light": {
+        web_background_color: "rgb(238, 238, 238)",
+        background_color: "white",
+        dot_colors: [
+            "#E19898",
+            "#A2678A",
+            "#4D3C77",
+            "#3F1D38"
+        ]
+    }
+}
 
-let reset_canvas = (lang) => {
+
+function get_hash(x, y) {
+    let ret = Math.abs(Math.floor((perlin.get(x * 1.0001, y * 1.0001) * 10000000))) % 100;
+    console.log(ret)
+    return ret;
+}
+
+let reset_canvas = (lang, theme) => {
+
+    let { web_background_color, background_color, dot_colors } = canvas_color_themes[theme];
 
     console.log("lang", lang)
     const content = document.getElementById("blog_flex_" + lang);
@@ -47,10 +51,10 @@ let reset_canvas = (lang) => {
 
 
 
-    fill_gradient.addColorStop("0", "#000000");
+    fill_gradient.addColorStop("0", web_background_color);
     fill_gradient.addColorStop("" + (transition_pixel_size / canvas.height), background_color);
     fill_gradient.addColorStop("" + (1 - transition_pixel_size / canvas.height), background_color);
-    fill_gradient.addColorStop("1", "#000000");
+    fill_gradient.addColorStop("1", web_background_color);
     ctx.fillStyle = fill_gradient;
     ctx.beginPath();
     ctx.rect(0, 0, canvas.width, canvas.height)
@@ -61,7 +65,7 @@ let reset_canvas = (lang) => {
     const perlin_scale = 3;
 
     for (let x = -1; x < columns + 1; x++) {
-        for (let y = 0; y < canvas.height / canvas.width * columns + 1; y++) {
+        for (let y = 0; y < canvas.height / canvas.width * columns; y++) {
 
             const center_x = canvas.width / (columns + 1) * (x + 1)
             const center_y = canvas.width / (columns + 1) * (y + 1)
@@ -74,54 +78,22 @@ let reset_canvas = (lang) => {
 
             const r = canvas.width / columns * scale;
 
-            draw_circle(center_x, center_y, r, ctx)
+            draw_circle(center_x, center_y, r, ctx, dot_colors, get_hash(x, y))
 
         }
     }
 
-    // let already_drawn = []
-
-    // for (let i = 0; i < canvas.height / canvas.width * 100; i++) {
-
-    //     let top_y = canvas.height * 0.1 + Math.random() * canvas.height
-    //     let center_x = Math.random() * canvas.width;
-    //     let r = Math.random() * canvas.width / 3 + canvas.width / 100;
-    //     let center_y = top_y + r;
-
-    //     let hit = false;
-
-    //     for (let j = 0; j < already_drawn.length; j++) {
-    //         let { center_x: x, center_y: y, r: rad } = already_drawn[j];
-
-    //         if ((center_x - x) ** 2 + (center_y - y) ** 2 < ((r + rad) * 1.1) ** 2) {
-    //             hit = true;
-    //             break
-    //         }
-    //     }
-
-    //     if (hit) continue;
-
-    //     draw_circle(center_x, center_y, r, ctx)
-
-    //     already_drawn.push({ center_x, center_y, r })
-    // }
-
 }
 
 
-function draw_circle(center_x, center_y, r, ctx) {
+function draw_circle(center_x, center_y, r, ctx, dot_colors, rand) {
     if (r < 0) return;
-    const fill_gradient = ctx.createLinearGradient(center_x - r, center_y - r, center_x + r, center_y + r);
 
-    let [a, b] = color_pairs[Math.floor(Math.random() * color_pairs.length)];
-
-    fill_gradient.addColorStop("0", a);
-    fill_gradient.addColorStop("1", b);
-    ctx.fillStyle = fill_gradient;
-
+    ctx.fillStyle = dot_colors[rand % dot_colors.length];
 
     ctx.beginPath();
     ctx.arc(center_x, center_y, r, 0, 2 * Math.PI);
     ctx.fill();
 
 }
+

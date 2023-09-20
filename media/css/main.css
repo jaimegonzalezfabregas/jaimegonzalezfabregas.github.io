@@ -3,6 +3,22 @@
     src: url(/media/fonts/Roboto-Regular.ttf);
 }
 
+body[theme="light"] {
+    --background-color: rgb(238, 238, 238);
+    --text-color: black;
+    --low-text-color: rgb(37, 37, 37);
+    --low-low-text-color: rgb(83, 83, 83);
+    --glass-gradient: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+}
+
+body[theme="dark"] {
+    --background-color: black;
+    --text-color: white;
+    --low-text-color: rgb(212, 212, 212);
+    --low-low-text-color: rgb(152, 152, 152);
+    --glass-gradient: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
+}
+
 * {
     font-family: roboto_regular;
 }
@@ -38,7 +54,7 @@
 
 .glass_box::before {
     border-radius: 30px;
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
+    background: var(--glass-gradient);
     position: absolute;
     content: "";
     inset: 0;

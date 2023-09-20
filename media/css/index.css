@@ -2,14 +2,14 @@ body,
 html {
     margin: 0;
     overflow-x: hidden;
-    background-color: black;
+    background-color: var(--background-color);
 }
 
 .separator {
     width: 100vw;
     height: 10vh;
-    background-color: black;
-    color: white;
+    background-color: var(--background-color);
+    color: var(--text-color);
     text-align: center;
     line-height: 25vh;
     font-size: 20vh;

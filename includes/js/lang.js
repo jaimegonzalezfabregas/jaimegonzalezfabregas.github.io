@@ -1,5 +1,8 @@
-let lang_i = 0;
 let langs = ["es", "en"];
+
+let lang_i = localStorage.getItem("lang_i");
+if (!lang_i) lang_i = 0
+
 
 function retranslate(dst_lang) {
     console.log("switching to lang:" + dst_lang);
@@ -15,18 +18,18 @@ function retranslate(dst_lang) {
 }
 
 window.addEventListener("load", function () {
-    langChange("es")
+    langChange(langs[lang_i % langs.length])
 });
 
 function toggle_language() {
     lang_i++;
-    let new_lang = langs[lang_i % langs.length]
-    langChange(new_lang)
+    localStorage.setItem("lang_i", theme_i);
+    langChange(langs[lang_i % langs.length])
 }
 
 function langChange(lang) {
     retranslate(lang)
 
     var event = new CustomEvent("onLangChange", { "detail": { lang } });
-    document.dispatchEvent(event);
+    dispatchEvent(event);
 }

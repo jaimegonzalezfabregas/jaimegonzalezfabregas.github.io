@@ -1,13 +1,17 @@
-let current_blog_lang = "";
+let current_blog_lang = "en";
+let current_blog_theme = "dark";
 
-document.addEventListener("onLangChange", (e) => {
+addEventListener("onLangChange", (e) => {
     current_blog_lang = e.detail.lang;
-    perlin.seed(Math.random())
-
-    reset_canvas(current_blog_lang)
+    reset_canvas(current_blog_lang, current_blog_theme)
 });
 
+addEventListener("onThemeChange", (e) => {
+    current_blog_theme = e.detail.theme;
+    reset_canvas(current_blog_lang, current_blog_theme)
+})
+
 addEventListener("resize", () => {
-    reset_canvas(current_blog_lang)
+    reset_canvas(current_blog_lang, current_blog_theme)
 
 })

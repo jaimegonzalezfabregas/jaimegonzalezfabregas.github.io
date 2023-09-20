@@ -3,17 +3,24 @@
     display: inline;
     text-align: center;
     font-size: 70px;
+    margin: 0;
+    padding: 0;
 }
 
-#toggle {
-    
-    margin: 0;
-    gap: 0px;
-    display: flex;
-
+.toggle_row {
     position: absolute;
-    top: calc(90vh - 120px);
-    left: 5vw;
+    bottom: 5vh;
+    left: 5vh;
+    gap: 5vh;
+    display: flex;
+}
+
+.toggle {
+    vertical-align: text-bottom;
+    letter-spacing: 0px;
+    gap: 0px;
+    display: inline-flex;
+
     transition: all 0.2s;
     user-select: none;
     width: fit-content;

@@ -16,17 +16,29 @@
                 Welcome to my personal webpage. You can read my <a onclick="scroll_to_blog()">blog</a>, see the colection of <a class="spotlight_butt">windows spotlight</a> images and many other proyects of mine. Have a look around!
             </div>
         </div>
-        <link rel="stylesheet" href="/media/css/lang.css">
-<script src="/includes/js/lang.js"></script>
+        <link rel="stylesheet" href="/media/css/toggle.css">
 
-<div id="toggle" class="glass_box clickable" onclick="toggle_language()">
+        <div class="toggle_row">
+
+            <script src="/includes/js/lang.js"></script>
+
+<div class="toggle glass_box clickable" onclick="toggle_language()">
     <div id="es_butt" class="half" selected="true">🇪🇸</div>
     <div id="en_butt" class="half" selected="false">🇬🇧</div>
 </div>
 
 
-        <div class="clickable glass_box spotlight_butt spotlight_butt_style" js_lang="es" >Más Imágenes de windows spotlight ...</div>
-        <div class="clickable glass_box spotlight_butt spotlight_butt_style" js_lang="en" >More windows spotlight images ...</div>
+            <script src="/includes/js/theme.js"></script>
+
+<div class="toggle glass_box clickable" onclick="toggle_theme()">
+    <div id="dark_butt" class="half" selected="true">🌜</div>
+    <div id="light_butt" class="half" selected="false">☀️</div>
+</div>
+
+
+
+        </div>
+
     </div>
 
 </div>

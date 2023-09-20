@@ -1,5 +1,5 @@
 .footer {
-    background: #000;
+    background: var(--background-color);
     padding: 30px 0px;
     font-family: 'Play', sans-serif;
     text-align: center;
@@ -9,12 +9,12 @@
     width: 100%;
     margin: 1% 0%;
     padding: 0.6% 0%;
-    color: gray;
+    color: var(--low-low-text-color);
     font-size: 0.8em;
 }
 
 .footer .footer_title {
-    color: #ababab;
+    color: var(--low-text-color);
     width: 100%;
     font-size: 1.3em;
     font-weight: bold;
@@ -22,12 +22,12 @@
 
 .footer .row a {
     text-decoration: none;
-    color: gray;
+    color: var(--low-low-text-color);
     transition: 0.5s;
 }
 
 .footer .row a:hover {
-    color: #fff;
+    color: var(--text-color);
 }
 
 .footer .row ul {
