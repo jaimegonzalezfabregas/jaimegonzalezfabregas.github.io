@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/post_layout.css">
+
+        <title>Molecube</title>
+    </head>
+    <body>
+        <canvas id="background_canvas"></canvas>
+        <div id="content_margins">
+            <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/toggle_bar.css">
+
+<div class="toggle_row">
+
+    <script src="/js/lang.js"></script>
+
+<div class="toggle glass_box clickable" onclick="toggle_language()">
+    <div id="es_butt" class="half" selected="true">🇪🇸</div>
+    <div id="en_butt" class="half" selected="false">🇬🇧</div>
+</div>
+
+
+    <script src="/js/theme.js"></script>
+
+<div class="toggle glass_box clickable" onclick="toggle_theme()">
+    <div id="dark_butt" class="half" selected="true">🌜</div>
+    <div id="light_butt" class="half" selected="false">☀️</div>
+</div>
+
+
+
+</div>
+
+            <h1>Molecube</h1>
+            <img url="" alt=""/>
+            <div>
+                <p>El molecube es un puzle que podría confundirse con un cubo de Rubik pero en realidad su objetivo es completamente opuesto. El objetivo de este rompecabezas es hacer que cada color aparezca sólo una vez por cara. Al principio mi plan era crear un programa en el que pudieras meter tu configuración y lo resolvería por ti, pero eso es bastante complicado. Una vez que terminé con la interfaz no continue con la lógica. De cualquier manera, creo que la interfaz fue un proyecto completo por si solo.</p>
+<p>Cuando hice esto acababa de empezar con el 3D. Algo de lo que estoy realmente orgulloso acerca de los gráficos es que fui yo quien programó el motor 3D completo. Todas las ecuaciones las derive con una hoja y un lapiz. También hago algunas suposiciones acerca de como funciona la luz (no utilizo aceleración de hardware, solo círculos en un canvas). Esa es suficiente explicación yo creo, vayamos a las cosas &quot;divertidas&quot;:</p>
+<p>Cómo navegar por el cubo:</p>
+<ul>
+<li>Teclas de flecha para rotar</li>
+<li>Haga clic en una bola para seleccionar
+<ul>
+<li>Si la pelota está en el medio usa A-D para girar esa cara.</li>
+<li>Si la pelota no está en el medio, usa A-D para cambiar su color.</li>
+</ul>
+</li>
+<li>W-S para acercarse y alejarse</li>
+<li>X restablecerá la cámara con una animación preciosa (aunque este feo que yo lo diga).</li>
+</ul>
+<p>Eso es básicamente todo, date una vuelta por mi código (que está dentro del archivo html) para verlo por ti mismo.</p>
+<p><a href="https://jaimegonzalezfabregas.github.io/proyectos-html/Molecube/">Enlace al proyecto del que hablo</a></p>
+<p>Mi padre, después de ver lo que yo hacía, programó el suyo (que puede o no ser mucho mejor que el mío😅)</p>
+<p><a href="https://alvarogonzalezsotillo.github.io/blog/resolver-molecube-en-prolog/">El proyecto de mi padre</a></p>
+
+            </div>
+
+        </div>
+
+        <link rel="stylesheet" href="/css/footer.css">
+
+<footer>
+    <div class="footer" id="footer">
+
+        <div class="row footer_title" js_lang="en">
+            That's not all!
+        </div>
+        <div class="row footer_title" js_lang="es">
+            Eso no es todo!
+        </div>
+        <div class="row">
+            <ul>
+                <li>
+                    <a href="/" js_lang="en">Home</a>
+                    <a href="/" js_lang="es">Inicio</a>
+                </li>
+                <li>
+                    <a href="/aboutme" js_lang="en">About me</a>
+                    <a href="/aboutme" js_lang="es">Sobre mi</a>
+                </li>
+                <li>
+                    <a class="spotlight_butt" js_lang="en">Windows spotlight galery</a>
+                    <a class="spotlight_butt" js_lang="es">Galeria de Windows spotlight</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="row" js_lang="en">
+            The source code of this page is on <a href="https://github.com/jaimegonzalezfabregas/jaimegonzalezfabregas.github.io">github</a>
+        </div>
+        <div class="row" js_lang="es">
+            El codigo de esta pagina está en <a href="https://github.com/jaimegonzalezfabregas/jaimegonzalezfabregas.github.io">github</a>
+        </div>
+    </div>
+</footer>
+
+        <script src="/js/perlin.js"></script>
+        <script src="/js/bg_canvas.js"></script>
+        <script src="/js/post_layout.js"></script>
+    </body>
+</html>

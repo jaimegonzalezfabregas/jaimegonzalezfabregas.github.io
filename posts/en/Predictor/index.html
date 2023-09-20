@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/post_layout.css">
+
+        <title>Word predictor</title>
+    </head>
+    <body>
+        <canvas id="background_canvas"></canvas>
+        <div id="content_margins">
+            <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/toggle_bar.css">
+
+<div class="toggle_row">
+
+    <script src="/js/lang.js"></script>
+
+<div class="toggle glass_box clickable" onclick="toggle_language()">
+    <div id="es_butt" class="half" selected="true">🇪🇸</div>
+    <div id="en_butt" class="half" selected="false">🇬🇧</div>
+</div>
+
+
+    <script src="/js/theme.js"></script>
+
+<div class="toggle glass_box clickable" onclick="toggle_theme()">
+    <div id="dark_butt" class="half" selected="true">🌜</div>
+    <div id="light_butt" class="half" selected="false">☀️</div>
+</div>
+
+
+
+</div>
+
+            <h1>Word predictor</h1>
+            <img url="" alt=""/>
+            <div>
+                <p>There is this thing with mobile phone's keyboards wich is preaty neat. They will try to guess what word comes next. That is not only a concerning privacy flaw, but also good inspiration for a litle program. The premise is that you write in a text input and the program tries to guess what key you will press next.</p>
+<p>On load my program will read and analyze the whole book and create a probability map for every leter conbination (this will lag when the page loads, you have been warned). The book used was a random Serlock Holmes book form <a href="http://www.gutenberg.org/">project guttemberg</a>(wich btw is in English).</p>
+<p>This is a web version of a c++ program I made that works with prebaked regexes that goes much faster. That other program works with full words instead of individual leters using data from multiple books. The web version uses only one book and is based on leters, this means that there are many cases it doesn't know what to say.</p>
+<p>Just an explanation on what you will see: In my program you can see bellow the input the prediction. '#' means that it has no idea what you are talking about.Anything else is a prediction. My program also only looks for the last few leters (the ones underlined), so don't even think about coherency.</p>
+<p><strong>WARNING: EXPECT GIGONOURMUS LAG SPIKE ON LOAD</strong></p>
+<p><a href="https://jaimegonzalezfabregas.github.io/html-projects/Predictor%20de%20latras/">Link to the project I'm talking about</a></p>
+<p>PD: this was way way earlier than the LLM feaver of 2023</p>
+
+            </div>
+
+        </div>
+
+        <link rel="stylesheet" href="/css/footer.css">
+
+<footer>
+    <div class="footer" id="footer">
+
+        <div class="row footer_title" js_lang="en">
+            That's not all!
+        </div>
+        <div class="row footer_title" js_lang="es">
+            Eso no es todo!
+        </div>
+        <div class="row">
+            <ul>
+                <li>
+                    <a href="/" js_lang="en">Home</a>
+                    <a href="/" js_lang="es">Inicio</a>
+                </li>
+                <li>
+                    <a href="/aboutme" js_lang="en">About me</a>
+                    <a href="/aboutme" js_lang="es">Sobre mi</a>
+                </li>
+                <li>
+                    <a class="spotlight_butt" js_lang="en">Windows spotlight galery</a>
+                    <a class="spotlight_butt" js_lang="es">Galeria de Windows spotlight</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="row" js_lang="en">
+            The source code of this page is on <a href="https://github.com/jaimegonzalezfabregas/jaimegonzalezfabregas.github.io">github</a>
+        </div>
+        <div class="row" js_lang="es">
+            El codigo de esta pagina está en <a href="https://github.com/jaimegonzalezfabregas/jaimegonzalezfabregas.github.io">github</a>
+        </div>
+    </div>
+</footer>
+
+        <script src="/js/perlin.js"></script>
+        <script src="/js/bg_canvas.js"></script>
+        <script src="/js/post_layout.js"></script>
+    </body>
+</html>

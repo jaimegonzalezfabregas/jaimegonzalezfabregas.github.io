@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/post_layout.css">
+
+        <title>Waves</title>
+    </head>
+    <body>
+        <canvas id="background_canvas"></canvas>
+        <div id="content_margins">
+            <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/toggle_bar.css">
+
+<div class="toggle_row">
+
+    <script src="/js/lang.js"></script>
+
+<div class="toggle glass_box clickable" onclick="toggle_language()">
+    <div id="es_butt" class="half" selected="true">🇪🇸</div>
+    <div id="en_butt" class="half" selected="false">🇬🇧</div>
+</div>
+
+
+    <script src="/js/theme.js"></script>
+
+<div class="toggle glass_box clickable" onclick="toggle_theme()">
+    <div id="dark_butt" class="half" selected="true">🌜</div>
+    <div id="light_butt" class="half" selected="false">☀️</div>
+</div>
+
+
+
+</div>
+
+            <h1>Waves</h1>
+            <img url="" alt=""/>
+            <div>
+                <p>This phenomena that I have simulated is a very complex one, therefore to wrap my head arround it I started with a lilte 1D project.</p>
+<p>1D usage:</p>
+<ul>
+<li>click whereever to force the level on that x position to the height of your mouse.</li>
+<li>release click and watch</li>
+<li>you can click at any moment anywhere</li>
+</ul>
+<p><a href="https://jaimegonzalezfabregas.github.io/html-projects/ondas/1d.html">1D version</a></p>
+<p>Once I properly understood the simulation I developed a new 2D version</p>
+<p>2D usage:</p>
+<ul>
+<li>left click will create a dip that will evolve into a wave.</li>
+<li>right click will switch between shaded mode and depth mode:
+<ul>
+<li><strong>shaded</strong>: darker tiles mean that their are looking away from the light source.</li>
+<li><strong>depth mode</strong>: black = 0, green = valey, red = mountain.</li>
+</ul>
+</li>
+</ul>
+<p>You will be able to see that the 2d version doesnt have perfect circular waves, they have a octogonal shape to them. This is because the celular automata part. As my cells are squared you get octagons. I'm planing a fix for this in the future, but for the moment I'm happy with what I learned.</p>
+<p><a href="https://jaimegonzalezfabregas.github.io/html-projects/ondas/2d2d.html">2D version</a></p>
+
+            </div>
+
+        </div>
+
+        <link rel="stylesheet" href="/css/footer.css">
+
+<footer>
+    <div class="footer" id="footer">
+
+        <div class="row footer_title" js_lang="en">
+            That's not all!
+        </div>
+        <div class="row footer_title" js_lang="es">
+            Eso no es todo!
+        </div>
+        <div class="row">
+            <ul>
+                <li>
+                    <a href="/" js_lang="en">Home</a>
+                    <a href="/" js_lang="es">Inicio</a>
+                </li>
+                <li>
+                    <a href="/aboutme" js_lang="en">About me</a>
+                    <a href="/aboutme" js_lang="es">Sobre mi</a>
+                </li>
+                <li>
+                    <a class="spotlight_butt" js_lang="en">Windows spotlight galery</a>
+                    <a class="spotlight_butt" js_lang="es">Galeria de Windows spotlight</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="row" js_lang="en">
+            The source code of this page is on <a href="https://github.com/jaimegonzalezfabregas/jaimegonzalezfabregas.github.io">github</a>
+        </div>
+        <div class="row" js_lang="es">
+            El codigo de esta pagina está en <a href="https://github.com/jaimegonzalezfabregas/jaimegonzalezfabregas.github.io">github</a>
+        </div>
+    </div>
+</footer>
+
+        <script src="/js/perlin.js"></script>
+        <script src="/js/bg_canvas.js"></script>
+        <script src="/js/post_layout.js"></script>
+    </body>
+</html>

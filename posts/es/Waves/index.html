@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/post_layout.css">
+
+        <title>Ondas</title>
+    </head>
+    <body>
+        <canvas id="background_canvas"></canvas>
+        <div id="content_margins">
+            <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/toggle_bar.css">
+
+<div class="toggle_row">
+
+    <script src="/js/lang.js"></script>
+
+<div class="toggle glass_box clickable" onclick="toggle_language()">
+    <div id="es_butt" class="half" selected="true">🇪🇸</div>
+    <div id="en_butt" class="half" selected="false">🇬🇧</div>
+</div>
+
+
+    <script src="/js/theme.js"></script>
+
+<div class="toggle glass_box clickable" onclick="toggle_theme()">
+    <div id="dark_butt" class="half" selected="true">🌜</div>
+    <div id="light_butt" class="half" selected="false">☀️</div>
+</div>
+
+
+
+</div>
+
+            <h1>Ondas</h1>
+            <img url="" alt=""/>
+            <div>
+                <p>Este fenómeno que he simulado es muy complejo, por lo tanto, para entenderlo, comencé con un pequeño proyecto 1D.</p>
+<h2>Versión 1D</h2>
+<ul>
+<li>Clic en cualquier lugar para forzar el nivel en esa posición x a la altura de su mouse.</li>
+<li>Puedes hacer clic en cualquier momento en cualquier lugar</li>
+</ul>
+<p><a href="https://jaimegonzalezfabregas.github.io/html-projects/ondas/1d.html">Versión 1D</a></p>
+<p>Una vez que domine la simulación simple desarrollé una nueva versión 2D.</p>
+<h2>Versión 2D</h2>
+<ul>
+<li>El clic izquierdo creará una depresión que evolucionará hasta convertirse en una ola.</li>
+<li>Al hacer clic derecho se cambiará entre el modo sombreado y el modo de profundidad:
+<ul>
+<li><strong>sombreado</strong>: los mosaicos más oscuros significan que no miran hacia la fuente de luz.</li>
+<li><strong>modo de profundidad</strong>: negro = 0, verde = valle, rojo = montaña.</li>
+</ul>
+</li>
+</ul>
+<p>Podrás ver que la versión 2D no tiene ondas circulares perfectas, sino que tienen una forma octogonal. Esto se debe a la forma cuadrada de cada celda. Como mis celdas son cuadradas las ondas son octágonos. Estoy planeando una solución para esto en el futuro, pero por el momento estoy contento con lo que he aprendido con el proyecto.</p>
+<p><a href="https://jaimegonzalezfabregas.github.io/html-projects/ondas/2d2d.html">Versión 2D</a></p>
+
+            </div>
+
+        </div>
+
+        <link rel="stylesheet" href="/css/footer.css">
+
+<footer>
+    <div class="footer" id="footer">
+
+        <div class="row footer_title" js_lang="en">
+            That's not all!
+        </div>
+        <div class="row footer_title" js_lang="es">
+            Eso no es todo!
+        </div>
+        <div class="row">
+            <ul>
+                <li>
+                    <a href="/" js_lang="en">Home</a>
+                    <a href="/" js_lang="es">Inicio</a>
+                </li>
+                <li>
+                    <a href="/aboutme" js_lang="en">About me</a>
+                    <a href="/aboutme" js_lang="es">Sobre mi</a>
+                </li>
+                <li>
+                    <a class="spotlight_butt" js_lang="en">Windows spotlight galery</a>
+                    <a class="spotlight_butt" js_lang="es">Galeria de Windows spotlight</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="row" js_lang="en">
+            The source code of this page is on <a href="https://github.com/jaimegonzalezfabregas/jaimegonzalezfabregas.github.io">github</a>
+        </div>
+        <div class="row" js_lang="es">
+            El codigo de esta pagina está en <a href="https://github.com/jaimegonzalezfabregas/jaimegonzalezfabregas.github.io">github</a>
+        </div>
+    </div>
+</footer>
+
+        <script src="/js/perlin.js"></script>
+        <script src="/js/bg_canvas.js"></script>
+        <script src="/js/post_layout.js"></script>
+    </body>
+</html>

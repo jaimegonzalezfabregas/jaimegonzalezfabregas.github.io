@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/post_layout.css">
+
+        <title>Iso-patience</title>
+    </head>
+    <body>
+        <canvas id="background_canvas"></canvas>
+        <div id="content_margins">
+            <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/toggle_bar.css">
+
+<div class="toggle_row">
+
+    <script src="/js/lang.js"></script>
+
+<div class="toggle glass_box clickable" onclick="toggle_language()">
+    <div id="es_butt" class="half" selected="true">🇪🇸</div>
+    <div id="en_butt" class="half" selected="false">🇬🇧</div>
+</div>
+
+
+    <script src="/js/theme.js"></script>
+
+<div class="toggle glass_box clickable" onclick="toggle_theme()">
+    <div id="dark_butt" class="half" selected="true">🌜</div>
+    <div id="light_butt" class="half" selected="false">☀️</div>
+</div>
+
+
+
+</div>
+
+            <h1>Iso-patience</h1>
+            <img url="" alt=""/>
+            <div>
+                <p>Creo que he encontrado la mejor combinacion de lenguages para montar aplicaciones. Ahora mismo dudo que pueda encontrar una configuración mucho mejor para crear apps. Recientemente he aprendido de un &quot;concepto/workflow/NoSeMuyBienComoLLamarlo&quot; para mejorar el rendimiento en el cliente web, se llama <strong>web assembly</strong>. Esto me ha hecho abandonar Angular para aprender la tecnología. Y consigue lo que promete. Puedes conseguir velocidades parecidas a las nativas con un pequeño cambio de sistema. Pero no es todo, puede combinar WASM con JS multithreading para tener aun mas velocidad.</p>
+<p>En otro post hablé de mi proyecto &quot;Ice-o_matic&quot;, donde la limitacion principal era la velocidad a la que resolvía los puzles. WASM areglaría totalmente mi problema, permitiendome hacer proyectos web mas ambiciosos en el futuro.</p>
+<p>Como prueba de concepto he desarroyado el siguiente jueguecillo:</p>
+<p>La idea del juego viene del legendario <a href="https://undertale.com/">UnderTale</a>, la mecanica se explica en <a href="https://youtu.be/v7nlXgDjCY8?t=341">este</a> segmento del gameplay. Es un momento de los más divertidos de la historia de los videojuegos, pero no conociendo el lore de Papairus (el esqueleto alto) alomejor no es tan gracioso. Judgen por si mismos.</p>
+<p>Mi juego en vez de tener un tablero aleatorio creo muchos tableros y eligo el que mejor solución tenga, lo que lo hace dificil de correr en JS normal. El siguiente tablero se calcula en segundo plano mientras juegas al tablero actual para adelantar al máximo el trabajo y que no tengas que esperar. También existen opciones para cambiar el tamaño de la cuadricula.</p>
+<p>No he incluido todas las casillas, solo las que me han parecido que tendrían sentido por si mismas.</p>
+<p>gris = nada
+azul = agua con pirañas
+amarillo = electificadas
+morado = resbaladizas
+naranja = sabor a naranja</p>
+<p>Usa las flechas para moverte. La tecla S te enseña la solcion, pulsada 2 veces pasa de nivel.</p>
+<p><a href="https://jaimegonzalezfabregas.github.io/IsoPatience/">Link al juego del que hablo</a></p>
+
+            </div>
+
+        </div>
+
+        <link rel="stylesheet" href="/css/footer.css">
+
+<footer>
+    <div class="footer" id="footer">
+
+        <div class="row footer_title" js_lang="en">
+            That's not all!
+        </div>
+        <div class="row footer_title" js_lang="es">
+            Eso no es todo!
+        </div>
+        <div class="row">
+            <ul>
+                <li>
+                    <a href="/" js_lang="en">Home</a>
+                    <a href="/" js_lang="es">Inicio</a>
+                </li>
+                <li>
+                    <a href="/aboutme" js_lang="en">About me</a>
+                    <a href="/aboutme" js_lang="es">Sobre mi</a>
+                </li>
+                <li>
+                    <a class="spotlight_butt" js_lang="en">Windows spotlight galery</a>
+                    <a class="spotlight_butt" js_lang="es">Galeria de Windows spotlight</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="row" js_lang="en">
+            The source code of this page is on <a href="https://github.com/jaimegonzalezfabregas/jaimegonzalezfabregas.github.io">github</a>
+        </div>
+        <div class="row" js_lang="es">
+            El codigo de esta pagina está en <a href="https://github.com/jaimegonzalezfabregas/jaimegonzalezfabregas.github.io">github</a>
+        </div>
+    </div>
+</footer>
+
+        <script src="/js/perlin.js"></script>
+        <script src="/js/bg_canvas.js"></script>
+        <script src="/js/post_layout.js"></script>
+    </body>
+</html>

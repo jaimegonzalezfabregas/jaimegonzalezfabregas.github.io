@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/post_layout.css">
+
+        <title>Ondas V2</title>
+    </head>
+    <body>
+        <canvas id="background_canvas"></canvas>
+        <div id="content_margins">
+            <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/toggle_bar.css">
+
+<div class="toggle_row">
+
+    <script src="/js/lang.js"></script>
+
+<div class="toggle glass_box clickable" onclick="toggle_language()">
+    <div id="es_butt" class="half" selected="true">🇪🇸</div>
+    <div id="en_butt" class="half" selected="false">🇬🇧</div>
+</div>
+
+
+    <script src="/js/theme.js"></script>
+
+<div class="toggle glass_box clickable" onclick="toggle_theme()">
+    <div id="dark_butt" class="half" selected="true">🌜</div>
+    <div id="light_butt" class="half" selected="false">☀️</div>
+</div>
+
+
+
+</div>
+
+            <h1>Ondas V2</h1>
+            <img url="" alt=""/>
+            <div>
+                <p>Esta es la continuación de mi otro simulador de dinámica de fluidos. El otro proyecto se basó en una cuadrícula, lo que causó problemas con la forma de las ondas, lo mejor que logré fue hacerlas octogonales. El nuevo motor fluido, en lugar de utilizar sólo una rejilla, utiliza partículas. Las partículas viven en una cuadrícula, de esa manera podemos tomar atajos en los calculos.</p>
+<p>Fenómenos que puede simular:</p>
+<ul>
+<li><strong>Viscosidad</strong> (Rozamiento interno): en cada tick de simulación, calculo la velocidad general de una determinada celda, luego modifico las velocidades de las partículas individuales en esa celda y las celdas cercanas para que coincidan con la tendencia general. De esta manera las partículas se &quot;pegan&quot; entre sí.</li>
+<li><strong>Rozamiento externo</strong>: este es el fenómeno más fácil de simular, simplemente disminuye la velocidad de las particulas en cada tic de simulación.</li>
+<li><strong>Presión</strong>: Para simular presión a pequeña escala introduzco el movimiento browniano. A gran escala calculo la presión por celda, si es mayor de lo que debería ser aplico fuerza hacia afuera a todas las partículas de esta celda y su entorno, si es menor hago lo contrario.</li>
+</ul>
+<p>Soy consciente de que esta forma de computación está lejos de la realidad, pero esta técnica me permite ejecutarla fácilmente en tiempo real y al mismo tiempo obtener un resultado bastante realista.</p>
+<p>También me gustaría señalar que la cuadrícula crea artefactos cuando se deja sin tocar durante mucho tiempo. Esto se debe a un error de cálculo de la presión, donde espero que haya una menor cantidad de partículas en los bordes. Hay una foto de los artefactos en la galería y también puedes verla por ti mismo si haces clic en el enlace a continuación.</p>
+<p><a href="https://jaimegonzalezfabregas.github.io/fluidSim/">Enlace al proyecto del que hablo</a></p>
+
+            </div>
+
+        </div>
+
+        <link rel="stylesheet" href="/css/footer.css">
+
+<footer>
+    <div class="footer" id="footer">
+
+        <div class="row footer_title" js_lang="en">
+            That's not all!
+        </div>
+        <div class="row footer_title" js_lang="es">
+            Eso no es todo!
+        </div>
+        <div class="row">
+            <ul>
+                <li>
+                    <a href="/" js_lang="en">Home</a>
+                    <a href="/" js_lang="es">Inicio</a>
+                </li>
+                <li>
+                    <a href="/aboutme" js_lang="en">About me</a>
+                    <a href="/aboutme" js_lang="es">Sobre mi</a>
+                </li>
+                <li>
+                    <a class="spotlight_butt" js_lang="en">Windows spotlight galery</a>
+                    <a class="spotlight_butt" js_lang="es">Galeria de Windows spotlight</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="row" js_lang="en">
+            The source code of this page is on <a href="https://github.com/jaimegonzalezfabregas/jaimegonzalezfabregas.github.io">github</a>
+        </div>
+        <div class="row" js_lang="es">
+            El codigo de esta pagina está en <a href="https://github.com/jaimegonzalezfabregas/jaimegonzalezfabregas.github.io">github</a>
+        </div>
+    </div>
+</footer>
+
+        <script src="/js/perlin.js"></script>
+        <script src="/js/bg_canvas.js"></script>
+        <script src="/js/post_layout.js"></script>
+    </body>
+</html>

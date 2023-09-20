@@ -1,0 +1,22 @@
+#background_canvas {
+    position: absolute;
+    width: 100vw;
+    margin: 0;
+    z-index: -1;
+}
+
+#content_margins {
+    min-height: 100vh;
+    padding: 3%;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.toggle_row {
+    top: 5vh;
+    right: 5vh;
+}
