@@ -19,8 +19,14 @@ body[theme="dark"] {
     --glass-gradient: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
 }
 
+body {
+    background-color: var(--background-color);
+}
+
 * {
+    transition: inherit;
     font-family: roboto_regular;
+    color: var(--text-color)
 }
 
 .glass_box {
@@ -37,8 +43,6 @@ body[theme="dark"] {
 
 
 .clickable {
-    transition: box-shadow 0.2s, background 0.2s;
-
     height: 70px;
     display: inline-block;
     text-align: center;
@@ -62,7 +66,6 @@ body[theme="dark"] {
     /* background-image: linear-gradient(to bottom, red, orange); */
     z-index: -1;
     opacity: 1;
-    transition: opacity 0.25s linear;
 }
 
 .clickable.glass_box:hover::before {

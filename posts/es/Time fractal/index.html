@@ -9,9 +9,9 @@
         <title>Fractal Temporal</title>
     </head>
     <body>
-        <canvas id="background_canvas"></canvas>
-        <div id="content_margins">
-            <link rel="stylesheet" href="/css/main.css">
+        <canvas id="background_canvas_light"></canvas>
+        <canvas id="background_canvas_dark"></canvas>
+        <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/toggle_bar.css">
 
 <div class="toggle_row">
@@ -19,34 +19,37 @@
     <script src="/js/lang.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_language()">
-    <div id="es_butt" class="half" selected="true">🇪🇸</div>
-    <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    <div class="centered_toggle">
+        <div id="es_butt" class="half" selected="true">🇪🇸</div>
+        <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    </div>
 </div>
-
-
     <script src="/js/theme.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_theme()">
-    <div id="dark_butt" class="half" selected="true">🌜</div>
-    <div id="light_butt" class="half" selected="false">☀️</div>
+    <div class="centered_toggle">
+        <div id="dark_butt" class="half" selected="true">🌜</div>
+        <div id="light_butt" class="half" selected="false">☀️</div>
+    </div>
 </div>
 
-
-
 </div>
 
-            <h1>Fractal Temporal</h1>
-            <img url="" alt=""/>
-            <div>
-                <p>Este proyecto fue inspirado por <a href="https://www.youtube.com/channel/UC0e3QhIYukixgh5VVpKHH9Q">code bullet</a> o <a href="https://www.youtube.com/channel/UC9z7EZAbkphEMg0SP7rw44A">carykh</a> o un youtuber similar que no puedo recordar. De todas formas la idea no es mia, solo la he implementado en HTML y JS.</p>
+        <div id="content_margins">
+            <div id="content_text_box" class="glass_box">
+
+                <h1>Fractal Temporal</h1>
+                <img url="" alt=""/>
+                <div>
+                    <p>Este proyecto fue inspirado por <a href="https://www.youtube.com/channel/UC0e3QhIYukixgh5VVpKHH9Q">code bullet</a> o <a href="https://www.youtube.com/channel/UC9z7EZAbkphEMg0SP7rw44A">carykh</a> o un youtuber similar que no puedo recordar. De todas formas la idea no es mia, solo la he implementado en HTML y JS.</p>
 <p>¿Alguna vez te has preguntado cómo se vería si dibujaras un reloj analógico (con 2 manijas) y en la punta de cada manija dibujaras el mismo reloj una vez, y otra vez, y otra vez, para siempre? Es un pensamiento bastante específico, pero no puedo ser yo el único. Para la gran mayoria de vosotros que han estado esperando esto toda su vida aqui teneis.</p>
 <p>Este es un concepto aparentemente simple, y al principio es un poco aburrido, pero a medida que pasa el tiempo surgen nuevas formas. Puedes abrir la pestaña en tu navegador y dejarla ahí durante un tiempo para que cambie sufiente para ser interesante.</p>
 <p><a href="https://jaimegonzalezfabregas.github.io/html-projects/TimeFractal/">Enlace al proyecto del que hablo</a></p>
 <p>También hice una versión en blender de la misma idea usando nodos procedurales y eevee, pero debido a las limitaciones del sistema no soporta más que unas pocas capas de recursión. Y puede o no que haya perdido el archivo en mi interminable pila de archivos .blend sin nombre. 😅</p>
 <p>PD: Me acordé, la inspiración vino de <a href="http://codeparade.net/">code parade</a></p>
 
+                </div>
             </div>
-
         </div>
 
         <link rel="stylesheet" href="/css/footer.css">
@@ -87,6 +90,7 @@
     </div>
 </footer>
 
+        <script src="/js/main.js"></script>
         <script src="/js/perlin.js"></script>
         <script src="/js/bg_canvas.js"></script>
         <script src="/js/post_layout.js"></script>

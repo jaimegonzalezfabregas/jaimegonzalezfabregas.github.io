@@ -23,7 +23,6 @@
 .footer .row a {
     text-decoration: none;
     color: var(--low-low-text-color);
-    transition: 0.5s;
 }
 
 .footer .row a:hover {

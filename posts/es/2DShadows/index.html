@@ -9,9 +9,9 @@
         <title>Luces 2D</title>
     </head>
     <body>
-        <canvas id="background_canvas"></canvas>
-        <div id="content_margins">
-            <link rel="stylesheet" href="/css/main.css">
+        <canvas id="background_canvas_light"></canvas>
+        <canvas id="background_canvas_dark"></canvas>
+        <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/toggle_bar.css">
 
 <div class="toggle_row">
@@ -19,26 +19,29 @@
     <script src="/js/lang.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_language()">
-    <div id="es_butt" class="half" selected="true">🇪🇸</div>
-    <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    <div class="centered_toggle">
+        <div id="es_butt" class="half" selected="true">🇪🇸</div>
+        <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    </div>
 </div>
-
-
     <script src="/js/theme.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_theme()">
-    <div id="dark_butt" class="half" selected="true">🌜</div>
-    <div id="light_butt" class="half" selected="false">☀️</div>
+    <div class="centered_toggle">
+        <div id="dark_butt" class="half" selected="true">🌜</div>
+        <div id="light_butt" class="half" selected="false">☀️</div>
+    </div>
 </div>
 
-
-
 </div>
 
-            <h1>Luces 2D</h1>
-            <img url="" alt=""/>
-            <div>
-                <p>¡Hola! Hoy presento un proyecto mío sobre iluminación. Ya había hecho raytracing antes, pero esta vez no quería tomar el camino más fácil. Me imaginé que tenía que haber una forma más elegante de abordar el problema, y la hay.</p>
+        <div id="content_margins">
+            <div id="content_text_box" class="glass_box">
+
+                <h1>Luces 2D</h1>
+                <img url="" alt=""/>
+                <div>
+                    <p>¡Hola! Hoy presento un proyecto mío sobre iluminación. Ya había hecho raytracing antes, pero esta vez no quería tomar el camino más fácil. Me imaginé que tenía que haber una forma más elegante de abordar el problema, y la hay.</p>
 <p>El algoritmo que he diseñado dibujará la sombra de cada pared de forma independiente, lo que lo hace bastante rápido. Observese que la sombra se vuelve menos nítida cuando se aleja de la superficie que la proyecta.</p>
 <p><a href="https://jaimegonzalezfabregas.github.io/html-projects/2D_Lights/">Enlace al proyecto del que hablo</a></p>
 <p>El proyecto anterior es sólo una demostración. Esto luego se desarrolló más en este otro juego mío. No es una página web estática, es un juego multijugador, por lo que el enlace te lleva al repositorio de Github. Para usarlo lanza el index.js y enchufate desde algun ordenador en la misma red al puerto 8000.</p>
@@ -48,8 +51,8 @@
 <p>Espero que te diviertas o aprendas algo!!</p>
 <p><a href="https://github.com/jaimegonzalezfabregas/html-projects/tree/master/2dShooter">Enlace al otro proyecto del que estoy hablando</a></p>
 
+                </div>
             </div>
-
         </div>
 
         <link rel="stylesheet" href="/css/footer.css">
@@ -90,6 +93,7 @@
     </div>
 </footer>
 
+        <script src="/js/main.js"></script>
         <script src="/js/perlin.js"></script>
         <script src="/js/bg_canvas.js"></script>
         <script src="/js/post_layout.js"></script>

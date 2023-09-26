@@ -14,7 +14,7 @@ function retranslate(dst_lang) {
         }
 
         document.querySelectorAll("[js_lang=\"" + curr_lang + "\"]").forEach(elm => {
-            elm.style.display = dst_lang == curr_lang ? "block" : "none"
+            elm.style.display = dst_lang == curr_lang ? "" : "none"
         });
 
         document.getElementById(curr_lang + "_butt").setAttribute("selected", dst_lang == curr_lang)

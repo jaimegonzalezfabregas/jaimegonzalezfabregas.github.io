@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="/css/blog_grid.css">
-<div class="blog_box" id="blog_box_en" js_lang="en">
-    <canvas id="background_canvas_en" class="background_canvas"></canvas>
-    <div id="blog_flex_en" class="blog_flex"><div class="clickable blog_card glass_box" onclick="window.location.assign('/posts/en/Snake/')">
+<div class="blog_box" id="blog_box">
+    <canvas id="background_canvas_dark" class="background_canvas"></canvas>
+    <canvas id="background_canvas_light" class="background_canvas"></canvas>
+    <div id="blog_flex_en" class="blog_flex" js_lang="en"><div class="clickable blog_card glass_box" onclick="window.location.assign('/posts/en/Snake/')">
                 <div class="picture_containter">
                     <div class="picture_div bg" heigth="fit-content" style="background-image: url('/img/SNAKE!.jpg')"></div>
                     <div class="picture_div sharp" heigth="fit-content" style="background-image: url('/img/SNAKE!.jpg')"></div>
@@ -14,21 +15,6 @@
                 </div>
                 <div class="blog_card_subtitle">
                     <p>Oldest web project I could find😄</p>
-                </div>
-                
-            </div><div class="clickable blog_card glass_box" onclick="window.location.assign('/posts/es/Snake/')">
-                <div class="picture_containter">
-                    <div class="picture_div bg" heigth="fit-content" style="background-image: url('/img/SNAKE!.jpg')"></div>
-                    <div class="picture_div sharp" heigth="fit-content" style="background-image: url('/img/SNAKE!.jpg')"></div>
-
-                </div>
-                <div class="blog_card_title">
-                    <br>
-
-                    SNAKE!
-                </div>
-                <div class="blog_card_subtitle">
-                    <p>El proyecto más antiguo que he encontrado</p>
                 </div>
                 
             </div><div class="clickable blog_card glass_box" onclick="window.location.assign('/posts/en/Molecube/')">
@@ -212,11 +198,22 @@
                 </div>
                 
             </div></div>
-</div>
+    <div id="blog_flex_es" class="blog_flex" js_lang="es"><div class="clickable blog_card glass_box" onclick="window.location.assign('/posts/es/Snake/')">
+                <div class="picture_containter">
+                    <div class="picture_div bg" heigth="fit-content" style="background-image: url('/img/SNAKE!.jpg')"></div>
+                    <div class="picture_div sharp" heigth="fit-content" style="background-image: url('/img/SNAKE!.jpg')"></div>
 
-<div class="blog_box" id="blog_box_es" js_lang="es">
-    <canvas id="background_canvas_es" class="background_canvas"></canvas>
-    <div id="blog_flex_es" class="blog_flex"><div class="clickable blog_card glass_box" onclick="window.location.assign('/posts/es/Molecube/')">
+                </div>
+                <div class="blog_card_title">
+                    <br>
+
+                    SNAKE!
+                </div>
+                <div class="blog_card_subtitle">
+                    <p>El proyecto más antiguo que he encontrado</p>
+                </div>
+                
+            </div><div class="clickable blog_card glass_box" onclick="window.location.assign('/posts/es/Molecube/')">
                 <div class="picture_containter">
                     <div class="picture_div bg" heigth="fit-content" style="background-image: url('/img/Molecube.jpg')"></div>
                     <div class="picture_div sharp" heigth="fit-content" style="background-image: url('/img/Molecube.jpg')"></div>
@@ -398,6 +395,7 @@
                 
             </div></div>
 </div>
+
 <script src="/js/perlin.js" ></script>
 <script src="/js/bg_canvas.js" ></script>
 <script src="/js/blog_grid.js" ></script>

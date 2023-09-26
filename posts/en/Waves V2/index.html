@@ -9,9 +9,9 @@
         <title>Waves V2</title>
     </head>
     <body>
-        <canvas id="background_canvas"></canvas>
-        <div id="content_margins">
-            <link rel="stylesheet" href="/css/main.css">
+        <canvas id="background_canvas_light"></canvas>
+        <canvas id="background_canvas_dark"></canvas>
+        <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/toggle_bar.css">
 
 <div class="toggle_row">
@@ -19,26 +19,29 @@
     <script src="/js/lang.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_language()">
-    <div id="es_butt" class="half" selected="true">🇪🇸</div>
-    <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    <div class="centered_toggle">
+        <div id="es_butt" class="half" selected="true">🇪🇸</div>
+        <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    </div>
 </div>
-
-
     <script src="/js/theme.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_theme()">
-    <div id="dark_butt" class="half" selected="true">🌜</div>
-    <div id="light_butt" class="half" selected="false">☀️</div>
+    <div class="centered_toggle">
+        <div id="dark_butt" class="half" selected="true">🌜</div>
+        <div id="light_butt" class="half" selected="false">☀️</div>
+    </div>
 </div>
 
-
-
 </div>
 
-            <h1>Waves V2</h1>
-            <img url="" alt=""/>
-            <div>
-                <p>This is the continuation to my other fluid dinamics automata simulator. The other project was based on a grid structue, what caused problems with the shape of the waves, the best I managed to do was to make them octagonal. The new fluid engine instead of using just a grid it uses particles. The particles live in a grid, that way we can aproximate calculations by considering every particle in each cell to be the same particle. You'll see what I mean just in a second:</p>
+        <div id="content_margins">
+            <div id="content_text_box" class="glass_box">
+
+                <h1>Waves V2</h1>
+                <img url="" alt=""/>
+                <div>
+                    <p>This is the continuation to my other fluid dinamics automata simulator. The other project was based on a grid structue, what caused problems with the shape of the waves, the best I managed to do was to make them octagonal. The new fluid engine instead of using just a grid it uses particles. The particles live in a grid, that way we can aproximate calculations by considering every particle in each cell to be the same particle. You'll see what I mean just in a second:</p>
 <p>Phenomena It can simulate:</p>
 <ul>
 <li>Viscosity (internal drag): Each simulation tick I calculate the overall speed of a certain cell, then I modify the speeds of the individual particles in that cell and the cells near it to match the overall tendency. That way particles &quot;stick&quot; to each other.</li>
@@ -49,8 +52,8 @@
 <p>I also would like to note that the grid thing creates artefacts when left untoched for a long time. This is due to a miscalculation of presure, where i spect to there be a lower amount of particles at the borders. A photo of the artefacts is up in the galery and you can see them for your self if you click the link below.</p>
 <p><a href="https://jaimegonzalezfabregas.github.io/fluidSim/">Link to the project I'm talking about</a></p>
 
+                </div>
             </div>
-
         </div>
 
         <link rel="stylesheet" href="/css/footer.css">
@@ -91,6 +94,7 @@
     </div>
 </footer>
 
+        <script src="/js/main.js"></script>
         <script src="/js/perlin.js"></script>
         <script src="/js/bg_canvas.js"></script>
         <script src="/js/post_layout.js"></script>

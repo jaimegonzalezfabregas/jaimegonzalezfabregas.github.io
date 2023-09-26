@@ -9,9 +9,9 @@
         <title>Ondas</title>
     </head>
     <body>
-        <canvas id="background_canvas"></canvas>
-        <div id="content_margins">
-            <link rel="stylesheet" href="/css/main.css">
+        <canvas id="background_canvas_light"></canvas>
+        <canvas id="background_canvas_dark"></canvas>
+        <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/toggle_bar.css">
 
 <div class="toggle_row">
@@ -19,26 +19,29 @@
     <script src="/js/lang.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_language()">
-    <div id="es_butt" class="half" selected="true">🇪🇸</div>
-    <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    <div class="centered_toggle">
+        <div id="es_butt" class="half" selected="true">🇪🇸</div>
+        <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    </div>
 </div>
-
-
     <script src="/js/theme.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_theme()">
-    <div id="dark_butt" class="half" selected="true">🌜</div>
-    <div id="light_butt" class="half" selected="false">☀️</div>
+    <div class="centered_toggle">
+        <div id="dark_butt" class="half" selected="true">🌜</div>
+        <div id="light_butt" class="half" selected="false">☀️</div>
+    </div>
 </div>
 
-
-
 </div>
 
-            <h1>Ondas</h1>
-            <img url="" alt=""/>
-            <div>
-                <p>Este fenómeno que he simulado es muy complejo, por lo tanto, para entenderlo, comencé con un pequeño proyecto 1D.</p>
+        <div id="content_margins">
+            <div id="content_text_box" class="glass_box">
+
+                <h1>Ondas</h1>
+                <img url="" alt=""/>
+                <div>
+                    <p>Este fenómeno que he simulado es muy complejo, por lo tanto, para entenderlo, comencé con un pequeño proyecto 1D.</p>
 <h2>Versión 1D</h2>
 <ul>
 <li>Clic en cualquier lugar para forzar el nivel en esa posición x a la altura de su mouse.</li>
@@ -59,8 +62,8 @@
 <p>Podrás ver que la versión 2D no tiene ondas circulares perfectas, sino que tienen una forma octogonal. Esto se debe a la forma cuadrada de cada celda. Como mis celdas son cuadradas las ondas son octágonos. Estoy planeando una solución para esto en el futuro, pero por el momento estoy contento con lo que he aprendido con el proyecto.</p>
 <p><a href="https://jaimegonzalezfabregas.github.io/html-projects/ondas/2d2d.html">Versión 2D</a></p>
 
+                </div>
             </div>
-
         </div>
 
         <link rel="stylesheet" href="/css/footer.css">
@@ -101,6 +104,7 @@
     </div>
 </footer>
 
+        <script src="/js/main.js"></script>
         <script src="/js/perlin.js"></script>
         <script src="/js/bg_canvas.js"></script>
         <script src="/js/post_layout.js"></script>

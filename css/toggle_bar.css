@@ -1,5 +1,4 @@
 .half {
-    transition: all 0.2s;
     display: inline;
     text-align: center;
     font-size: 70px;
@@ -11,22 +10,25 @@
     position: absolute;
     gap: 5vh;
     display: flex;
+    z-index: 100;
 }
 
 .toggle {
-    vertical-align: text-bottom;
-    letter-spacing: 0px;
-    gap: 0px;
-    display: inline-flex;
+    
+    flex: 1 1 0;
 
-    transition: all 0.2s;
     user-select: none;
-    width: fit-content;
 
     padding-left: 1vw;
     padding-right: 1vw;
 }
 
+.centered_toggle {
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    width: fit-content;
+}
 
 
 .half[selected="false"] {

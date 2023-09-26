@@ -9,9 +9,9 @@
         <title>Predictor de palabas</title>
     </head>
     <body>
-        <canvas id="background_canvas"></canvas>
-        <div id="content_margins">
-            <link rel="stylesheet" href="/css/main.css">
+        <canvas id="background_canvas_light"></canvas>
+        <canvas id="background_canvas_dark"></canvas>
+        <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/toggle_bar.css">
 
 <div class="toggle_row">
@@ -19,26 +19,29 @@
     <script src="/js/lang.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_language()">
-    <div id="es_butt" class="half" selected="true">🇪🇸</div>
-    <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    <div class="centered_toggle">
+        <div id="es_butt" class="half" selected="true">🇪🇸</div>
+        <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    </div>
 </div>
-
-
     <script src="/js/theme.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_theme()">
-    <div id="dark_butt" class="half" selected="true">🌜</div>
-    <div id="light_butt" class="half" selected="false">☀️</div>
+    <div class="centered_toggle">
+        <div id="dark_butt" class="half" selected="true">🌜</div>
+        <div id="light_butt" class="half" selected="false">☀️</div>
+    </div>
 </div>
 
-
-
 </div>
 
-            <h1>Predictor de palabas</h1>
-            <img url="" alt=""/>
-            <div>
-                <p>Existe una cosa con los teclados de los teléfonos móviles que es bastante interesante. Intentán adivinar qué palabra viene a continuación. Esto no es sólo un problema de privacidad preocupante, sino también una buena inspiración para un pequeño programa. La premisa es que escribes una entrada de texto y el programa intenta adivinar qué tecla presionarás a continuación.</p>
+        <div id="content_margins">
+            <div id="content_text_box" class="glass_box">
+
+                <h1>Predictor de palabas</h1>
+                <img url="" alt=""/>
+                <div>
+                    <p>Existe una cosa con los teclados de los teléfonos móviles que es bastante interesante. Intentán adivinar qué palabra viene a continuación. Esto no es sólo un problema de privacidad preocupante, sino también una buena inspiración para un pequeño programa. La premisa es que escribes una entrada de texto y el programa intenta adivinar qué tecla presionarás a continuación.</p>
 <p>Al cargar, mi programa leerá y analizará todo el libro y creará un mapa de probabilidad para cada combinación de letras (esto dará un lag spike bueno cuando se cargue la página, están advertidos). Podría tener este paso precalculado, pero el objetivo no es ser rápido sino ser una prueba de concepto. El libro utilizado fue un libro aleatorio de Serlock Holmes de <a href="http://www.gutenberg.org/">proyecto guttemberg</a> (que por cierto está en inglés).</p>
 <p>Esta es una versión web de un programa en C++ que hice y que funciona con expresiones regulares predefinidas y que va mucho más rápido. Ese otro programa funciona con palabras completas en lugar de letras individuales utilizando datos de varios libros. La versión web utiliza un solo libro y está basada en letras, esto significa que hay muchos casos en los que no sabe qué decir.</p>
 <p>Sólo una explicación de lo que verás: En mi programa puedes ver debajo la entrada de la predicción. '#' significa que no tiene idea de lo que estás hablando. Cualquier otra cosa es una predicción. Mi programa sólo busca las últimas letras (las subrayadas), así que no le pidas mucha coherencia.</p>
@@ -46,8 +49,8 @@
 <p><a href="https://jaimegonzalezfabregas.github.io/html-projects/Predictor%20de%20latras/">Enlace al proyecto del que hablo</a></p>
 <p>PD: esto fue mucho antes de la fiebre del LLM de 2023</p>
 
+                </div>
             </div>
-
         </div>
 
         <link rel="stylesheet" href="/css/footer.css">
@@ -88,6 +91,7 @@
     </div>
 </footer>
 
+        <script src="/js/main.js"></script>
         <script src="/js/perlin.js"></script>
         <script src="/js/bg_canvas.js"></script>
         <script src="/js/post_layout.js"></script>

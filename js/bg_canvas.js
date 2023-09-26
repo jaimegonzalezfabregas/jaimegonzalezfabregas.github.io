@@ -1,5 +1,5 @@
 
-let transition_pixel_size = 100;
+let gradient_pixel_size = 100;
 
 let canvas_color_themes = {
     "dark": {
@@ -15,13 +15,17 @@ let canvas_color_themes = {
         web_background_color: "rgb(238, 238, 238)",
         background_color: "white",
         dot_colors: [
-            "#00425A",
-            "#1F8A70",
-            "#BFDB38",
-            "#FC7300"
+            "#4E4FEB",
+            "#000000",
+            "#068FFF",
+
         ]
     }
 }
+
+let columns = 30;
+
+const perlin_scale = 3;
 
 
 function get_hash(x, y) {
@@ -31,7 +35,6 @@ function get_hash(x, y) {
 
 const reset_canvas = (canvas, theme) => {
     let { web_background_color, background_color, dot_colors } = canvas_color_themes[theme];
-
     canvas.width = canvas.clientWidth;
     canvas.height = canvas.clientHeight;
 
@@ -40,17 +43,13 @@ const reset_canvas = (canvas, theme) => {
     const fill_gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
 
     fill_gradient.addColorStop("0", web_background_color);
-    fill_gradient.addColorStop("" + (transition_pixel_size / canvas.height), background_color);
-    fill_gradient.addColorStop("" + (1 - transition_pixel_size / canvas.height), background_color);
+    fill_gradient.addColorStop("" + (gradient_pixel_size / canvas.height), background_color);
+    fill_gradient.addColorStop("" + (1 - gradient_pixel_size / canvas.height), background_color);
     fill_gradient.addColorStop("1", web_background_color);
     ctx.fillStyle = fill_gradient;
     ctx.beginPath();
     ctx.rect(0, 0, canvas.width, canvas.height)
     ctx.fill();
-
-    let columns = 30;
-
-    const perlin_scale = 3;
 
     for (let x = -1; x < columns + 1; x++) {
         for (let y = 0; y < canvas.height / canvas.width * columns; y++) {

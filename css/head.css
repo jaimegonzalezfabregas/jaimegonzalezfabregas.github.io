@@ -46,7 +46,6 @@
 
 a {
     font-weight: bold;
-    transition: 0.1s;
 }
 
 a:hover {
@@ -54,7 +53,6 @@ a:hover {
 }
 
 .head_banner {
-    transition: opacity 3s;
     position: absolute;
     width: 100vw;
     height: 90vh;

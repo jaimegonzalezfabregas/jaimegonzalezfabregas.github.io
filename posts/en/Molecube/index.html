@@ -9,9 +9,9 @@
         <title>Molecube</title>
     </head>
     <body>
-        <canvas id="background_canvas"></canvas>
-        <div id="content_margins">
-            <link rel="stylesheet" href="/css/main.css">
+        <canvas id="background_canvas_light"></canvas>
+        <canvas id="background_canvas_dark"></canvas>
+        <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/toggle_bar.css">
 
 <div class="toggle_row">
@@ -19,26 +19,29 @@
     <script src="/js/lang.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_language()">
-    <div id="es_butt" class="half" selected="true">🇪🇸</div>
-    <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    <div class="centered_toggle">
+        <div id="es_butt" class="half" selected="true">🇪🇸</div>
+        <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    </div>
 </div>
-
-
     <script src="/js/theme.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_theme()">
-    <div id="dark_butt" class="half" selected="true">🌜</div>
-    <div id="light_butt" class="half" selected="false">☀️</div>
+    <div class="centered_toggle">
+        <div id="dark_butt" class="half" selected="true">🌜</div>
+        <div id="light_butt" class="half" selected="false">☀️</div>
+    </div>
 </div>
 
-
-
 </div>
 
-            <h1>Molecube</h1>
-            <img url="" alt=""/>
-            <div>
-                <p>The molecube is a puzzle that could be mistaken for a rubik cube but in fact the goal of it it completly the oposite. The goal for this fiddle is to make every color apear only once per face. At first my plan was to create a program to wich you could input your configuration and it would resolve it for you, buy that plan was too ambitious. After I was done with the interface I gave up on the logic. Any way I belive that the interface was a full project on its own.</p>
+        <div id="content_margins">
+            <div id="content_text_box" class="glass_box">
+
+                <h1>Molecube</h1>
+                <img url="" alt=""/>
+                <div>
+                    <p>The molecube is a puzzle that could be mistaken for a rubik cube but in fact the goal of it it completly the oposite. The goal for this fiddle is to make every color apear only once per face. At first my plan was to create a program to wich you could input your configuration and it would resolve it for you, buy that plan was too ambitious. After I was done with the interface I gave up on the logic. Any way I belive that the interface was a full project on its own.</p>
 <p>At the time I made this I had just started with 3D. Something I'am really proud of about the graphics is that I was the one to program the full 3D engine. I had to came up with the trigonometry and such with just a piece of paper and with some asumptions I made up about how light works (of course no hardware acceleration is used, just old trusty circles in a canvas). That is enough explanation, lets get to the &quot;fun&quot; stuff:</p>
 <p>How to navigate the cube:</p>
 <ul>
@@ -57,8 +60,8 @@
 <p>My father, after seeing what I was after, programed his own thing (wich may or may not be much better than mine😅)</p>
 <p><a href="https://alvarogonzalezsotillo.github.io/blog/resolver-molecube-en-prolog/">My father's proyect</a></p>
 
+                </div>
             </div>
-
         </div>
 
         <link rel="stylesheet" href="/css/footer.css">
@@ -99,6 +102,7 @@
     </div>
 </footer>
 
+        <script src="/js/main.js"></script>
         <script src="/js/perlin.js"></script>
         <script src="/js/bg_canvas.js"></script>
         <script src="/js/post_layout.js"></script>

@@ -9,9 +9,9 @@
         <title>Decoder</title>
     </head>
     <body>
-        <canvas id="background_canvas"></canvas>
-        <div id="content_margins">
-            <link rel="stylesheet" href="/css/main.css">
+        <canvas id="background_canvas_light"></canvas>
+        <canvas id="background_canvas_dark"></canvas>
+        <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/toggle_bar.css">
 
 <div class="toggle_row">
@@ -19,33 +19,36 @@
     <script src="/js/lang.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_language()">
-    <div id="es_butt" class="half" selected="true">🇪🇸</div>
-    <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    <div class="centered_toggle">
+        <div id="es_butt" class="half" selected="true">🇪🇸</div>
+        <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    </div>
 </div>
-
-
     <script src="/js/theme.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_theme()">
-    <div id="dark_butt" class="half" selected="true">🌜</div>
-    <div id="light_butt" class="half" selected="false">☀️</div>
+    <div class="centered_toggle">
+        <div id="dark_butt" class="half" selected="true">🌜</div>
+        <div id="light_butt" class="half" selected="false">☀️</div>
+    </div>
 </div>
 
-
-
 </div>
 
-            <h1>Decoder</h1>
-            <img url="" alt=""/>
-            <div>
-                <p>Im sure you've hear about <a href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar cipher</a>, but you can go one step further. Instead of relating each letter with other one with a given offset you can scramble the abecedary to get a harder encription.</p>
+        <div id="content_margins">
+            <div id="content_text_box" class="glass_box">
+
+                <h1>Decoder</h1>
+                <img url="" alt=""/>
+                <div>
+                    <p>Im sure you've hear about <a href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar cipher</a>, but you can go one step further. Instead of relating each letter with other one with a given offset you can scramble the abecedary to get a harder encription.</p>
 <p>(btw, the resulting encryption is very week for modern standars)</p>
 <p>To try to crack these types of encryption, it is used a fequency analysis, wich is what my algorithm does, so if you want you can go to an online encryptor, get a encrypted book and put my system to the test.</p>
 <p>(It will probably not work without big chunks of text)</p>
 <p><a href="https://jaimegonzalezfabregas.github.io/html-projects/decoder/">Link to the project I'm talking about</a></p>
 
+                </div>
             </div>
-
         </div>
 
         <link rel="stylesheet" href="/css/footer.css">
@@ -86,6 +89,7 @@
     </div>
 </footer>
 
+        <script src="/js/main.js"></script>
         <script src="/js/perlin.js"></script>
         <script src="/js/bg_canvas.js"></script>
         <script src="/js/post_layout.js"></script>

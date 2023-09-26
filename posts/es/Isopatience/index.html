@@ -9,9 +9,9 @@
         <title>Iso-patience</title>
     </head>
     <body>
-        <canvas id="background_canvas"></canvas>
-        <div id="content_margins">
-            <link rel="stylesheet" href="/css/main.css">
+        <canvas id="background_canvas_light"></canvas>
+        <canvas id="background_canvas_dark"></canvas>
+        <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/toggle_bar.css">
 
 <div class="toggle_row">
@@ -19,26 +19,29 @@
     <script src="/js/lang.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_language()">
-    <div id="es_butt" class="half" selected="true">🇪🇸</div>
-    <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    <div class="centered_toggle">
+        <div id="es_butt" class="half" selected="true">🇪🇸</div>
+        <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    </div>
 </div>
-
-
     <script src="/js/theme.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_theme()">
-    <div id="dark_butt" class="half" selected="true">🌜</div>
-    <div id="light_butt" class="half" selected="false">☀️</div>
+    <div class="centered_toggle">
+        <div id="dark_butt" class="half" selected="true">🌜</div>
+        <div id="light_butt" class="half" selected="false">☀️</div>
+    </div>
 </div>
 
-
-
 </div>
 
-            <h1>Iso-patience</h1>
-            <img url="" alt=""/>
-            <div>
-                <p>Creo que he encontrado la mejor combinacion de lenguages para montar aplicaciones. Ahora mismo dudo que pueda encontrar una configuración mucho mejor para crear apps. Recientemente he aprendido de un &quot;concepto/workflow/NoSeMuyBienComoLLamarlo&quot; para mejorar el rendimiento en el cliente web, se llama <strong>web assembly</strong>. Esto me ha hecho abandonar Angular para aprender la tecnología. Y consigue lo que promete. Puedes conseguir velocidades parecidas a las nativas con un pequeño cambio de sistema. Pero no es todo, puede combinar WASM con JS multithreading para tener aun mas velocidad.</p>
+        <div id="content_margins">
+            <div id="content_text_box" class="glass_box">
+
+                <h1>Iso-patience</h1>
+                <img url="" alt=""/>
+                <div>
+                    <p>Creo que he encontrado la mejor combinacion de lenguages para montar aplicaciones. Ahora mismo dudo que pueda encontrar una configuración mucho mejor para crear apps. Recientemente he aprendido de un &quot;concepto/workflow/NoSeMuyBienComoLLamarlo&quot; para mejorar el rendimiento en el cliente web, se llama <strong>web assembly</strong>. Esto me ha hecho abandonar Angular para aprender la tecnología. Y consigue lo que promete. Puedes conseguir velocidades parecidas a las nativas con un pequeño cambio de sistema. Pero no es todo, puede combinar WASM con JS multithreading para tener aun mas velocidad.</p>
 <p>En otro post hablé de mi proyecto &quot;Ice-o_matic&quot;, donde la limitacion principal era la velocidad a la que resolvía los puzles. WASM areglaría totalmente mi problema, permitiendome hacer proyectos web mas ambiciosos en el futuro.</p>
 <p>Como prueba de concepto he desarroyado el siguiente jueguecillo:</p>
 <p>La idea del juego viene del legendario <a href="https://undertale.com/">UnderTale</a>, la mecanica se explica en <a href="https://youtu.be/v7nlXgDjCY8?t=341">este</a> segmento del gameplay. Es un momento de los más divertidos de la historia de los videojuegos, pero no conociendo el lore de Papairus (el esqueleto alto) alomejor no es tan gracioso. Judgen por si mismos.</p>
@@ -52,8 +55,8 @@ naranja = sabor a naranja</p>
 <p>Usa las flechas para moverte. La tecla S te enseña la solcion, pulsada 2 veces pasa de nivel.</p>
 <p><a href="https://jaimegonzalezfabregas.github.io/IsoPatience/">Link al juego del que hablo</a></p>
 
+                </div>
             </div>
-
         </div>
 
         <link rel="stylesheet" href="/css/footer.css">
@@ -94,6 +97,7 @@ naranja = sabor a naranja</p>
     </div>
 </footer>
 
+        <script src="/js/main.js"></script>
         <script src="/js/perlin.js"></script>
         <script src="/js/bg_canvas.js"></script>
         <script src="/js/post_layout.js"></script>

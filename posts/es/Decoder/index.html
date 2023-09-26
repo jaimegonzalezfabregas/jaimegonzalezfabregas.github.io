@@ -9,9 +9,9 @@
         <title>Decodificador</title>
     </head>
     <body>
-        <canvas id="background_canvas"></canvas>
-        <div id="content_margins">
-            <link rel="stylesheet" href="/css/main.css">
+        <canvas id="background_canvas_light"></canvas>
+        <canvas id="background_canvas_dark"></canvas>
+        <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/toggle_bar.css">
 
 <div class="toggle_row">
@@ -19,33 +19,36 @@
     <script src="/js/lang.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_language()">
-    <div id="es_butt" class="half" selected="true">🇪🇸</div>
-    <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    <div class="centered_toggle">
+        <div id="es_butt" class="half" selected="true">🇪🇸</div>
+        <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    </div>
 </div>
-
-
     <script src="/js/theme.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_theme()">
-    <div id="dark_butt" class="half" selected="true">🌜</div>
-    <div id="light_butt" class="half" selected="false">☀️</div>
+    <div class="centered_toggle">
+        <div id="dark_butt" class="half" selected="true">🌜</div>
+        <div id="light_butt" class="half" selected="false">☀️</div>
+    </div>
 </div>
 
-
-
 </div>
 
-            <h1>Decodificador</h1>
-            <img url="" alt=""/>
-            <div>
-                <p>Estoy seguro de que has oído hablar del <a href="https://en.wikipedia.org/wiki/Caesar_cipher">cifrado César</a>, pero se puede ir un paso más allá. En lugar de relacionar cada letra con otra con un desplazamiento determinado, puede mezclar el abecedario para obtener un cifrado más difícil.</p>
+        <div id="content_margins">
+            <div id="content_text_box" class="glass_box">
+
+                <h1>Decodificador</h1>
+                <img url="" alt=""/>
+                <div>
+                    <p>Estoy seguro de que has oído hablar del <a href="https://en.wikipedia.org/wiki/Caesar_cipher">cifrado César</a>, pero se puede ir un paso más allá. En lugar de relacionar cada letra con otra con un desplazamiento determinado, puede mezclar el abecedario para obtener un cifrado más difícil.</p>
 <p>(Actualmente ambos metodos se consideran muy muy debiles)</p>
 <p>Para intentar descifrar este tipo de cifrado se utiliza el análisis de frecuencia, que es lo que hace mi algoritmo, así que si necesitas descifrar un rotX o algo parecido puedes usar el proyecto de abajo!!</p>
 <p>(Probablemente no funcionará sin fragmentos grandes de texto)</p>
 <p><a href="https://jaimegonzalezfabregas.github.io/html-projects/decoder/">Enlace al proyecto del que hablo</a></p>
 
+                </div>
             </div>
-
         </div>
 
         <link rel="stylesheet" href="/css/footer.css">
@@ -86,6 +89,7 @@
     </div>
 </footer>
 
+        <script src="/js/main.js"></script>
         <script src="/js/perlin.js"></script>
         <script src="/js/bg_canvas.js"></script>
         <script src="/js/post_layout.js"></script>

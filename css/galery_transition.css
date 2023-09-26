@@ -1,15 +1,6 @@
-.transition-parent {
-    transition: opacity 0.3s;
-}
-
 .img {
-    transition: all 0.3s ease;
     transform: translate(0);
     opacity: 1;
-}
-
-.bg {
-    transition: opacity 1.5s;
 }
 
 .bg_main {

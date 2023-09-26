@@ -9,9 +9,9 @@
         <title>Sudoku</title>
     </head>
     <body>
-        <canvas id="background_canvas"></canvas>
-        <div id="content_margins">
-            <link rel="stylesheet" href="/css/main.css">
+        <canvas id="background_canvas_light"></canvas>
+        <canvas id="background_canvas_dark"></canvas>
+        <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/toggle_bar.css">
 
 <div class="toggle_row">
@@ -19,26 +19,29 @@
     <script src="/js/lang.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_language()">
-    <div id="es_butt" class="half" selected="true">🇪🇸</div>
-    <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    <div class="centered_toggle">
+        <div id="es_butt" class="half" selected="true">🇪🇸</div>
+        <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    </div>
 </div>
-
-
     <script src="/js/theme.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_theme()">
-    <div id="dark_butt" class="half" selected="true">🌜</div>
-    <div id="light_butt" class="half" selected="false">☀️</div>
+    <div class="centered_toggle">
+        <div id="dark_butt" class="half" selected="true">🌜</div>
+        <div id="light_butt" class="half" selected="false">☀️</div>
+    </div>
 </div>
 
-
-
 </div>
 
-            <h1>Sudoku</h1>
-            <img url="" alt=""/>
-            <div>
-                <p>So I made a thing that solves sudokus, not much to coment. The AI is not more inteligent than me, it does exactly what I would do but faster, therefore there are a lot of sudoku games that it will not be able to finish.</p>
+        <div id="content_margins">
+            <div id="content_text_box" class="glass_box">
+
+                <h1>Sudoku</h1>
+                <img url="" alt=""/>
+                <div>
+                    <p>So I made a thing that solves sudokus, not much to coment. The AI is not more inteligent than me, it does exactly what I would do but faster, therefore there are a lot of sudoku games that it will not be able to finish.</p>
 <p>The other option would have been to implement backtraking, but I've done that a million times and I wanted to take a different aproach. Also by my &quot;humanish&quot; aproach you can see how the AI fills the sudoku as a human would, wich in my opinion is pretty cute.</p>
 <p>To use it bear in mind:</p>
 <ul>
@@ -49,8 +52,8 @@
 <p><em>As a sudoku solver my AI is not the best one, so dont be very confident with difficult sudokus</em></p>
 <p><a href="https://jaimegonzalezfabregas.github.io/html-projects/Sudoku/">Link to the project I'm talking about</a></p>
 
+                </div>
             </div>
-
         </div>
 
         <link rel="stylesheet" href="/css/footer.css">
@@ -91,6 +94,7 @@
     </div>
 </footer>
 
+        <script src="/js/main.js"></script>
         <script src="/js/perlin.js"></script>
         <script src="/js/bg_canvas.js"></script>
         <script src="/js/post_layout.js"></script>

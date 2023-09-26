@@ -9,9 +9,9 @@
         <title>Time Fractal</title>
     </head>
     <body>
-        <canvas id="background_canvas"></canvas>
-        <div id="content_margins">
-            <link rel="stylesheet" href="/css/main.css">
+        <canvas id="background_canvas_light"></canvas>
+        <canvas id="background_canvas_dark"></canvas>
+        <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/toggle_bar.css">
 
 <div class="toggle_row">
@@ -19,34 +19,37 @@
     <script src="/js/lang.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_language()">
-    <div id="es_butt" class="half" selected="true">🇪🇸</div>
-    <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    <div class="centered_toggle">
+        <div id="es_butt" class="half" selected="true">🇪🇸</div>
+        <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    </div>
 </div>
-
-
     <script src="/js/theme.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_theme()">
-    <div id="dark_butt" class="half" selected="true">🌜</div>
-    <div id="light_butt" class="half" selected="false">☀️</div>
+    <div class="centered_toggle">
+        <div id="dark_butt" class="half" selected="true">🌜</div>
+        <div id="light_butt" class="half" selected="false">☀️</div>
+    </div>
 </div>
 
-
-
 </div>
 
-            <h1>Time Fractal</h1>
-            <img url="" alt=""/>
-            <div>
-                <p>This project was inspired by <a href="https://www.youtube.com/channel/UC0e3QhIYukixgh5VVpKHH9Q">code bullet</a> or <a href="https://www.youtube.com/channel/UC9z7EZAbkphEMg0SP7rw44A">carykh</a> or a similar youtuber I can't for the shake of me remeber. Any way the idea is not mine, I just implemented it on HTML and JS.</p>
+        <div id="content_margins">
+            <div id="content_text_box" class="glass_box">
+
+                <h1>Time Fractal</h1>
+                <img url="" alt=""/>
+                <div>
+                    <p>This project was inspired by <a href="https://www.youtube.com/channel/UC0e3QhIYukixgh5VVpKHH9Q">code bullet</a> or <a href="https://www.youtube.com/channel/UC9z7EZAbkphEMg0SP7rw44A">carykh</a> or a similar youtuber I can't for the shake of me remeber. Any way the idea is not mine, I just implemented it on HTML and JS.</p>
 <p>Have ever wonderded how would it look if you drew an analogic clock (with 2 haddles) and on the tip of each handle drew the same clock again, and again, and again, forever? It is a pretty specific think to wonder, but it is not imposible. For the large mayority of you that have been waiting for this your hole life here you go.</p>
 <p>Now in a more serius note, this is an aparently simple concept, and in the begining it is king of dull, but as time passes new paters emerge. I recomend to open the tab in your browser and leave it there for a while. Each time you want to change the mind set for a second just go to the tab an look at it evolve for some seconds.</p>
 <p><a href="https://jaimegonzalezfabregas.github.io/html-projects/TimeFractal/">Link to the project I'm talking about</a></p>
 <p>I also made a blender version of the same idea using procedural nodes and eevee, but due to the system's limitations it does not suport more than a few layers of recursion. And I may or may not have lost the file on my endless pile of unnamed .blend files. 😅</p>
 <p>PD: I remembered, the inspiration came from <a href="http://codeparade.net/">code parade</a></p>
 
+                </div>
             </div>
-
         </div>
 
         <link rel="stylesheet" href="/css/footer.css">
@@ -87,6 +90,7 @@
     </div>
 </footer>
 
+        <script src="/js/main.js"></script>
         <script src="/js/perlin.js"></script>
         <script src="/js/bg_canvas.js"></script>
         <script src="/js/post_layout.js"></script>

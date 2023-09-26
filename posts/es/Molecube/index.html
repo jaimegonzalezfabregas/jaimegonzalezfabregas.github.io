@@ -9,9 +9,9 @@
         <title>Molecube</title>
     </head>
     <body>
-        <canvas id="background_canvas"></canvas>
-        <div id="content_margins">
-            <link rel="stylesheet" href="/css/main.css">
+        <canvas id="background_canvas_light"></canvas>
+        <canvas id="background_canvas_dark"></canvas>
+        <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/toggle_bar.css">
 
 <div class="toggle_row">
@@ -19,26 +19,29 @@
     <script src="/js/lang.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_language()">
-    <div id="es_butt" class="half" selected="true">🇪🇸</div>
-    <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    <div class="centered_toggle">
+        <div id="es_butt" class="half" selected="true">🇪🇸</div>
+        <div id="en_butt" class="half" selected="false">🇬🇧</div>
+    </div>
 </div>
-
-
     <script src="/js/theme.js"></script>
 
 <div class="toggle glass_box clickable" onclick="toggle_theme()">
-    <div id="dark_butt" class="half" selected="true">🌜</div>
-    <div id="light_butt" class="half" selected="false">☀️</div>
+    <div class="centered_toggle">
+        <div id="dark_butt" class="half" selected="true">🌜</div>
+        <div id="light_butt" class="half" selected="false">☀️</div>
+    </div>
 </div>
 
-
-
 </div>
 
-            <h1>Molecube</h1>
-            <img url="" alt=""/>
-            <div>
-                <p>El molecube es un puzle que podría confundirse con un cubo de Rubik pero en realidad su objetivo es completamente opuesto. El objetivo de este rompecabezas es hacer que cada color aparezca sólo una vez por cara. Al principio mi plan era crear un programa en el que pudieras meter tu configuración y lo resolvería por ti, pero eso es bastante complicado. Una vez que terminé con la interfaz no continue con la lógica. De cualquier manera, creo que la interfaz fue un proyecto completo por si solo.</p>
+        <div id="content_margins">
+            <div id="content_text_box" class="glass_box">
+
+                <h1>Molecube</h1>
+                <img url="" alt=""/>
+                <div>
+                    <p>El molecube es un puzle que podría confundirse con un cubo de Rubik pero en realidad su objetivo es completamente opuesto. El objetivo de este rompecabezas es hacer que cada color aparezca sólo una vez por cara. Al principio mi plan era crear un programa en el que pudieras meter tu configuración y lo resolvería por ti, pero eso es bastante complicado. Una vez que terminé con la interfaz no continue con la lógica. De cualquier manera, creo que la interfaz fue un proyecto completo por si solo.</p>
 <p>Cuando hice esto acababa de empezar con el 3D. Algo de lo que estoy realmente orgulloso acerca de los gráficos es que fui yo quien programó el motor 3D completo. Todas las ecuaciones las derive con una hoja y un lapiz. También hago algunas suposiciones acerca de como funciona la luz (no utilizo aceleración de hardware, solo círculos en un canvas). Esa es suficiente explicación yo creo, vayamos a las cosas &quot;divertidas&quot;:</p>
 <p>Cómo navegar por el cubo:</p>
 <ul>
@@ -57,8 +60,8 @@
 <p>Mi padre, después de ver lo que yo hacía, programó el suyo (que puede o no ser mucho mejor que el mío😅)</p>
 <p><a href="https://alvarogonzalezsotillo.github.io/blog/resolver-molecube-en-prolog/">El proyecto de mi padre</a></p>
 
+                </div>
             </div>
-
         </div>
 
         <link rel="stylesheet" href="/css/footer.css">
@@ -99,6 +102,7 @@
     </div>
 </footer>
 
+        <script src="/js/main.js"></script>
         <script src="/js/perlin.js"></script>
         <script src="/js/bg_canvas.js"></script>
         <script src="/js/post_layout.js"></script>

@@ -1,13 +1,22 @@
-#background_canvas {
+#background_canvas_light, #background_canvas_dark {
     position: absolute;
     width: 100vw;
     margin: 0;
-    z-index: -1;
 }
 
 #content_margins {
-    min-height: 100vh;
-    padding: 3%;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
+
+.toggle_row{
+    flex-direction: column;
+}
+
+#content_text_box {
+    padding: 30px;
 }
 
 body,
