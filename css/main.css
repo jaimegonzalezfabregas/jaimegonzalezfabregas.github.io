@@ -1,8 +1,3 @@
-@font-face {
-    font-family: roboto_regular;
-    src: url(/fonts/Roboto-Regular.ttf);
-}
-
 body[theme="light"] {
     --background-color: rgb(238, 238, 238);
     --text-color: black;
@@ -24,16 +19,20 @@ body {
 }
 
 * {
+    font-family: 'Play', sans-serif;
     transition: inherit;
-    font-family: roboto_regular;
     color: var(--text-color)
+}
+
+a {
+    cursor: pointer;
 }
 
 .glass_box {
     text-shadow: rgba(0, 0, 0, 0.387) 0px 0 10px;
     backdrop-filter: blur(10px);
     border-radius: 30px;
-    color: white;
+    color: var(--text-color);
     background-color: rgba(0, 0, 0, 0.177);
 
     /* border: 1px solid rgb(187, 187, 187); */
@@ -70,13 +69,6 @@ body {
 
 .clickable.glass_box:hover::before {
     opacity: 0;
-}
-
-
-
-
-[js_lang="en"] {
-    display: none;
 }
 
 .clickable {

@@ -6,10 +6,13 @@ addEventListener("onThemeChange", (e) => {
 });
 
 addEventListener("resize", () => {
+    setTimeout(() => {
+        reset_bg()
+    }, transition_time)
     reset_bg()
 })
 
-let transition_time = 300;
+let transition_time = 400;
 
 let last_reset_time = 0;
 

@@ -1,5 +1,5 @@
 .blog_box {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     position: relative;
     height: fit-content;
 }
@@ -8,10 +8,19 @@
     height: 100%;
     width: 100%;
     position: relative;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.background_plane {
+    display: grid;
+    height: inherit;
 }
 
 .blog_flex {
-    gap: 3%;    
+    background-color: rgba(0, 0, 0, 0);
+
+    gap: 3%;
     padding-left: 10%;
     padding-right: 10%;
     z-index: 10;
